@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>echarts折线图</title>
+    <style type="text/css">
+        #chart{ width: 480px; height: 260px;}
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/echarts.common.min.js"></script>
+    <script type="text/javascript">
+        var mychart = echarts.init(document.getElementById("chart"));
+        var option = {
+            legend:{
+                left:'right',
+                data:['Overall()free'],
+                top:20
+            },
+            grid:[
+                {
+                    show:true,
+                left:50,
+                right:50,
+                height:'60%',
+                    borderWidth: 1,
+                    borderColor: '#ccc'
+            }
+            ],
+            tooltip:{
+                trigger:'axis'
+            },
+            xAxis:{
+                type:'category',
+                name:'时间',
+                nameGap:30,
+                nameLocation:'middle',
+                splitLine:{
+                  show:true
+                },
+                splitNumber:24,
+                data:['00','03','06','09','12','15','18','21','24','00','03','06','09','12','15','18','21','24','00','03','06','09','12','15','18','21','24']
+            },
+            yAxis:{
+                type:'value',
+                name:'排名',
+                nameGap:30,
+                nameLocation:'middle',
+                min:0,
+                max:180,
+                splitNumber:6,
+                inverse: true
+            },
+            series:[
+                {
+                    name:"Overall()free",
+                    type:'line',
+                    lineStyle:{
+                        normal:{
+                            color:"#6BB828",
+                            width:2
+                        }
+                    },
+                    itemStyle:{
+                        normal:{
+                            color:"#6BB828"
+                        }
+                    },
+                    symbol:'circle',
+                    symbleSize:'5',
+                    data:[ 23,35,67,87,45,56,97,21,44,32,35,46,54,67,76,68, 89,68,97,105,68,136,45,150,112,96,56]
+                }
+            ],
+            textStyle:{
+                color:'grey'
+            }
+        };
+        mychart.setOption(option)
+    </script>
+</body>
+</html>

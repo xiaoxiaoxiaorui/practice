@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scolltop</title>
+    <style type="text/css">
+        .layer{ width: 200px; height: 300px; background: #ccc;}
+        .layer a{ font-size: 20px; color: aqua; cursor: pointer;}
+    </style>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".layer a").click(function () {
+                alert(1);
+                layer.open({
+                 type: 1,
+                 title: false,
+                 closeBtn: 0,
+                 shadeClose: true,
+                 skin: 'yourclass',
+                 content: '自定义HTML内容'
+                 })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="layer">
+        <a>点击</a>
+    </div>
+</body>
+</html>

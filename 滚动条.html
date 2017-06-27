@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scrollbar</title>
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <style type="text/css">
+        *{ border: none; padding: 0; margin: 0; list-style: none;}
+        .wrap{ width: 20%; height: 300px; position: relative;}
+        .scrol{ width: 100%; height: 200px; overflow: auto;}
+        ul ul{ display: none;}
+        li{ line-height: 20px; position: relative;}
+        ul ul{ position: absolute; top: 0; left: 50%;}
+    </style>
+</head>
+<body>
+<div class="wrap mCustomScrollbar">
+    <div class="scrol">
+        <ul>
+            <li>xxxxxxxxxxxxx
+            <ul>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+            </ul>
+            </li>
+            <li>xxxxxxxxxxxxx
+            <ul>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+            </ul>
+            </li>
+            <li>xxxxxxxxxxxxx
+            <ul>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+            </ul>
+            </li>
+            <li>xxxxxxxxxxxxx
+            <ul>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+                <li>xxxxxxxxxxxxx</li>
+            </ul>
+            </li>
+            <li>xxxxxxxxxxxxx</li>
+            <li>xxxxxxxxxxxxx</li>
+            <li>xxxxxxxxxxxxx</li>
+            <li>xxxxxxxxxxxxx</li>
+            <li>xxxxxxxxxxxxx</li>
+            <li>xxxxxxxxxxxxx</li>
+            <li>xxxxxxxxxxxxx</li>
+            <li>xxxxxxxxxxxxx</li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript">
+    $("li").mouseenter(function () {
+        $(this).find("ul").css("display","block");
+    });
+    $(".scrol").mCustomScrollbar({
+        theme:"dark-3"
+    })
+</script>
+</body>
+</html>
