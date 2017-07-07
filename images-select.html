@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images-select</title>
+    <link href="css/jquery.selectBoxIt.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+    <form>
+        <select name="test" class="themes" id="webmenu" style=" width: 200px;">
+            <option value="calendar" data-iconurl="Images/icon_calendar.gif">Calendar</option>
+            <option value="shopping_cart" data-iconurl="Images/icon_cart.gif">Shopping Cart</option>
+            <option value="cd" data-iconurl="Images/icon_calendar.gif">CD</option>
+            <option value="email" data-iconurl="Images/icon_calendar.gif">Email</option>
+            <option value="faq" data-iconurl="Images/icon_calendar.gif">FAQ</option>
+            <option value="games" data-iconurl="Images/icon_calendar.gif">Games</option>
+        </select>
+    </form>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.selectBoxIt.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('select').selectBoxIt({ defaultText: 'Testing', autoWidth: false });
+        $('form').removeClass('hidden');
+    });
+</script>
+</body>
+</html>

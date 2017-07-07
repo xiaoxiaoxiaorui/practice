@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>响应式轮播图</title>
+    <link rel="stylesheet" type="text/css" href="css/demo1.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+</head>
+<body>
+<div class="wrap">
+    <div class='o-sliderContainer hasShadow ' id="pbSliderWrap3">
+        <div class='o-slider' id='pbSlider3'>
+            <div class="o-slider--item" data-image="Images/banner0.png">
+                <div class="o-slider-textWrap">
+                    <!--<h1 class="o-slider-title">This is a title</h1>
+                    <span class="a-divider"></span>
+                    <h2 class="o-slider-subTitle">This is a sub title</h2>-->
+                </div>
+            </div>
+            <div class="o-slider--item" data-image="Images/banner0.png">
+                <div class="o-slider-textWrap">
+                    <!--<h1 class="o-slider-title">This is a title</h1>
+                    <span class="a-divider"></span>
+                    <h2 class="o-slider-subTitle">This is a sub title</h2>-->
+                </div>
+            </div>
+            <div class="o-slider--item" data-image="Images/banner0.png">
+                <div class="o-slider-textWrap">
+                    <!--<h1 class="o-slider-title">freejs.net</h1>
+                    <span class="a-divider"></span>
+                    <h2 class="o-slider-subTitle">专注web前端</h2>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/hammer.min.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#pbSlider3').pbTouchSlider({
+        slider_Wrap: '#pbSliderWrap3',
+        slider_Threshold: 50 ,
+        slider_Speed:400 ,
+        slider_Ease:'linear',
+        slider_Breakpoints: {
+            default: {
+                height: 400 /*460*/
+            },
+            tablet: {
+                height: 300,/*246*/
+                media: 1024
+            },
+            smartphone: {
+                height: 200,/*184*/
+                media: 768
+            }
+        }
+    });
+})
+</script>
+</body>
+</html>

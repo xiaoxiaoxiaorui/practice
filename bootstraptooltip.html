@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap tooltip</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <h4>提示工具（Tooltip）插件 - 锚</h4>
+        这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip"
+                title="默认的 Tooltip">
+        默认的 Tooltip
+    </a>.
+        这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip"
+                data-placement="left" title="左侧的 Tooltip">
+        左侧的 Tooltip
+    </a>.
+        这是一个 <a href="#" data-toggle="tooltip" data-placement="top"
+                title="顶部的 Tooltip">
+        顶部的 Tooltip
+    </a>.
+        这是一个 <a href="#" data-toggle="tooltip" data-placement="bottom"
+                title="底部的 Tooltip">
+        底部的 Tooltip
+    </a>.
+        这是一个 <a href="#" data-toggle="tooltip" data-placement="right"
+                title="右侧的 Tooltip">
+        右侧的 Tooltip
+    </a>
+
+        <br>
+
+        <h4>提示工具（Tooltip）插件 - 按钮</h4>
+        <button type="button" class="btn btn-default" data-toggle="tooltip"
+                title="默认的 Tooltip">
+            默认的 Tooltip
+        </button>
+        <button type="button" class="btn btn-default" data-toggle="tooltip"
+                data-placement="left" title="左侧的 Tooltip">
+            左侧的 Tooltip
+        </button>
+        <button type="button" class="btn btn-default" data-toggle="tooltip"
+                data-placement="top" title="顶部的 Tooltip">
+            顶部的 Tooltip
+        </button>
+        <button type="button" class="btn btn-default" data-toggle="tooltip"
+                data-placement="bottom" title="底部的 Tooltip">
+            底部的 Tooltip
+        </button>
+        <button type="button" class="btn btn-default" data-toggle="tooltip"
+                data-placement="right" title="右侧的 Tooltip">
+            右侧的 Tooltip
+        </button>
+    </div>
+</div>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(".btn").tooltip();
+        $(function () { $("[data-toggle='tooltip']").tooltip(); });
+    </script>
+</body>
+</html>

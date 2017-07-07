@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap-select</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/dd.css">
+</head>
+<body>
+<div class="wrap">
+    <select class="selectpicker"  data-live-search="true">
+        <option value="">芥末</option>
+        <option value="">番茄酱</option>
+        <option value="">酱油</option>
+        <option value="">陈醋</option>
+        <option value="">橄榄油</option>
+    </select>
+
+    <select class="selectpicker"  data-live-search="true"  data-size="5" multiple data-max-options="2">
+        <option value="">芥末</option>
+        <option value="">番茄酱</option>
+        <option value="">酱油</option>
+        <option value="">陈醋</option>
+        <option value="">橄榄油</option>
+        <option>鸡蛋酱</option>
+    </select>
+
+    <select class="selectpicker" multiple  data-width="fit">
+        <optgroup label="Condiments" data-max-options="2">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </optgroup>
+        <optgroup label="Breads" data-max-options="2">
+            <option>Plain</option>
+            <option>Steamed</option>
+            <option>Toasted</option>
+        </optgroup>
+    </select>
+
+
+    <select name="webmenu" id="webmenu" style=" width: 200px;" data-size="6">
+        <option value="calendar" title="Images/icon_calendar.gif">Calendar</option>
+        <option value="shopping_cart" title="Images/icon_calendar.gif">Shopping Cart</option>
+        <option value="cd" title="Images/icon_calendar.gif">CD</option>
+        <option value="email" title="Images/icon_calendar.gif">Email</option>
+        <option value="faq" title="Images/icon_calendar.gif">FAQ</option>
+        <option value="games" title="Images/icon_calendar.gif">Games</option>
+    </select>
+</div>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.dd.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script language="javascript">
+        $(document).ready(function(e) {
+            try {
+                $("#webmenu").msDropDown();
+            } catch(e) {
+                alert(e.message);
+            }
+        });
+        $(function () {
+            $(".ddTitle").click(function () {
+                $(".ddChild").css({height:"126px"});
+            })
+        })
+    </script>
+</body>
+</html>

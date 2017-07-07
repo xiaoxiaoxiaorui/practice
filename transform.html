@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        ul li{ width: 50px; color: #000;}
+        ul li:hover{ color: #002a80;}
+        ul li:hover .caret{ transform: rotate(180deg); transition: 0.5s;}
+        .out{ width: 100px; height: 100px; margin-left: 100px; color: #f65d3e; box-shadow: 0 0 10px #f00; padding: 1px; position: relative; z-index: 1;
+                animation: change 2s linear infinite;}
+        @-webkit-keyframes change {
+            0%{ -webkit-transform:rotate(0deg);}
+            50%{ -webkit-transform: rotate(180deg);}
+            100%{ -webkit-transform: rotate(360deg);}
+        }
+        .in{ width: 80px; height: 80px; color: #f65d3e; box-shadow: 0 0 15px #f00; margin: 9% auto;
+            animation: change 2s linear infinite;}
+        @-webkit-keyframes change {
+            0%{ -webkit-transform:rotate(0deg);}
+            50%{ -webkit-transform: rotate(-180deg);}
+            100%{ -webkit-transform: rotate(-360deg);}
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li>thftghtrsh<i class="caret"></i></li>
+        <li>dshgyjytj<i class="caret"></i></li>
+        <li>fdjhyfj<i class="caret"></i></li>
+        <li>fgjnghmkfg,m<i class="caret"></i></li>
+    </ul>
+
+    <div class="out">
+        <div class="in"></div>
+    </div>
+
+    <form action="" method="get" target="">
+        <input type="number" class="Type" value="1">
+        <input type="number" class="Type" value="2">
+        <input type="number" class="Type" value="3">
+        <input type="number" class="Type" value="4">
+        <input type="number" class="Type" value="5">
+    </form>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $(".Type").each(function () {
+            total += parseInt($(this).val());
+        }).keyup(function () {
+            total = 0;
+            $(".Type").each(function () {
+                total += parseInt($(this).val());
+            });
+            alert(total);
+            if(total > 500){
+                $(this).val("").attr("placeholder","bu he li")
+            }
+        }).change(function () {
+            alert($(this).val())
+        });
+        alert(total)
+        var total = 0;
+    });
+</script>
+</body>
+</html>

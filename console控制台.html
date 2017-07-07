@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>console控制台</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="row">
+        <div class="col-md-7">
+            <ul class="playerInfo-list">
+                <li class="clearfix">
+                    <p><em class="red">*</em>Player Name：</p>
+                    <div class="player-search">
+                        <input type="text" class="searchInput" placeholder="Please enter the playerName">
+                        <div class="player-modal">
+                            <div class="list-title">
+                                <span>PlayerName</span>
+                                <span class="pull-right">Rating</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard</span>
+                                    <span class="pull-right">94</span>
+                                </li>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard2</span>
+                                    <span class="pull-right">12</span>
+                                </li>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard3</span>
+                                    <span class="pull-right">11</span>
+                                </li>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard3</span>
+                                    <span class="pull-right">11</span>
+                                </li>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard3</span>
+                                    <span class="pull-right">11</span>
+                                </li>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard3</span>
+                                    <span class="pull-right">11</span>
+                                </li>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard3</span>
+                                    <span class="pull-right">11</span>
+                                </li>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard3</span>
+                                    <span class="pull-right">11</span>
+                                </li>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard3</span>
+                                    <span class="pull-right">11</span>
+                                </li>
+                                <li>
+                                    <img src="../img/ceshi.png" alt="">
+                                    <span> Eden Hazard3</span>
+                                    <span class="pull-right">11</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--<select class="selectpicker" data-live-search="true" data-size="5" title="please choise the player">-->
+                    <!--<option></option>-->
+                    <!--<option>Casillas</option>-->
+                    <!--<option>Reyna</option>-->
+                    <!--<option>Diego - Lopez</option>-->
+                    <!--<option>Albiol</option>-->
+                    <!--<option>Ramos</option>-->
+                    <!--<option>Arbeloa</option>-->
+                    <!--<option>Capdevila</option>-->
+                    <!--<option>Peak</option>-->
+                    <!--<option>Puyol</option>-->
+                    <!--<option>Marchena</option>-->
+                    <!--</select>-->
+                </li>
+                <li>
+                    <p><em class="red">*</em>Start Price：</p>
+                    <input type="text" class="stap" value="1">
+                </li>
+                <li>
+                    <p><em class="red">*</em>Buy Now Price：</p>
+                    <input type="text" value="10 k" class="bg" disabled="disabled">
+                </li>
+                <li>
+                    <p><em class="red">*</em>Time Remaining：</p>
+                    <input type="text">
+                </li>
+                <li>
+                    <p><em class="red">*</em>Quantity of listed players：</p>
+                    <em>
+                        <button class="reduce" type="button">-</button>
+                        <input type="text" value="1">
+                        <button class="add" type="button">+</button>
+                    </em>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-5 infoImg">
+            <img src="../img/info.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-12 infoNotice">
+            <h5>Notice：</h5>
+            <p>1 if you have 2 or more same players, please fill the Numbers of listed players.</p>
+            <p>2 if you have differents players, please click Add more players.</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+
+    let isTrue = false; console.assert(isTrue, 'This will display'); isTrue = true; console.assert(isTrue, 'This will not');
+
+
+    console.table([['Javascript', 'PHP', 'Perl', 'C++']]);
+    const superhero = { firstname: 'Peter', lastname: 'Parker' };
+    console.table([superhero]);
+
+
+    console.dir($('.stap'));   //把一个对象以列表的方式展示出来
+    console.table($('.stap'));   //把一个数组或对象按表格的方式展示出来
+
+    console.group();
+    console.log('I will output');
+    console.group();
+    console.log('more indents');
+    console.groupEnd();
+    console.log('ohh look a bear');
+    console.groupEnd();
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select2</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/select2.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        .select2{ margin-top: 20px;}
+        .img-flag{ height: 15px; width: 18px;}
+        .select2{ width: 100%;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <select class="js-example-basic-single">
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+        </select>
+
+        <select class="js-example-basic-multiple" multiple="multiple">
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+        </select>
+
+        <label for="id_label_single">
+            Click this to highlight the single select element
+            <select class="js-example-basic-single js-states form-control" id="id_label_single">
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+            </select>
+        </label>
+        <label for="id_label_multiple">
+            Click this to highlight the multiple select element
+            <select class="js-example-basic-multiple js-states form-control" id="id_label_multiple" multiple="multiple">
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+            </select>
+        </label>
+
+        <select class="js-example-templating js-states form-control select2-hidden-accessible">
+            <option value="ak">Alaska</option>
+            <option value="hi">Hawaii</option>
+            <option value="ca">California</option>
+            <option value="nv">Nevada</option>
+        </select>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/select2.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".js-example-basic-single").select2({
+            placeholder:"Select a state",
+            allowClear: true
+        });
+        $(".js-example-basic-multiple").select2({
+            placeholder:"Select a state",
+            maximumSelectionLength: 2
+        });
+
+
+        function formatState (state) {
+            if (!state.id) { return state.text; }
+            var $state = $(
+                '<span><img src="Images/' + state.element.value + '.png" class="img-flag" /> ' + state.text + '</span>'
+            );
+            return $state;
+        }
+        $(".js-example-templating").select2({
+            templateResult: formatState,
+            templateSelection: formatState
+        });
+
+
+
+
+
+
+
+
+
+
+
+        $(".select2").width('100%');
+    })
+</script>
+</body>
+</html>

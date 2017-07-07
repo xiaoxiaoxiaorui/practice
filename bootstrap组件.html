@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap组件</title>
+    <link type="text/css" href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        .mb{ width: 100%; height: 30px;  line-height: 30px;}
+        .mb li{ width: 70px;  height: 30px; border-radius: 10px;  line-height: 30px; float: left; font-size: 15px; color: #333333;  border: 1px solid #999999; text-align: center; margin-right: 20px;}
+        .icon-flag{ display: inline-block; width: 18px; height: 15px; margin-right: 5px; background-repeat: no-repeat; background-size: contain;}
+        .icon-flag-btn{ background-image: url("Images/ak.png");}
+        .icon-flag-ak{ background-image: url("Images/ak.png");}
+        .icon-flag-hi{ background-image: url("Images/hi.png");}
+        .icon-flag-ca{ background-image: url("Images/ca.png");}
+        .icon-flag-nv{ background-image: url("Images/nv.png");}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="select">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownMenu1" aria-haspopup="true" aria-expanded="true">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="dropup">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropup
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nutton">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">1</button>
+                    <button type="button" class="btn btn-default">2</button>
+                    <button type="button" class="btn btn-default">3</button>
+                    <button type="button" class="btn btn-default">4</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">5</button>
+                    <button type="button" class="btn btn-default">6</button>
+                    <button type="button" class="btn btn-default">7</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">8</button>
+                </div>
+            </div>
+            <div class="btn-group btn-group-lg" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+            <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">1</button>
+                <button type="button" class="btn btn-default">2</button>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn-group-vertical" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Button</button>
+                <button type="button" class="btn btn-default">Button</button>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-default">Button</button>
+                <button type="button" class="btn btn-default">Button</button>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Left</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Middle</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Right</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Right</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Right</button>
+                </div>
+            </div>
+
+            <!-- 分裂式按钮下拉菜单 (向下弹出)-->
+            <div class="btn-group">
+                <button type="button" class="btn btn-success">Action</button>
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <!-- 向下弹出 -->
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-default">Dropup</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+
+            <!-- input group -->
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2">@example.com</span>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-addon">.00</span>
+            </div>
+            <label for="basic-url">Your vanity URL</label>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="checkbox" aria-label="...">
+                          </span>
+                          <input type="text" class="form-control" aria-label="...">
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="radio" aria-label="...">
+                          </span>
+                          <input type="text" class="form-control" aria-label="...">
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+
+            <!-- 作为额外元素的按钮式下拉菜单 -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                            <button type="button" class="btn btn-default">A</button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div><!-- /btn-group -->
+                        <input type="text" class="form-control" aria-label="...">
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" aria-label="...">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default">B</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div><!-- /btn-group -->
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+
+            <!-- 标签页 -->
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+            </ul>
+        </div>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Hello, world!</h1>
+                <p>Home Profile Messages This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.如果需要让巨幕组件的宽度与浏览器宽度一致并且没有圆角，请把此组件放在所有 .container 元素的外面，并在组件内部添加一个 .container 元素。</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            </div>
+        </div>
+
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+        </div>
+
+        <!-- 4:3 aspect ratio -->
+        <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+        </div>
+
+        <!-- 表单 -->
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+        <div class="demo">
+            <ul class="mb">
+                <li class="span blue">模板一<>
+                <li class="span blue">模板二<>
+                <li class="span blue">模板三<>
+                <li class="span blue">模板四<>
+                <li class="span blue">模板五<>
+                <li class="span blue">模板六<>
+                <li class="span blue">模板七<>
+                <li class="span blue">模板八<>
+                <li class="span blue">模板九<>
+                <li class="span blue">模板十<>
+            </ul>
+        </div>
+
+        <div class="img" style="position: relative;">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="icon-flag icon-flag-btn"></i>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                <div class="search-country">
+                    <input type="text" class="form-control search-country-input" placeholder="搜索国家/地区" autocomplete="off">
+                </div>
+                <li><a href="javascript:void(0)"><i class="icon-flag icon-flag-ak" data-image="Images/ak.png"></i>Action</a></li>
+                <li><a href="javascript:void(0)"><i class="icon-flag icon-flag-hi" data-image="Images/hi.png"></i>Another action</a></li>
+                <li><a href="javascript:void(0)"><i class="icon-flag icon-flag-ca" data-image="Images/ca.png"></i>Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)"><i class="icon-flag icon-flag-nv" data-image="Images/nv.png"></i>Separated link</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+
+    $(function() {
+        $('.span').each(function(){
+            var target=true;
+            $(this).click(function () {
+                if ( target == true) {
+                    $(this).css('background','#5da5dc');
+                    $(this).css('color','#ffffff');
+                    $(this).css('border','1px solid #5da5dc');
+                    target=false;
+                } else {
+                    $(this).css('background','#ffffff');
+                    $(this).css('color','#333333');
+                    $(this).css('border','1px solid #999999');
+                    target=true;
+                }
+            });
+        });
+        $('#form').submit(function () {
+            if (!confirm("确定要提交吗？")) {
+                return false;
+            }
+            var spanid = '';
+            $('.span').each(function () {
+                if ($(this).css('background','#5da5dc') ){
+                    var id = 1;
+                    spanid += id + ','
+                }
+            });
+            spanid = spanid.substring(0, spanid.length - 1);
+            $('[name=spanid]').val(spanid);
+            return true;
+        });
+    });
+
+    $(function () {
+       $(".dropdown-menu li").click(function () {
+           var con = $(this).children().children("i").attr("data-image");
+           $(this).parent().prev().children("i").css({backgroundImage:'URL('+con+')'});
+       });
+
+       $(".search-country-input").keyup(function () {
+           var cont = $(this).val();
+       })
+    })
+</script>
+
+</body>
+</html>
