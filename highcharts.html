@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>highcharts</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .charts{ width: 48%; padding: 20px 0;}
+        .charts:nth-child(odd){ margin-right: 4%;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 charts" id="chart1"></div>
+            <div class="col-md-5 charts" id="chart2"></div>
+            <div class="col-md-5 charts" id="chart3"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script type="text/javascript">
+    var options = {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: '月平均降雨量'
+            },
+            subtitle: {
+                text: '数据来源: WorldClimate.com'
+            },
+            xAxis: {
+                categories: [
+                    '一月',
+                    '二月',
+                    '三月',
+                    '四月',
+                    '五月',
+                    '六月',
+                    '七月',
+                    '八月',
+                    '九月',
+                    '十月',
+                    '十一月',
+                    '十二月'
+                ],
+                crosshair: {
+                    width: 1,
+                    color: 'gray',
+                    dashStyle: 'Solid'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '降雨量 (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [/*{
+                name: '东京'
+            }*/]
+        };
+
+    var da ={
+        name:'东京',
+        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    } ;
+    options.series.push(da);
+    $("#chart1").highcharts(options);
+</script>
+</body>
+</html>

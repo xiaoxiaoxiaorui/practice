@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select_try</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .box{ height: 500px; background: #000; opacity: 0.5;}
+        form{ text-align: center;}
+        form span.glyphicon{ width: 60px; height: 56px; background: #0bb995; color: #fff; font-size: 25px; text-align: center; line-height: 56px;}
+        ul li{ font-size: 16px; color: #fff;}
+        .input-group{ display: inline-table; vertical-align: middle;}
+        .input-group-btn{ background-color: #fff; border: 1px solid #fff; color: #ccc;}
+
+        .input-group-addon, .input-group-btn{ width: 0;}
+
+        .btn{ width: 70px; height: 46px; border: 1px solid transparent; border-right: 1px solid #ddd;}
+        .open > .dropdown-toggle.btn-default{ background: transparent; border: 1px solid transparent; box-shadow: none; outline: none;}
+        .btn-default:active{ background: transparent; border: 1px solid transparent; box-shadow: none; outline: none;}
+        .btn-default:focus{ background: transparent; border: 1px solid transparent; box-shadow: none; outline: none;}
+        .btn-default:hover{ background: transparent; border: 1px solid transparent; box-shadow: none;}
+        .btn-default:active:hover{ background: transparent; border: 1px solid transparent; box-shadow: none;}
+        .open > .dropdown-toggle.btn-default:hover, .open > .dropdown-toggle.btn-default:focus{ background: transparent; border: 1px solid transparent; box-shadow: none;}
+        .btn:active, .btn.active{ box-shadow: none;}
+        .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus{ outline: 0;}
+
+        .dropdown-menu>li>a{ line-height: 30px;}
+        .fa{ margin-right: 5px; font-size: 20px;}
+        .icon-flag{ width: 28px; height: 18px; margin-right: 5px; display: inline-block; background-size: contain; position: relative; top: 3px;}
+        .icon-flag-ak{ background-image: url("Images/ak.png")}
+        .icon-flag-hi{ background-image: url("Images/hi.png")}
+        .icon-flag-ca{ background-image: url("Images/ca.png")}
+        .icon-flag-nv{ background-image: url("Images/nv.png")}
+        .input-group .form-control{ width: 300px; height: 58px; border: 1px solid #fff; box-shadow: none;}
+
+        .text{ margin-right: 10px;}
+        .search{ float: left; border: 1px solid #0bb995; border-radius: 4px; cursor: pointer;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="box">
+            <form>
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-flag icon-flag-ak"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)"><i class="icon-flag icon-flag-ak" data-image="Images/ak.png"></i>Action</a></li>
+                            <li><a href="javascript:void(0)"><i class="icon-flag icon-flag-hi" data-image="Images/hi.png"></i>Another action</a></li>
+                            <li><a href="javascript:void(0)"><i class="icon-flag icon-flag-ca" data-image="Images/ca.png"></i>Something else here</a></li>
+                            <li><a href="javascript:void(0)"><i class="icon-flag icon-flag-nv" data-image="Images/nv.png"></i>Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-apple" aria-hidden="true"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)"><i class="fa fa-apple" aria-hidden="true"></i>ios</a></li>
+                            <li><a href="javascript:void(0)"><i class="fa fa-android" aria-hidden="true"></i>Android</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control text" placeholder="应用名称">
+                    <span class="glyphicon glyphicon-search input-group-btn search"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+$(".dropdown-menu li").click(function () {
+    var Class = $(this).find("i").attr("class");
+    $(this).parent("ul").prev().find("i").attr("class",Class);
+})
+</script>
+</body>
+</html>

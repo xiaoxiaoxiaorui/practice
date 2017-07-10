@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquaryui-slider</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <style type="text/css">
+        #slid{ margin-top: 50px;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <div id="slid"></div>
+        <p>
+            <label for="min">最小值</label>
+            <input type="text" id="min">
+            <label for="max">最大值</label>
+            <input type="text" id="max">
+        </p>
+    </div>
+</div>
+<script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+    $("#slid").slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide:function (event,elements) {
+            $("#min").val(elements.values[0]);
+            $("#max").val(elements.values[1]);
+        }
+    });
+    $("#min").val($("#slid").slider("values",0)).keyup(function () {
+        var Min = $(this).val(),
+            Max = $("#max").val();
+        if( parseInt(Max) > parseInt(Min)){
+            $("#slid").slider("values",0,Min);
+        }else{
+            alert("最小的不能比最大的大");
+        }
+    });
+    $("#max").val($("#slid").slider("values",1)).keyup(function () {
+        var Min = $("#min").val(),
+            Max = $(this).val();
+        if( parseInt(Max) > parseInt(Min)){
+            $("#slid").slider("values",1,Max);
+        }else{
+            alert("最大的不能比最小的小");
+        }
+    });
+</script>
+</body>
+</html>
