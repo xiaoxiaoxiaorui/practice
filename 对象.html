@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+</head>
+<body>
+<div class="wrap">
+</div>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script>
+    /* 创建对象的几种方法 */
+
+//    第一种，简单对象创建
+    var car = {};
+    car.color = "white";
+    car.weight = 300;
+    car.show = function () {
+      alert( car.color + " is " +car.weight);
+    };
+    car.show();
+
+    var cor = {
+        color : "white",
+        weight : 300,
+        show : function () {
+            alert( cor.color + " is " +cor.weight);
+        }
+    };
+    cor.show();
+    alert(cor.weight)
+
+//    第二种，创建一个对象，相当于new一个类的实例
+    function person() {
+    }
+    var personone = new person();
+    personone.name = "Jack";
+    personone.sex = "man";
+    personone.message = function () {
+        alert(personone.name + " is a " + personone.sex)
+    };
+    personone.message();
+
+//    第三种，使用有参函数来实现
+    function pet(name,age,hobby) {
+        this.name = name;
+        this.age = age;
+        this.hobby = hobby;
+        this.describe = function () {
+            alert("我叫" + this.name + "我" + this.age +"岁了" + "我喜欢" + this.hobby)
+        }
+    }
+    var maidou =new pet("麦兜",5,"睡觉");
+    maidou.describe();
+
+//    第四种，使用工厂方式来创建（Object关键字）
+    var Person = new Object();
+    Person.eyecolor = "black";
+    Person.age = 22;
+    Person.height = 185;
+    Person.lastname = "Grace";
+    console.log(Person.lastname+" height is "+Person.height);
+
+//    第五种，使用原型对象的方式  prototype关键字
+    function dog() {
+    }
+    dog.prototype.name = "magic";
+    dog.prototype.color = "black";
+    dog.prototype.show = function () {
+        alert(this.name + " is " + this.color);
+    };
+    var magic = new dog();
+    magic.show();
+    
+//    第六种，混合模式(原型和构造函数)
+    function carr(name,price) {
+        this.name = name;
+        this.price = price;
+    }
+    carr.prototype.sale = function () {
+        alert("我是" + this.name + "我的价格是" + this.price + "万");
+    };
+    var carone = new carr("mosai",300);
+    carone.sale();
+
+
+    //    第七种,动态原型的方式(可以看作是混合模式的一种特例)
+    function car1(name,price) {
+        this.name = name;
+        this.price = price;
+        if(typeof car1.sell == "undefined"){
+            car1.prototype.sell = function () {
+                alert("我是" + this.name + "我的价格是" + this.price + "万");
+            };
+            car1.sell = true;
+        }
+    }
+    var cat = new  car1("凯美瑞",27);
+    cat.sell();
+
+
+    var drive = ["Mike","John"];
+    var a = 1;
+    var drive1 = drive;
+    var b = a;
+    b = 4;
+    drive1[0] = "bill";
+    alert(drive);
+    alert(drive1);
+    alert(a);
+    alert(b)
+
+
+</script>
+</body>
+</html>

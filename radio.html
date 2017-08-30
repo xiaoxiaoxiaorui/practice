@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>radio</title>
+</head>
+<body>
+
+                        <!-- 单选框注意需要name一致 -->
+        <label for="ff"><img src="Images/icon_music.gif"></label>
+        <input type="radio" value="ff" id="ff" name="vvvvv">
+        <label for="dd"><img src="Images/icon_calendar.gif"></label>
+        <input type="radio" value="dd" id="dd" name="vvvvv">
+        <label for="ss"><img src="Images/icon_faq.gif"></label>
+        <input type="radio" value="" name="vvvvv" id="ss">
+        <label for="ee"><img src="Images/icon_games.gif"></label>
+        <input type="radio" value="" name="vvvvv" id="ee">
+        <label for="ll"><img src="Images/icon_lockopen.gif"></label>
+        <input type="radio" value="" name="vvvvv" id="ll">
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    $("input:last").attr("checked","checked");
+
+//    js设置boolean型的属性时，jquary1.6以下可以用attr（）设置，以上的都只能用prop（）
+
+/*    $("input").click(function () {
+$("input").removeAttr("checked");
+$(this).prop("checked",true);
+    })*/
+</script>
+</body>
+</html>

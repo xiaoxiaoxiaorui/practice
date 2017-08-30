@@ -68,10 +68,10 @@
         </label>
 
         <select class="js-example-templating js-states form-control select2-hidden-accessible">
-            <option value="ak">Alaska</option>
-            <option value="hi">Hawaii</option>
-            <option value="ca">California</option>
-            <option value="nv">Nevada</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="California">California</option>
+            <option value="Nevada">Nevada</option>
         </select>
     </div>
 </div>
@@ -80,30 +80,33 @@
 <script type="text/javascript" src="js/select2.js"></script>
 <script type="text/javascript">
     $(function () {
-        $(".js-example-basic-single").select2({
+        /*$(".js-example-basic-single").select2({
             placeholder:"Select a state",
             allowClear: true
         });
         $(".js-example-basic-multiple").select2({
             placeholder:"Select a state",
             maximumSelectionLength: 2
-        });
+        });*/
 
 
         function formatState (state) {
             if (!state.id) { return state.text; }
+            /*var scr = "Images/" + state.element.value + ".png";*/
             var $state = $(
-                '<span><img src="Images/' + state.element.value + '.png" class="img-flag" /> ' + state.text + '</span>'
+                '<span><img src="Images/' + state.element.value + '.png" class="img-flag" /> ' + '</span><span>' + state.text + '</span>'
+            /*'<span style="background:url(' + scr + ');background-size:100%;float:left;margin:5px 10px 0 0;">' + '<div class="img-flag"></div></span><span>' + state.text + '</span>'*/
             );
             return $state;
         }
         $(".js-example-templating").select2({
             templateResult: formatState,
             templateSelection: formatState
+        }).change(function () {
+            $(".select2-selection__rendered span:last-child").html("");
         });
-
-
         $(".select2").width('100%');
+        $(".select2-selection__rendered span:last-child").html("");
     })
 </script>
 </body>

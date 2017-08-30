@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>深浅复制</title>
+</head>
+<body>
+<div class="wrap"></div>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script>
+
+    //   浅复制
+    var a = ["a","b","c"];
+    var a_slice = a;
+    console.log(a === a_slice);
+    a_slice[0]="f";
+    console.log(a_slice);
+    console.log(a);
+
+
+    //   深复制
+    /*var obj = {name:'xixi',age:20,company : { name : '腾讯', address : '深圳'} };
+     var obj_extend = $.extend(true,{}, obj); //extend方法，第一个参数为true，为深拷贝，为false，或者没有为浅拷贝。
+     console.log(obj === obj_extend);
+     obj.company.name = "ali";
+     obj.name = "hei";
+     console.log(obj);
+     console.log(obj_extend);*/
+</script>
+</body>
+</html>

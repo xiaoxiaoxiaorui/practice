@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>li的宽自适应</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        *{ list-style: none; box-sizing: border-box;}
+        .list{ width: auto; background: #e3e3e3; list-style: none; padding: 0; display: none;}
+        .list li{ width: auto; float: left; position: relative; line-height: 25px; margin: 0 10px;}
+        .list li ul{ position: absolute; top: 0; left: 100%; display: none; background: #00E8D7;}
+        .list li:hover{ background: #00E8D7;}
+        .list li:hover ul{ display: block;}
+        .clear{ clear: both;}
+        .list-a{ background: #2a6496; padding: 6px 12px; color: #fff; margin: 20px 0; display: inline-block;}
+        .list-a:hover,.list-a:focus{ color: #fff; text-decoration: none;}
+
+        .Cate-ul{ width: auto; background: #e3e3e3; list-style: none; padding: 0; }
+        .Cate-ul li{ width: auto; float: left; position: relative; line-height: 25px; margin: 0 10px; white-space: nowrap;}
+        .Cate-ul li a{ display: inline-block; padding: 0;}
+        .Cate-ul li a:hover{ background: inherit;}
+        .Cate-ul li ul{ position: absolute; top: 0; left: 100%; display: none; background: #ccc; z-index: 2; padding: 0;}
+        .Cate-ul li:hover{ background: #ccc;}
+        .Cate-ul li:hover ul{ display: block;}
+        .glyphicon{ font-size: 12px; width: 12px; height: 12px; margin-left: 5px;}
+
+        .china{ color: #333; border-color: #adadad;}
+        </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <a class="list-a" href="javascript:void(0)">list</a>
+        <ul class="list">
+            <li>fvjmvkjfyl;k</li>
+            <li>cgjmhblkm.bgf</li>
+            <li>xcgn hvkjbk
+                <ul>
+                    <li>fvgbh</li>
+                    <li>chnjn</li>
+                    <li>cn h</li>
+                    <li>cvjnb</li>
+                    <li>xdcfhgnh</li>
+                    <li>xcfh</li>
+                </ul>
+            </li>
+            <li>vgbmkhj,kml,</li>
+            <li>v bk,dgfdxcnjh</li>
+            <li>vhmj</li>
+            <li>vgbkjl,</li>
+            <li>fghfhret</li>
+            <li>dxchgcvb</li>
+            <li>dgdxfhg</li>
+            <li>xdfgfd</li>
+            <li>dh</li>
+            <div class="clear"></div>
+        </ul>
+        <div class="dropdown">
+            <a class="btn btn-default dropdown-toggle china" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">general list<i class="caret"></i></a>
+            <ul class="dropdown-menu dropdown-menu1 Cate-ul" role="menu">
+                <div class="trangle"></div>
+                <li class="active"><a href="javascript:void(0)">general list</a></li>
+                <li><a href="javascript:void(0)">business</a>
+                    <span class="glyphicon glyphicon-menu-right"></span>
+                    <ul class="">
+                        <li><a href="javascript:void(0)">general list</a></li>
+                        <li><a href="javascript:void(0)">business</a></li>
+                        <li><a href="javascript:void(0)">life</a></li>
+                        <li><a href="javascript:void(0)">tool</a></li>
+                        <li><a href="javascript:void(0)">general</a></li>
+                        <li><a href="javascript:void(0)">business</a></li>
+                        <li><a href="javascript:void(0)">life</a></li>
+                        <li><a href="javascript:void(0)">tool</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)">life</a></li>
+                <li><a href="javascript:void(0)">tool</a></li>
+                <li><a href="javascript:void(0)">general list general list general list</a>
+                    <span class="glyphicon glyphicon-menu-right"></span>
+                    <ul class="">
+                        <li><a href="javascript:void(0)">general</a></li>
+                        <li><a href="javascript:void(0)">business</a></li>
+                        <li><a href="javascript:void(0)">life</a></li>
+                        <li><a href="javascript:void(0)">tool</a></li>
+                        <li><a href="javascript:void(0)">general list</a></li>
+                        <li><a href="javascript:void(0)">business</a></li>
+                        <li><a href="javascript:void(0)">life</a></li>
+                        <li><a href="javascript:void(0)">tool</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)">business</a></li>
+                <li><a href="javascript:void(0)">life</a></li>
+                <li><a href="javascript:void(0)">tool</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $(".list-a").click(function () {
+        $(".list").toggle();
+        var arr = $(".list li");
+        var len = arr.length;
+        var i=0,max=0;
+        for(i;i<len;i++){
+            var w = parseInt($(arr[i]).css("width"));
+            console.log(w);
+            if(w > max){
+                max = w;
+            }
+        }
+        $(".list li").css({width:max});
+        $(".list").css({width:max*2+40})
+    });
+    $(".Cate-ul li").mouseenter(function () {
+        $(this).children("ul").css({display:"block"});
+        var arr = $(this).children("ul").children("li");
+        var len = arr.length;
+        var i=0,max=0;
+        for(i;i<len;i++){
+            var w = parseInt($(arr[i]).css("width"));
+            console.log(w);
+            if(w > max){
+                max = w;
+            }
+        }
+        $(this).children("ul").children("li").css({width:max});
+        $(this).children("ul").css({width:max*2+42});
+    }).mouseleave(function () {
+        $(this).children("ul").css({display:"none"});
+    });
+    $(".china").click(function () {
+        $(".Cate-ul").toggle();
+        var d = $(".Cate-ul").css("display");
+        if(d == "block"){
+            $(document).click(function () {
+                $(".Cate-ul").css("display","none");
+            })
+        }
+        var arr = $(".Cate-ul>li");
+        var len = arr.length;
+        var i=0,max=0;
+        for(i;i<len;i++){
+            var w = parseInt($(arr[i]).css("width"));
+            if(w > max){
+                max = w;
+            }
+        }
+        arr.css({width:max});
+        $(".Cate-ul").css({width:max*2+42});
+        $(".Cate-ul>ul").css({width:max*2+42});
+    })
+</script>
+</body>
+</html>

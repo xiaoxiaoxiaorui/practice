@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找父元素第一个孩子</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>dfbhfgjhn</td>
+        <td>chvjhgj</td>
+        <td><input class="con" type="text" value="1"></td>
+    </tr>
+    <tr>
+        <td>xfhftg</td>
+        <td>vgkioul</td>
+        <td><input class="con" type="text" value="2"></td>
+    </tr>
+    <tr>
+        <td>xcghgf</td>
+        <td>cgjku</td>
+        <td><input class="con" type="text" value="3"></td>
+    </tr>
+</table>
+<script src="js/jquery-1.4.2.min.js"></script>
+<script>
+    /*第一种：根据当前元素查找父级第一个元素*/
+    /*1.*/
+    /*$(".con").click(function () {
+        var content = $(this).parent().prev().prev().html();
+        alert(content)
+    });*/
+    /*2.*/
+    /*$(".con").click(function () {
+        var arr = $(this).parent().parent().children("td");
+        var content = $(arr[0]).html();
+        alert(content)
+    });*/
+    /*第二种：直接查找父级第一个元素*/
+    /*1.方法1*/
+    /*var content = $("tr td:eq(0)").html();*/
+    /* 方法2 */
+    var content = $("tr td:nth-child(1)").html();
+    alert(content)
+</script>
+</body>
+</html>

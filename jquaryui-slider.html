@@ -25,7 +25,7 @@
 <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript">
-    $("#slid").slider({
+    /*$("#slid").slider({
         range: true,
         min: 0,
         max: 500,
@@ -34,8 +34,58 @@
             $("#min").val(elements.values[0]);
             $("#max").val(elements.values[1]);
         }
+    });*/
+
+//  将max和min做为两个参数传进函数中再进行调用
+    var MIN = 1;
+    var MAX = 100;
+    var test;
+    $(function () {
+        $.tt = function () {
+            test = $("#slid").slider({
+                range: true,
+                min: MIN,
+                max: MAX,
+                values: [ 2, 3 ],
+                slide:function (event,elements) {
+                    $("#min").val(elements.values[0]);
+                    $("#max").val(elements.values[1]);
+                }
+            });
+            $("#min").val($("#slid").slider("values",0));
+            $("#max").val($("#slid").slider("values",1));
+        };
+        $.ss = function (min,max) {
+            MIN = min;
+            MAX = max;
+            $.tt();
+            delete test;
+        };
+        $.ss(1,20);
+
+        $("#min").val($("#slid").slider("values",0)).keyup(function () {
+            var Min = $(this).val(),
+                Max = $("#max").val();
+            if( parseInt(Max) > parseInt(Min)){
+                $("#slid").slider("values",0,Min);
+            }else{
+                alert("最小的不能比最大的大");
+            }
+        });
+        $("#max").val($("#slid").slider("values",1)).keyup(function () {
+            var Min = $("#min").val(),
+                Max = $(this).val();
+            if( parseInt(Max) > parseInt(Min)){
+                $("#slid").slider("values",1,Max);
+            }else{
+                alert("最大的不能比最小的小");
+            }
+        });
     });
-    $("#min").val($("#slid").slider("values",0)).keyup(function () {
+
+
+
+    /*$("#min").val($("#slid").slider("values",0)).keyup(function () {
         var Min = $(this).val(),
             Max = $("#max").val();
         if( parseInt(Max) > parseInt(Min)){
@@ -52,7 +102,9 @@
         }else{
             alert("最大的不能比最小的小");
         }
-    });
+    });*/
+
+
 </script>
 </body>
 </html>

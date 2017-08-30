@@ -800,8 +800,8 @@ body.colorbox-demo #cboxContent, body.colorbox-demo #cboxContent p, body.colorbo
 .rtl-demo #content-1 p{ width: 1000px; }
 
 .transitions #examples{
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
 }
 
 .transitions .content{

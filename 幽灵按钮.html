@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幽灵按钮</title>
+    <style>
+        .center{ width: 200px; height: 200px; margin: 100px 0 0 100px; background: #333333; display: table; border-radius: 10px;}
+        .pos{ margin: 50px 40px; float: left; position: relative; width: 100px; height: 76px; display: table-cell; vertical-align: middle;}
+        .btn{ padding: 15px 10px; width: 76px; border: 2px solid #fff; color: #fff; position: absolute; top: 0; left: 0;}
+        .pos div{ transition: all 0.2s;}
+        .bor1,.bor3{ width: 30px; height: 2px; background: #fff;}
+        .bor2,.bor4{ width: 2px; height: 20px; background: #fff;}
+        .bor1{ position: absolute; left: -40px; top: 0; opacity: 0;}
+        .bor2{ position: absolute; right: 0; top: -20px; opacity: 0;}
+        .bor3{ position: absolute; right: -40px; bottom: 0; opacity: 0;}
+        .bor4{ position: absolute; left: 0; bottom: -20px; opacity: 0;}
+        .pos:hover .bor1{ left: 0; opacity: 1;}
+        .pos:hover .bor2{ top: 0; opacity: 1;}
+        .pos:hover .bor3{ right: 0; opacity: 1;}
+        .pos:hover .bor4{ bottom: 0; opacity: 1;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="center">
+        <div class="pos">
+            <a class="btn">按钮 button</a>
+            <div class="bor1"></div>
+            <div class="bor2"></div>
+            <div class="bor3"></div>
+            <div class="bor4"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

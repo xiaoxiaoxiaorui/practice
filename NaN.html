@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NaN</title>
+</head>
+<body>
+<input class="nan" type="text" value="456">
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script>
+    $(".nan").keyup(function () {
+        var m = parseInt($(this).val());
+
+        console.log(m);
+        console.log(m == NaN);
+        console.log(parseInt(""));
+        if($(this).val()==""){
+            $(this).val(2)
+        }
+
+    })
+</script>
+</html>

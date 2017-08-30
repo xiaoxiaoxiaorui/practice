@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3</title>
+    <style>
+
+        /* 30 30 代表裁剪原的区域，上下30，左右30，裁剪完成之后四个角的图片不会再随着改变，变化的只有四周边框的图片做相应的效果。
+         round  平铺
+         stretch 拉伸
+         */
+        .text{ width: 200px; height: 100px; border: 15px solid transparent; -webkit-border-image: url("Images/border.png") 30 30 round;}
+        .txt{ width: 200px; height: 100px; border: 15px solid transparent; -webkit-border-image: url("Images/border.png") 30 30 stretch;}
+        .color{ width: 200px; height: 200px; background: rgba(245,101,23,0.5);}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="text">图片边框</div>
+    <div class="txt">图片边框</div>
+    <div class="color"></div>
+</div>
+</body>
+</html>

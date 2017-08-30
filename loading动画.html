@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loading 动画</title>
+    <style>
+        .wrap{ width: 100px; height: 100px; margin: 100px 0 0 100px;}
+        .con{ width: 20px; height: 20px; position: relative; /*animation: spin 2s infinite;*/}
+        .con>div{ width: 20px; height: 20px; border-radius: 50%; position: absolute; top: 0; left: 0;}
+        .blue{ background: #2e8ded; animation: top-left 1.5s infinite;}
+        @keyframes top-left {
+            from{ transform: rotate(0deg); transform-origin: 50%;}
+            to{ transform: rotate(-360deg); transform-origin: 0 20px;}
+        }
+        .yellow{ background: #fbed50; animation: top-right 1.5s infinite;}
+        @keyframes top-right {
+            from{ transform: rotate(0deg); transform-origin: 50%;}
+            to{ transform: rotate(-360deg); transform-origin: 20px 20px;}
+        }
+        .green{ background: #0bb995; animation: bottom-left 1.5s infinite;}
+        @keyframes bottom-left {
+            from{ transform: rotate(0deg); transform-origin: 50%;}
+            to{ transform: rotate(-360deg); transform-origin: 0 0;}
+        }
+        .red{ background: #c9302c; animation: bottom-right 1.5s infinite;}
+        @keyframes bottom-right {
+            from{ transform: rotate(0deg); transform-origin: 50%;}
+            to{ transform: rotate(-360deg); transform-origin: 20px 0;}
+        }
+        @keyframes spin {
+            from{ transform: rotate(0deg);}
+            to{ transform: rotate(-360deg);}
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="con">
+        <div class="blue"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+        <div class="red"></div>
+    </div>
+</div>
+</body>
+</html>

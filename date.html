@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date</title>
+    <link href="http://cdn.bootcss.com/bootstrap/2.2.2/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        *{
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <input type="text" id="date" class="laydate-icon">
+        <div class="input-append date form_datetime" style="margin-top: 100px;">
+            <input size="16" class="Date" type="text" value="" readonly>
+            <span class="add-on"><i class="icon-th"></i></span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/laydate/laydate.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript">
+    var date = new Date();
+    $("#date").val(date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate());
+    laydate.skin('molv');
+    laydate({
+        elem:'#date',
+        event:'focus',
+        format:'YYYY/MM/DD'
+    });
+
+
+
+    $(".Date").val(date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate());
+    $.fn.datetimepicker.dates['zh-CN'] = {
+        days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+        daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+        daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
+        months: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+        monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        today: "今天",
+        suffix: [],
+        meridiem: ["上午", "下午"]
+    };
+
+    $(".form_datetime").datetimepicker({
+            format: " yyyy-MM-dd",
+            autoclose: true,
+            todayBtn: true,
+            pickerPosition: "bottom-left",
+            language: 'zh-CN',
+            /*daysOfWeekDisabled:'0,6',*/
+            immediateUpdates: true,
+            minView: "month"
+        });
+
+</script>
+</body>
+</html>

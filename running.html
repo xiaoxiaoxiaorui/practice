@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>running</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .run{ width: 400px; height: 30px; background: #00E8D7; position: relative; overflow: hidden;}
+        ul{ list-style: none; color: #fff; position: absolute; top: 0; left: 0; padding: 0;}
+        li{ line-height: 30px; float: left;}
+        .btn{ padding: 10px 20px; background: #00E8D7; margin-top: 30px; border-radius: 5px; color: #fff; text-decoration: none; display: inline-block;}
+        .btn:hover{ color: #fff; text-decoration: none;}
+        .btn:focus{ color: #fff; text-decoration: none;}
+
+        .search{ margin-top: 30px; float: right;}
+        .search-button{ float: left; line-height: 30px; padding: 0 20px 0 15px; cursor: pointer;}
+        .search-text{ float: left; width: 0; line-height: 24px; border: 0; background: #00E8D7;}
+        /*.search:hover{ background: #00E8D7;}*/
+
+        a{ display: block; color: #333;}
+
+        .clear{ clear: both;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="run">
+            <ul>
+                <li>1.zhezhouwendu hengao a yaoresil dibiaowendu pai qvanguodiyi a </li>
+                <li>2.hainengbunenggengrele ganbuganzairedian weishenme zongshuo youyu danjiushibuxiayu </li>
+                <li>3.tianqiyubao bushitingzhundeme hainengbunengbeixinrenl renyurende xinrenhezai </li>
+                <li>4.xiawuhaokuna zaoshangqibulaichuang weishenmezhemekun yaoshuizhaol a a a</li>
+                <li>5.en lianxigedaima zhege gundongdaodi zenmezuode shibushi animatedonghua kongzhide </li>
+                <li>6.huibuhui gundong a  ha zhongyudongl nengbunengtingxialai a hubuhuitingxialai suiyueshentou </li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <a class="btn" href="javascript:void(0)">滚动</a>
+
+
+
+
+        <form>
+            <div class="search">
+                <div class="search-button">
+                    <a href="javascript:void(0)">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </a>
+                </div>
+                <input type="text" class="search-text">
+                <div class="clear"></div>
+            </div>
+        </form>
+
+
+
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+    var sum = 0;
+    var $m = $("ul");
+    $("li").each(function () {
+        sum += $(this).width();
+    });
+    $m.width(sum);
+    function tt() {
+        $m.stop().css("left",400);
+        $m.animate({left: -sum}, 10000);
+        $("li").mouseenter(function () {
+            $m.stop();
+            $m.mouseleave(function () {
+                var l = parseInt($(this).css("left"));
+                $m.stop().css("left",l);
+                $m.animate({left: -sum}, 10000);
+            })
+        })
+    }
+    $("a").click(function () {
+        $m.animate({left: -sum}, 10000);
+        setInterval("tt()",10000);
+    });
+
+    $(".search").mouseenter(function () {
+       $(".search-text").animate({width:"200px"});
+       $(this).css({background:"#00E8D7"})
+    }).mouseleave(function () {
+        var isFocus = $(".search-text").is(":focus");
+        if(isFocus == false){
+            $(".search-text").stop().animate({width:"0px"});
+            $(this).css({background:"#fff"})
+        }
+    });
+    $(".search-text").blur(function () {
+        $(this).animate({width:"0px"});
+        $(".search").css({background:"#fff"})
+    })
+</script>
+</body>
+</html>

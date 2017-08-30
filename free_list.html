@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>free_list</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/select2.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        *{ margin: 0; padding: 0; border: none; list-style: none;}
+        body{ font-size: 14px; font-family: "微软雅黑"; color: #333;}
+        a{ text-decoration: none; color: #333; cursor: pointer;}
+        a:hover{ color: #333; text-decoration: none;}
+        input{ display: block;}
+
+
+        .top-title{ border-bottom: 2px solid #f65d3e;}
+        .top-title h2{ float: left;}
+        .top-title p{ float: right; margin-top: 30px;}
+        .clear{clear: both;}
+
+        .more-width li{ width: 50%; float: left;}
+        .dropdown-menu li{ padding-left: 10px;}
+        .img-flag{ height: 15px; width: 18px;}
+        .top-tool>ul>li{ float: left; padding-left: 10px;}
+        .top-tool>ul{ margin-top: 15px;}
+        .select2-container{ display: block;}
+        .form_date{ width: 200px;}
+        .select2-container .select2-selection--single{ height: 34px;}
+        .dropdown-menu li{ cursor: pointer;}
+        .btn .caret{ margin-left: 20px;}
+        .select2-container--default .select2-selection--single .select2-selection__arrow{ height: 34px;}
+        .table-condensed{ width: 240px;}
+
+        .time-line{ margin-top: 20px;}
+        .time-line-left{ float: left; padding-right: 15px;}
+        .time-line-right{ float: left; width: 990px;}
+        .time-line-right>li{ float: left; position: relative;}
+        .time-point{ border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px; overflow: hidden;}
+        .time-point:hover{ overflow: visible;}
+        .time-point>a{ padding: 2px 7px; width: 52px; height: 26px; display: block;}
+        .time-hr{ width: 20px;}
+        .time-hr hr{ margin: 7px 0; position: relative; top: 5px; border-top: 1px dashed #f65d3e; }
+        .time-point-event{ position: absolute; bottom: 30px; background: #fff; z-index: 2;}
+        .time-point-event ul{ border: 1px solid #2D93CA; border-radius: 5px;}
+        .time-point-event ul a{line-height: 30px; padding: 0 10px;}
+        .time-point-event ul a:hover{ color: #2D93CA;}
+        .time-event-height{ height: 20px; width: 80px; position: absolute; bottom: 24px;}
+
+
+        .con-list{ border: 1px solid #ddd; border-radius: 5px;}
+        .con-list:hover{ box-shadow: 0 0 8px #f65d3e;}
+        .con-list ul li{ line-height: 24px; text-align: center; text-overflow: ellipsis;}
+        .list-img{ margin: 20px 0; text-align: center;}
+        .count p{ line-height: 40px; background: #f8f8f8; margin: 0; text-align: center;}
+
+        .navbar-default{ height: 80px; background: #fff; line-height: 78px; }
+        .navbar-header{}
+        .nav-list{ float: right; position: relative; z-index: 10; background: #fff;}
+        .nav-list>li{ float: left; padding: 0 20px; position: relative; cursor: pointer;}
+        .nav-list>li>span{ margin-left: 10px;}
+        .nav-list>li ul{ position: absolute; top: 100%; display: none; padding: 20px 0;background:#f65d3e;}
+        .nav-list>li ul li{ line-height: 20px; padding: 0 20px;}
+        .nav-list>li ul li a{ color: #fff;}
+        .nav-list>li ul li a:hover{ color: #5bc0de;}
+
+        .search-border{ border: 1px solid #f65d3e; border-bottom: none;}
+        .search-border>li{ border-bottom: 1px solid #f65d3e; padding: 20px;}
+        .li-left{ float: left; padding-top: 12px;}
+        .li-content{ margin-left: 20px; float: left;}
+        .li-right{ float: right; margin-right: 30px; padding-top: 12px;}
+        .app-info>span{ float: left; margin-left: 10px;}
+        .app-info>span:first-child{ margin-left: 0; margin-right: 30px;}
+        .compare{ padding-left: 20px;}
+        tbody{ border-top: 1px solid #ddd; border-left: 1px solid #ddd;}
+        tbody td{ border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 5px; text-align: center;}
+        .down{ transform: rotate(180deg); display: inline-block;}
+        .continue{ transform: rotate(90deg); display: inline-block;}
+
+
+
+
+        @media (min-width: 768px) {
+            .col-sm-2{ width: 20%;}
+        }
+        @media (max-width: 767px) {
+            .nav-list{ width: 100%; padding: 0;}
+            .nav-list li{ float: none;text-align: left; line-height: 30px; padding: 0; padding-left: 20px;}
+            .nav-list>li ul{ width: 100%; position: static; padding: 0;}
+            .navbar-collapse{ padding: 0;}
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a href="javascript:void(0)"><img src="Images/lo.png" alt="logo"></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav-list">
+                    <li>Home</li>
+                    <li>Charts<span class="glyphicon glyphicon-menu-down"></span>
+                        <ul>
+                            <li><a href="javascript:void(0)">fhfthhsth</a></li>
+                            <li><a href="javascript:void(0)">xdhtfgjhy</a></li>
+                            <li><a href="javascript:void(0)">xdcnjhgfcj</a></li>
+                            <li><a href="javascript:void(0)">xchjhyjy</a></li>
+                        </ul>
+                    </li>
+                    <li>Keywords<span class="glyphicon glyphicon-menu-down"></span>
+                        <ul>
+                            <li><a href="javascript:void(0)">dxfh</a></li>
+                            <li><a href="javascript:void(0)">cxh</a></li>
+                            <li><a href="javascript:void(0)">cxhngfj</a></li>
+                            <li><a href="javascript:void(0)">xdch</a></li>
+                        </ul>
+                    </li>
+                    <li>Service<span class="glyphicon glyphicon-menu-down"></span>
+                        <ul>
+                            <li><a href="javascript:void(0)">xfbhthhfth</a></li>
+                            <li><a href="javascript:void(0)">fghft</a></li>
+                            <li><a href="javascript:void(0)">fghthj</a></li>
+                            <li><a href="javascript:void(0)">dxfhgfjhjcfgj</a></li>
+                        </ul>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </nav>
+        <div class="top">
+            <div class="top-title">
+                <h2>App Store中国总榜免费榜Top1500</h2>
+                <p>更新时间<span>2017年7月17日17时17分</span></p>
+                <div class="clear"></div>
+            </div>
+            <div class="top-tool">
+                <ul>
+                    <li>
+                        <span class="top-tool-nav" >设备</span>
+                        <div class="dropdown">
+                            <a class="btn btn-default dropdown-toggle china" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">iPhone<i class="caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>iPhone</li>
+                                <li>iPad</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="top-tool-nav" >地区</span>
+                        <select class="js-example-templating js-states form-control select2-hidden-accessible">
+                            <option value="Alaska">Alaska</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="California">California</option>
+                            <option value="Nevada">Nevada</option>
+                        </select>
+                    </li>
+                    <li>
+                        <span class="top-tool-nav" >榜单</span>
+                        <div class="dropdown">
+                            <a class="btn btn-default dropdown-toggle china" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">免费<i class="caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>免费</li>
+                                <li>付费</li>
+                                <li>畅销</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="top-tool-nav" >类别</span>
+                        <div class="dropdown">
+                            <a class="btn btn-default dropdown-toggle china" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">总榜<i class="caret"></i></a>
+                            <ul class="dropdown-menu more-width" role="menu">
+                                <li>总榜</li>
+                                <li>游戏</li>
+                                <li>商务</li>
+                                <li>教育</li>
+                                <li>生活</li>
+                                <li>娱乐</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="top-tool-nav" >日期</span>
+                        <!--<div class="input-append date form_datetime">
+                            <input size="16" class="Date" type="text" value="" readonly>
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>-->
+                        <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input class="form-control Date" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                        </div>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div class="time-line">
+                <p class="time-line-left">榜单快照</p>
+                <ul class="time-line-right">
+                    <li class="time-point">
+                        <a href="javascript:void(0)">00:00</a>
+                        <div class="time-point-event">
+                            <ul>
+                                <li><a href="javascript:void(0)">zxgddrfh</a></li>
+                                <li><a href="javascript:void(0)">dxhjyfj</a></li>
+                                <li><a href="javascript:void(0)">xhdgtfj</a></li>
+                                <li><a href="javascript:void(0)">zjxdhyk</a></li>
+                            </ul>
+                        </div>
+                        <div class="time-event-height"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">01:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">02:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">03:00</a>
+                        <div class="time-point-event">
+                            <ul>
+                                <li><a href="javascript:void(0)">zxgddrfh</a></li>
+                                <li><a href="javascript:void(0)">dxhjyfj</a></li>
+                                <li><a href="javascript:void(0)">xhdgtfj</a></li>
+                                <li><a href="javascript:void(0)">zjxdhyk</a></li>
+                            </ul>
+                        </div>
+                        <div class="time-event-height"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">04:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">05:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">06:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">07:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">08:00</a>
+                        <div class="time-point-event">
+                            <ul>
+                                <li><a href="javascript:void(0)">zxgddrfh</a></li>
+                                <li><a href="javascript:void(0)">dxhjyfj</a></li>
+                                <li><a href="javascript:void(0)">xhdgtfj</a></li>
+                                <li><a href="javascript:void(0)">zjxdhyk</a></li>
+                            </ul>
+                        </div>
+                        <div class="time-event-height"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">09:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">10:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">11:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">12:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">13:00</a>
+                        <div class="time-point-event">
+                            <ul>
+                                <li><a href="javascript:void(0)">zxgddrfh</a></li>
+                                <li><a href="javascript:void(0)">dxhjyfj</a></li>
+                                <li><a href="javascript:void(0)">xhdgtfj</a></li>
+                                <li><a href="javascript:void(0)">zjxdhyk</a></li>
+                            </ul>
+                        </div>
+                        <div class="time-event-height"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">14:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">15:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">16:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">17:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">18:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">19:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">20:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">21:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">22:00</a>
+                        <div class="time-point-event"></div>
+                    </li>
+                    <li class="time-hr"><hr /></li>
+                    <li class="time-point">
+                        <a href="javascript:void(0)">23:00</a>
+                        <div class="time-point-event">
+                            <ul>
+                                <li><a href="javascript:void(0)">zxgddrfh</a></li>
+                                <li><a href="javascript:void(0)">dxhjyfj</a></li>
+                                <li><a href="javascript:void(0)">xhdgtfj</a></li>
+                                <li><a href="javascript:void(0)">zjxdhyk</a></li>
+                            </ul>
+                        </div>
+                        <div class="time-event-height"></div>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="row">
+                <div class="col-sm-2 col-xs-6">
+                    <div class="con-list">
+                        <div class="list-img"><img src="Images/ima1.png" alt="wangzherongyao"></div>
+                        <ul>
+                            <li>1.王者荣耀</li>
+                            <li>Tencent Mobile Games</li>
+                            <li>相比昨日总榜上升4</li>
+                        </ul>
+                        <div class="count">
+                            <p>游戏1名</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="con-list">
+                        <div class="list-img"><img src="Images/ima1.png" alt="wangzherongyao"></div>
+                        <ul>
+                            <li>1.王者荣耀</li>
+                            <li>Tencent Mobile Games</li>
+                            <li>相比昨日总榜上升4</li>
+                        </ul>
+                        <div class="count">
+                            <p>游戏1名</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="con-list">
+                        <div class="list-img"><img src="Images/ima1.png" alt="wangzherongyao"></div>
+                        <ul>
+                            <li>1.王者荣耀</li>
+                            <li>Tencent Mobile Games</li>
+                            <li>相比昨日总榜上升4</li>
+                        </ul>
+                        <div class="count">
+                            <p>游戏1名</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="con-list">
+                        <div class="list-img"><img src="Images/ima1.png" alt="wangzherongyao"></div>
+                        <ul>
+                            <li>1.王者荣耀</li>
+                            <li>Tencent Mobile Games</li>
+                            <li>相比昨日总榜上升4</li>
+                        </ul>
+                        <div class="count">
+                            <p>游戏1名</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="con-list">
+                        <div class="list-img"><img src="Images/ima1.png" alt="wangzherongyao"></div>
+                        <ul>
+                            <li>1.王者荣耀</li>
+                            <li>Tencent Mobile Games</li>
+                            <li>相比昨日总榜上升4</li>
+                        </ul>
+                        <div class="count">
+                            <p>游戏1名 ▲</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <ul class="search-border">
+                <li>
+                    <div class="li-left"><img src="Images/s_03.gif"></div>
+                    <div class="li-content">
+                        <h5>体重小本-体重记录小管家</h5>
+                        <p>huijun luo</p>
+                        <div class="app-info">
+                            <span class="copyright">健康健美</span>
+                            <span class="phone"><span class="glyphicon glyphicon-phone"></span>iPhone</span>
+                            <span class="compare">相比2017-07-18：<span class="top">▲</span><span class="num">0</span></span>
+                        </div>
+                    </div>
+                    <div class="li-right">
+                        <table class="sear-table">
+                            <tbody>
+                            <tr>
+                                <td>总榜</td>
+                                <td>旅游（免费）</td>
+                            </tr>
+                            <tr>
+                                <td>115</td>
+                                <td>6</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <div class="li-left"><img src="Images/s_06.gif"></div>
+                    <div class="li-content">
+                        <h5>体重小本-体重记录小管家</h5>
+                        <p>huijun luo</p>
+                        <div class="app-info">
+                            <span class="copyright">健康健美</span>
+                            <span class="phone"><span class="glyphicon glyphicon-phone"></span>iPhone</span>
+                            <span class="compare">相比2017-07-18：<span class="down">▲</span><span class="num">0</span></span>
+                        </div>
+                    </div>
+                    <div class="li-right">
+                        <table class="sear-table">
+                            <tbody>
+                            <tr>
+                                <td>总榜</td>
+                                <td>旅游（免费）</td>
+                            </tr>
+                            <tr>
+                                <td>115</td>
+                                <td>6</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <div class="li-left"><img src="Images/s_08.png"></div>
+                    <div class="li-content">
+                        <h5>体重小本-体重记录小管家</h5>
+                        <p>huijun luo</p>
+                        <div class="app-info">
+                            <span class="copyright">健康健美</span>
+                            <span class="phone"><span class="glyphicon glyphicon-phone"></span>iPhone</span>
+                            <span class="compare">相比2017-07-18：<span class="continue">▲</span><span class="num">0</span></span>
+                        </div>
+                    </div>
+                    <div class="li-right">
+                        <table class="sear-table">
+                            <tbody>
+                            <tr>
+                                <td>总榜</td>
+                                <td>旅游（免费）</td>
+                            </tr>
+                            <tr>
+                                <td>115</td>
+                                <td>6</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <div class="li-left"><img src="Images/s_03.gif"></div>
+                    <div class="li-content">
+                        <h5>体重小本-体重记录小管家</h5>
+                        <p>huijun luo</p>
+                        <div class="app-info">
+                            <span class="copyright">健康健美</span>
+                            <span class="phone"><span class="glyphicon glyphicon-phone"></span>iPhone</span>
+                            <span class="compare">相比2017-07-18：<span class="top">▲</span><span class="num">0</span></span>
+                        </div>
+                    </div>
+                    <div class="li-right">
+                        <table class="sear-table">
+                            <tbody>
+                            <tr>
+                                <td>总榜</td>
+                                <td>旅游（免费）</td>
+                            </tr>
+                            <tr>
+                                <td>115</td>
+                                <td>6</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="grint" style=" height: 100px; background: linear-gradient(right, #1E2432 5%, #1E2432 90%,blue 5%);"></div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+<script src="js/select2.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+
+<script type="text/javascript">
+
+            //    地区
+    function formatState (state) {
+        if (!state.id) { return state.text; }
+        var $state = $(
+            '<span><img src="Images/' + state.element.value + '.png" class="img-flag" /> ' + '</span><span>' + state.text + '</span>'
+        );
+        return $state;
+    }
+    $(".js-example-templating").select2({
+        templateResult: formatState,
+        templateSelection: formatState
+    }).change(function () {
+        $(".select2-selection__rendered span:last-child").html("");
+    });
+    $(".select2-selection__rendered span:last-child").html("");
+    $(".select2").width(200);
+
+            //     日期
+    var date = new Date();
+    $(".Date").val(date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate());
+    $.fn.datetimepicker.dates['zh-CN'] = {
+        days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+        daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+        daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
+        months: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+        monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        today: "今天",
+        suffix: [],
+        meridiem: ["上午", "下午"]
+    };
+    $(".form_date").datetimepicker({
+        format: " yyyy-MM-dd",
+        showSecond: false,
+        showMillisec: false,
+        autoclose: true,
+        todayBtn: true,
+        pickerPosition: "bottom-left",
+        language: 'zh-CN',
+        /*daysOfWeekDisabled:'0,6',*/
+        immediateUpdates: true,
+        minView: "month"
+    });
+
+            //    选项框
+    $(".dropdown-menu li").click(function () {
+       var str = $(this).html();
+       $(this).parent().prev().html(str+'<i class="caret"></i>');
+    });
+
+
+            //    时间轴
+    $(".time-point-event ul").parent() .parent().css({background:"#f65d3e"});
+    $(".time-point-event ul").parent().prev().css({color:"#fff"});
+
+
+            //    导航条
+
+    var w = window.innerWidth;
+    if( w < 768){
+        $(".nav-list>li").click(function () {
+            $(this).children("ul").toggle(500);
+        });
+    }else{
+        $(".nav-list>li").mouseenter(function () {
+            $(this).children("span").css({transform:"rotate(180deg)",transition:"0.5s"});
+            $(this).children("ul").css({display:"block",background:"#f65d3e"});
+        }).mouseleave(function () {
+            $(this).children("span").css({transform:"rotate(-180deg)",transition:"0.5s"});
+            $(this).children("ul").css({display:"none"});
+        });
+    }
+    $(window).resize(function () {
+        var w = window.innerWidth;
+        if( w < 768){
+            $(".nav-list>li").click(function () {
+                $(this).children("ul").toggle(500);
+            });
+        }else{
+            $(".nav-list>li").mouseenter(function () {
+                $(this).children("span").css({transform:"rotate(180deg)",transition:"0.5s"});
+                $(this).children("ul").css({display:"block",background:"#f65d3e"});
+            }).mouseleave(function () {
+                $(this).children("span").css({transform:"rotate(-180deg)",transition:"0.5s"});
+                $(this).children("ul").css({display:"none"});
+            });
+        }
+    });
+
+
+
+            //    change 三角
+    $(".top").parent(".compare").css("color","#f33");
+    $(".down").parent(".compare").css("color","#33ba95");
+
+
+
+
+            document.onkeypress = function (event) {
+               var enent = event || window.event;
+               alert(event.keyCode);
+            }
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css3 2D</title>
+    <style>
+        /* translate设置元素移动  50px 是距左50 100px 是距上100 */
+        .translate{ width: 200px; height: 100px; background: #f65d3e; -webkit-transform: translate(50px,100px); transform: translate(50px,100px);}
+        /* rotate设置元素旋转  默认是顺时针旋转，负数则是逆时针
+            默认旋转中心是元素的中心位置，transform-origin（x , y）可设置旋转中心的位置，也可以写一个值transform-origin（10px）
+        */
+        .rotate{ width: 200px; margin-left: 100px; height: 100px; background: #2a6496; -webkit-transform: rotate(30deg); transform: rotate(30deg);}
+        /* scale设置元素扩大和缩小   scale(1,2)参数分别代表x轴和y轴的扩大和缩小倍数,若参数为一个，则代表x轴y轴扩大或缩小相同的倍数 */
+        .scale{ width: 200px; margin: 100px 0 0 100px; height: 100px; background: #00E8D7; -webkit-transform: scale(2,0.5); transform: scale(2,0.5);}
+        /* skew设置元素翻转的方向以及角度  skew(30deg,20deg) 围绕 X 轴把元素翻转 30 度，围绕 Y 轴翻转 20 度。  */
+        .skew{ width: 200px; margin: 100px 0 0 100px; height: 100px; background: #1b6d85; -webkit-transform: skew(30deg,20deg); transform: skew(30deg,20deg);}
+        /* transition设置元素的变化过度属性 （支持IE9及以上）*/
+        .transition{ transform-origin: 0; width: 200px; margin: 100px 0 0 100px; height: 100px; background: #a6e1ec; -webkit-transform: skew(0deg,0deg); transform: skew(0deg,0deg); transition: -webkit-transform 3s, transform 3s;}
+        .transition:hover{  -webkit-transform: skew(30deg,20deg); transform: skew(30deg,20deg);}
+        /* animation设置元素动画  @keyframes 规则用于创建动画，
+
+         animation-name: myfirst;    动画名称
+        animation-duration: 5s;    动画每一周期的持续时间
+        animation-timing-function: linear;   动画速度曲线（默认是easa）
+        animation-delay: 2s;    动画开始时间
+        animation-iteration-count: infinite;   动画执行次数
+        animation-direction: alternate;     动画是否在下一周期逆向地播放（默认是 "normal"）
+        animation-play-state: running;    动画时间之外的状态。（即动画开始之前及结束之后的状态）
+
+         （支持IE9及以上）*/
+        @keyframes myfirst{
+            0%{ background: #92B901; -webkit-transform: rotate(0deg); left: 0; transform: rotate(0deg);}
+            25%{ background: #48C293; -webkit-transform: rotate(20deg); left: 0; transform: rotate(20deg);}
+            50%{ -webkit-transform: rotate(0deg); left: 500px; transform: rotate(0deg);}
+            55%{ -webkit-transform: rotate(0deg); left: 500px; transform: rotate(0deg);}
+            70%{ background: #24C6DA; left: 500px; -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+            100%{ background: #92B901; left: 0; -webkit-transform: rotate(-360deg); transform: rotate(-360deg);}
+        }
+        .animation{ width: 100px; height: 60px; text-align: center; color: #fff; border-radius: 5px; background: #92B901; position: relative; -webkit-animation: myfirst 5s 2s infinite; animation: myfirst 5s 2s infinite;}
+        .animation p{ padding-top: 20px;}
+        .border{ width: 100%; height: 200px; margin: 100px 0 0 100px;}
+
+        @keyframes obj1 {
+            from{ transform: rotate(0deg);}
+            to{ transform: rotate(360deg);}
+        }
+        .obj1{ width: 100px; height: 100px; border-radius: 20px; border: 2px solid #1b6d85; box-shadow: 0 0 15px #24C6DA; animation: obj1 3s linear 1s infinite;}
+
+        @keyframes obj2 {
+            from{ transform: scale(0.5); opacity: 0;}
+            to{ transform: scale(1); opacity: 1;}
+        }
+        .obj2{ width: 100px; height: 100px; margin: 100px 0 0 100px; border-radius: 50%; border: 2px solid #f65d3e; box-shadow: 0 0 15px #cdab4f; animation: obj2 3s linear 1s infinite;}
+
+        @keyframes obj3 {
+            0%{ opacity: 0;}
+            50%{ opacity: 1;}
+            100%{ opacity: 0;}
+        }
+        .obj3{ width: 100px; height: 100px; margin: 100px 0 0 100px; background: #f0ad4e; border-radius: 50%; border: 1px solid #a6e1ec; animation: obj3 1s linear infinite;}
+
+        .stack{ width: 100%;}
+        .more{ position: relative; width: 100px; height: 100px; z-index: 10;}
+        .more img{ border: 2px solid #ccc; border-radius: 5px; box-shadow: 0 0 5px #a6e1ec; z-index: 5; transition: all 1s;}
+        .pre1{ position: absolute; top: 3px; left: 10px;}
+        .pre2{ position: absolute; top: 2px; left: 5px;}
+        .pre3{ position: absolute; top: 0; left: 0;}
+        .left{ transform: rotate(-20deg); left: -20px;}
+        .right{ transform: rotate(20deg); left: 25px;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="translate">translate</div>
+    <div class="rotate">rotate</div>
+    <div class="scale">scale</div>
+    <div class="skew">skew</div>
+    <div class="transition">transition</div>
+    <div class="border">
+        <div class="animation"><p>animation</p></div>
+    </div>
+
+    <div class="obj1">匀速旋转效果</div>
+    <div class="obj2">渐出变大效果</div>
+    <div class="obj3">呼吸灯效果</div>
+
+    <div class="stack">
+        <div class="more">
+            <img class="pre1" src="Images/s_03.gif">
+            <img class="pre2" src="Images/s_06.gif">
+            <img class="pre3" src="Images/s_08.png">
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(".more img").mouseenter(function () {
+        $(".pre1").addClass("right");
+        $(".pre3").addClass("left");
+    }).mouseout(function () {
+        $(".pre1").removeClass("right");
+        $(".pre3").removeClass("left");
+    })
+</script>
+</body>
+</html>

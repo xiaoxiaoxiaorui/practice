@@ -6,13 +6,84 @@
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
     <style type="text/css">
         .table{ margin-top: 30px;}
+        .table thead tr th{ text-align: center; vertical-align: middle;}
+        thead{ background: #f9f9f9;}
+        .dropdown{ width: 40%; position: relative;}
+        .dropdown-menu{ position: absolute; top: 99%; margin-top: 10px;}
+        .glyphicon-triangle-top{ position: absolute; left: 10px; top: -10px;}
     </style>
 </head>
 <body>
 <div class="wrap">
     <div class="container">
         <table class="table">
-
+            <thead>
+            <tr>
+                <th rowspan="2">应用</th>
+                <th colspan="2">排名</th>
+                <th colspan="3">关键词</th>
+                <th rowspan="2">操作</th>
+            </tr>
+            <tr>
+                <th>总榜</th>
+                <th>分类榜</th>
+                <th>全部</th>
+                <th>前三</th>
+                <th>前十</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col-md-1">1</div>
+                        <div class="col-md-4"><img src="Images/tr1.png" alt="tr1"></div>
+                        <div class="col-md-7">
+                            蚂蚁短租
+                            <div class="dropdown">
+                                <a class="btn btn-default dropdown-toggle china" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">中国<i class="caret"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <span class="glyphicon glyphicon-triangle-top"></span>
+                                    <li>中国香港</li>
+                                    <li>中国台湾</li>
+                                    <li>日本</li>
+                                    <li>韩国</li>
+                                    <li>美国</li>
+                                    <li>英国</li>
+                                </ul>
+                            </div>
+                            <!--<div class="dropdown" disabled="disabled">
+                                <a class="btn btn-default dropdown-toggle china" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">iphone<i class="caret"></i></a>
+                            </div>-->
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
         </table>
     </div>
 </div>
@@ -20,7 +91,19 @@
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 <script type="text/javascript">
-
+    var timer = "";
+    $(".china").mouseenter(function () {
+        $(this).parent().addClass("open");
+    }).mouseleave(function () {
+        var tt = $(this);
+        timer = setTimeout(function() { tt.parent().removeClass("open") },100);
+        $(".dropdown-menu").mouseenter(function () {
+            clearTimeout(timer);
+            $(this).parent().addClass("open");
+        }).mouseleave(function () {
+            $(this).parent().removeClass("open") ;
+        });
+    });
 </script>
 </body>
 </html>
