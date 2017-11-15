@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie</title>
+</head>
+<body>
+<script>
+    var today = new Date();
+    var expiredDay = new Date();
+    expiredDay.setTime(today.getTime() + 1000);
+    document.cookie = 'name = sss;expires ='+expiredDay.toGMTString();
+    document.write(document.cookie);
+    /*setInterval(function () {
+        if(document.cookie != ''){
+            document.write(document.cookie);
+        }else {
+            document.write('已失效')
+        }
+    },500);*/
+    console.log("expire day: " + expiredDay.toGMTString());
+    var a = 1;
+</script>
+
+
+</body>
+</html>

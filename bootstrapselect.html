@@ -48,6 +48,15 @@
         <option value="faq" title="Images/icon_calendar.gif">FAQ</option>
         <option value="games" title="Images/icon_calendar.gif">Games</option>
     </select>
+
+
+    <select class="selectpicker" id="sel1">
+        <option>dfhftg</option>
+        <option value="vgj">gyikuo</option>
+        <option value="yguoki">hloi;l</option>
+        <option value="hjl">hblo;</option>
+        <option value="hlo;li">hlo;l</option>
+    </select>
 </div>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -65,7 +74,8 @@
             $(".ddTitle").click(function () {
                 $(".ddChild").css({height:"126px"});
             })
-        })
+        });
+        $('#sel1').children('option').eq(2).attr('selected',true)
     </script>
 </body>
 </html>

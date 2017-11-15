@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- 2017.11.01 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨浏览器事件处理</title>
+</head>
+<body data-page="bb">
+<div id="wrap">
+    <input type="button" id="btn1" value="btn1">
+    <input type="button" id="btn2" value="btn2">
+    <a href="cookie.html" id="Skip">跳转</a>
+</div>
+<script type="text/javascript">
+    var btn1 = document.getElementById('btn1');
+    var btn2 = document.getElementById('btn2');
+    var box = document.getElementById('wrap');
+    var Skip = document.getElementById('Skip');
+    var eventHandle = {
+        //  添加事件
+        addEventHandle:function (element,Type,Handle) {
+            if(element.addEventListener){
+                /* DOM2级事件处理程序*/
+                element.addEventListener(Type,Handle,false);
+            }else if(element.attachEvent()){
+                /* IE事件处理程序（IE8及以下）*/
+                element.attachEvent('on'+Type,Handle);
+            }else{
+                /* 老版本其他两个都不支持的执行DOM0级事件处理 */
+                element['on'+Type]=Handle;
+            }
+        },
+        //  删除事件
+        removeEventHandle:function (element,Type,Handle) {
+            if(element.removeEventListener){
+                element.removeEventListener(Type,Handle,false);
+            }else if(element.detachEvent){
+                element.detachEvent('on'+Type,Handle);
+            }else{
+                element['on'+Type]=Handle;
+            }
+        }
+    };
+    function showBtn1() {
+        alert('This is btn1');
+    }
+    function showBtn2(event) {
+        alert(event.target.id);  //target是目标的意思，可获取关于目标的属性（nodeName节点名称，id）
+        //event.stopPropagation();   // 阻止事件冒泡
+    }
+    function Parent() {
+        alert('This is btn box');
+    }
+    function Skiping(event) {
+        alert(event.target);
+        alert('This is a a element');
+        event.stopPropagation();
+        event.preventDefault();
+    }
+    eventHandle.addEventHandle(btn1,'click',showBtn1);
+    eventHandle.addEventHandle(btn2,'click',showBtn2);
+    eventHandle.addEventHandle(box,'click',Parent);
+    eventHandle.addEventHandle(Skip,'click',Skiping);
+    //eventHandle.removeEventHandle(btn1,'click',showBtn1);
+    //eventHandle.addEventHandle(btn2,'click',showBtn2);
+</script>
+</body>
+</html>

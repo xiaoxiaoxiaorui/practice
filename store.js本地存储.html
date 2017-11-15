@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>本地存储</title>
+</head>
+<body>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/store.legacy.min.js"></script>
+<script>
+    $.ajax({
+        url: 'js/test.json',
+        type: 'get',
+        datatype: 'json',
+        success: function (data) {
+            store.set('user',data);
+        }
+    });
+    store.set('us',{name:'sss'});
+    console.log(store.get('user')[0]);
+    store.each(function (key,val) {
+        console.log(val,'==',key);
+    });
+</script>
+</body>
+</html>

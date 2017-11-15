@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json转化</title>
+</head>
+<body>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    function myEval() {
+        var str = '{ "name": "Violet", "occupation": "character" }';
+        var obj = $.parseJSON(str);  //  将字符串转化为json对象
+        alert(obj);
+        alert(JSON.stringify(obj));   //  将json对象转化为字符串
+    }
+    myEval();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js实现路有</title>
+</head>
+<body>
+<div class="wrap">
+    <button>aa</button>
+    <button>bb</button>
+    <button>cc</button>
+</div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    console.log(window.location.hash = '#aa');
+    function Route() {}
+    Route.prototype.open = function (page,callback) {
+        var arr={};
+        arr[page] = callback;
+    };
+     $('button').click(function () {
+         var con = $(this).html();
+         window.location.hash = '#' + con;
+     });
+    window.addEventListener('hashchange', function() {
+        console.log(location.hash);
+    });
+</script>
+</body>
+</html>

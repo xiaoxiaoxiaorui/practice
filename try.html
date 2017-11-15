@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>try</title>
+    <style>
+        .str{ transform: rotate(0); transition: all 2s 2s; display: inline-block;}
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><a href="">dxfhn</a></li>
+        <li><a href="">xdfhgfh</a></li>
+        <li><a href="">dfhbfghnj</a></li>
+        <li><a href="">dfhggjhg</a></li>
+        <li><a href="">cgnvbnmhm</a></li>
+    </ul>
+    <div id="div1">aaa</div>
+    <div id="div2">bbb</div>
+    <div id="div3">ccc</div>
+    <div class="str">rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</div>
+    <input type="text">
+</div>
+
+
+
+
+<a href=" " >white</a>
+<a href="#/green" >green</a>
+<a href="#/blue" >blue</a>
+<a href="#/yellow" >yellow</a>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<!--<script type="text/javascript">
+
+    //  匿名函数的使用
+    /*for(var i = 1; i<4; i++){
+        !function (i) {
+            var Div = document.getElementById('div'+i);
+            Div.addEventListener('click',function () {
+                alert(i);
+            })
+        }(i);
+    }*/
+
+    for(var i = 1; i<4; i++){
+        (function (i) {
+            var Div = document.getElementById('div'+i);
+            Div.addEventListener('click',function () {
+                alert(i);
+            })
+        })(i);
+    }
+
+    var o = {x:1,y:2},
+        key;
+    var obj = Object.create(o);
+    obj.a = 3;
+    for(key in obj){
+        console.log(key);
+    }
+
+    var str = '5562 lkdfbvgn jdghjk';
+    console.log(str.replace(/ /g,'-'));
+$('.str').mouseenter(function () {
+    $(this).css('transform','rotate(90deg)')
+})
+
+</script>-->
+<script>
+
+    function Route(){
+    }
+    Route.prototype.open=function(route,callback){
+        var arr={};
+        arr[route]=callback;
+
+        window.addEventListener('hashchange',function(){
+            var temp=window.location.hash;
+            for(var i in arr){
+                if(i==temp.slice(1,temp.length)){
+                    arr[i]();
+                }
+            }
+        })
+    };
+    window.Route=new Route();
+
+
+    function change(color){
+        var body=document.getElementsByTagName('body')[0];
+        body.style.backgroundColor=color;
+        console.log(color);
+    }
+
+    Route.open('/',function(){
+        change('');
+    });
+    Route.open('/green',function(){
+        change('green');
+    });
+    Route.open('/blue',function(){
+        change('blue');
+    });
+    Route.open('/yellow',function(){
+        change('yellow');
+    });
+
+</script>
+</body>
+</html>

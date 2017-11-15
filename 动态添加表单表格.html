@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态添加表单表格</title>
+    <style>
+        table{ width: 400px; border-top: 1px solid #ccc; border-left: 1px solid #ccc;}
+        thead{ background: #2e8ded; height: 30px; color: #FFF;}
+        tr{ height: 30px; text-align: center; border-bottom: 1px solid #ccc;}
+        td{ text-align: center; border-right: 1px solid #ccc; height: 30px; padding: 0;}
+        th{ text-align: center;}
+    </style>
+</head>
+<body>
+<div class="table">
+    <table>
+        <thead>
+        <tr>
+            <th>添加列表</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <form method="get" action="focus.html">
+                <td>ID</td>
+                <td><input type="text" name="aa"></td>
+                <td>名称</td>
+                <td><button type="submit">提交</button></td>
+            </form>
+        </tr>
+        <tr class="Btn">
+            <td><button class="add">点击添加</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.add').click(function () {
+        var TR = '<tr><form method="get" action="focus.html" class="FORM">'+'<td>ID</td><td><input type="text" name="aa"></td><td>名称</td><td><form method="get" action="checkbox颜色.html"><button type="submit">提交</button></form></td>'+'</form></tr>';
+        $('.Btn').before(TR);
+    })
+</script>
+</body>
+</html>

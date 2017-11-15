@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html" charset="UTF-8">
+    <title>ajax调用json数据</title>
+    <style>
+        .flagimg img{ width: 26px; height: 16px;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div id="container" class="GlobalRanking"></div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="https://cdn.hcharts.cn/highmaps/highmaps.js"></script>
+<script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+<script>
+    function Global( data,title) {
+        var map = {
+            title:{
+                text:title,
+                style:{
+                    fontSize:"14px",
+                    fontFamily:'Microsoft YaHei'
+                }
+            },
+            mapNavigation: {  //地图导航器
+                enabled: true
+            },
+            colorAxis: {
+                min: 1,
+                max: 1500,
+                minColor: '#0eba91',
+                maxColor: '#d3f6f0'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                verticalAlign: 'bottom'
+            },
+            credits:{
+                enabled:false//隐藏右下角网址
+            },
+            series: [{
+                mapData: Highcharts.maps['custom/world'],
+                joinBy: 'name',
+                name: 'Population density',
+                data:data,
+                borderColor: "#cccccc",
+                borderWidth: 0.2,
+                states: {
+                    hover: {
+                        color: '#a4edba'
+                    }
+                }
+            }],
+            tooltip: {
+                useHTML: true,
+                headerFormat: '',
+                pointFormat: '<span class="flagimg"><img src="{point.src}"><span class="flagtext">{point.name}: <span>{point.Category} {point.value}</span></span></span>'
+            }
+        };
+        return map;
+    }
+    $.ajax({
+        type:'GET',
+        url:'js/test.json',
+        dataType:'json',
+        success:function (data) {
+            var dat1 = [];
+            for(var i = 0;i<data.dat1.length;i++){
+                var dd = {
+                    name : data.dat1[i].name,
+                    src : data.dat1[i].src,
+                    Category : data.dat1[i].Category,
+                    value : data.dat1[i].value
+                };
+                dat1.push(dd);
+            }
+            var D = {
+                title : data.title,
+                datt: dat1
+            };
+            $(".GlobalRanking").highcharts("Map",Global(D.datt,D.title));
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.status);  // 状态码
+            alert(XMLHttpRequest.readyState);
+            alert(textStatus);
+        }
+
+    })
+</script>
+</body>
+</html>

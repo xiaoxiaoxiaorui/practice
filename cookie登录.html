@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie登录</title>
+</head>
+<body>
+<div class="wrap">
+    <form>
+        <label for="Name">登录</label>
+        <input type="text" id="Name" placeholder="请输入用户名">
+        <label for="Password">密码</label>
+        <input type="password" id="Password" placeholder="请输入密码">
+        <label for="Check">记住密码</label>
+        <input type="checkbox" id="Check" placeholder="">
+        <button type="button" value="登录" id="Login">登录</button>
+    </form>
+</div>
+<script>
+    document.getElementById('Login').onclick = function () {
+        login();
+    };
+    document.getElementById('Name').onblur = function () {
+        GetCookieHistory();
+    };
+    //  点击登录按钮获取姓名及密码
+    function login() {
+        var UserName = document.getElementById('Name').value;
+        var PSWord = document.getElementById('Password').value;
+        if(document.getElementById('Check').checked == true){
+            var Times = new Date();
+            Times.setTime(Times.getTime() + 1000*60*60);  // 设置时间为一小时
+            SetCookie(UserName,PSWord,Times);
+            alert(UserName);
+            alert(PSWord);
+            alert('已保存');
+        }
+    }
+    //   存储数据
+    function SetCookie(name,value,expires) {
+        document.cookie = name + "=" + value + "; expires=" + expires.toGMTString();
+    }
+    //   失去焦点时所输入的名字存在则自动填入密码
+    function GetCookieHistory() {
+        var UserName = document.getElementById('Name').value;
+        var PSWord = SearchName(UserName);
+        if(PSWord != null){
+            document.getElementById('Password').value = PSWord;
+            document.getElementById('Check').checked = true;
+        }else{
+            alert('没有这个数据的记录');
+            document.getElementById('Password').value = '';
+            document.getElementById('Check').checked = false;
+        }
+    }
+    //    判断输入的名字是否存在
+    function SearchName(Name) {
+        var UserName = Name + "=";
+        var CookieStr = document.cookie;
+        var UserLen = UserName.length;
+        var CookieLen = CookieStr.length;
+        var i = 0;
+        while (i<CookieLen){
+            var j = i + UserLen;
+            if(CookieStr.substring(i,j) == UserName) return GetCookieVal(j);
+            i = CookieStr.indexOf(" ",i) + 1;
+            if(i == 0) break;
+        }
+        return null;
+    }
+    //    若存在继续查找名字所对应的密码
+    function GetCookieVal(Order) {
+        var EndStr = document.cookie.indexOf(";",Order);
+        if(EndStr == -1) EndStr = document.cookie.length;
+        var Str = document.cookie.substring(Order,EndStr);
+        return Str;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" width = device-width,initial-scale = 1, maximum-scale=1">
+    <title>登录注册</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .wrap{ width: 100%; height: 100%; background: #ccc;}
+        :focus { outline: 0;}
+        .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{ outline: 0;}
+        .form-group{ position: relative;}
+        .ToolTip{ position: absolute; right: 0; top:-4px;}
+        .Tip{ padding: 3px 8px; position: relative; background: #5a5a5a; font-size: 12px; color: #fff; border-radius: 5px;}
+        .Tip span{ position: absolute; bottom: -10px; right: 15px; border-bottom: 5px solid transparent; border-top: 5px solid #5a5a5a; border-left: 5px solid transparent; border-right: 5px solid transparent;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="Box">
+
+        <button type="button" data-toggle="modal" data-target=".LoginUp">SignUp</button>
+        <button type="button" data-toggle="modal" data-target=".LoginIn">SignIn</button>
+
+        <div class="modal fade LoginUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <form method="get" action="">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title myModalLabel">Sign Up</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input id="Email" type="email" class="form-control" placeholder="Name" title="请输入6位用户名">
+                                <div class="ToolTip">
+                                    <div class="Tip">
+                                        用户名错误
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" placeholder="Password" title="请输入6位数密码">
+                                <div class="ToolTip">
+                                    <div class="Tip">
+                                        密码错误
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade LoginIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <form method="get" action="">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title myModalLabel">Sign In</h4>
+                        </div>
+                        <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Name</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                                    <div class="ToolTip">
+                                        <div class="Tip">
+                                            用户名错误
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <div class="ToolTip">
+                                        <div class="Tip">
+                                            密码错误
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>xzvgfh</p>
+    <p>hui chu xian me</p>
+</div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/reconnecting-websocket.min.js"></script>
+<script>
+    var ws =  new  ReconnectingWebSocket("ws://echo.全屏登录注册页面.org/");
+    ws.open = function(event){alert("已经与服务器建立了连接rn当前连接状态："+this.readyState)};
+    ws.onmessage = function(event){alert("接收到服务器发送的数据：rn"+event.data);};
+    ws.onclose = function(event){alert("已经与服务器断开连接rn当前连接状态："+this.readyState);};
+    ws.onerror = function(event){alert("WebSocket异常！");}
+</script>
+</body>
+</html>

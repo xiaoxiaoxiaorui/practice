@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>compare</title>
+</head>
+<body>
+<textarea cols="40" rows="20"></textarea>
+<input class="Change" type="button" value="change">
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    function trim(s){
+        return s.replace(/(^\s*)|(\s*$)/g,"");
+    }
+    function unique(arr){
+// 遍历arr，把元素分别放入tmp数组(不存在才放)
+        var tmp = new Array();
+        for(var i in arr){
+//该元素在tmp内部不存在才允许追加
+            if(tmp.indexOf(arr[i])==-1 && arr[i]!='' && arr[i]!= undefined){
+                tmp.push(arr[i]);
+            }
+        }
+        return tmp;
+    }
+    $('.Change').click(function () {
+        var strr = $('textarea').val();
+        var str = strr.replace(/，/g,',');
+        var ss = str.split('\n');
+        var i =0;
+        var New = '';
+        var cc = '';
+        var NewStr = '';
+        var Change = '';
+        console.log(ss)
+        for(i; i<ss.length; i++){
+            ss[i] = trim(ss[i]).replace(/(^,*)|(,$)/g,'');
+            console.log(ss[i])
+            var Split2 = ss[i].split(',');
+            for(var j =0;j<Split2.length;j++){
+                if(j == Split2.length - 1){
+                    cc = trim(Split2[j]).replace(/^,*/g,'');
+                }else{
+                    cc = trim(Split2[j]).replace(/^,*/g,'') + ',';
+                }
+                New = New +cc;
+            }
+            NewStr = New.split(',');
+            New = unique(NewStr);
+            console.log(New)
+            New = New + '\n';
+        }
+        NewStr = New.split("\n");
+        New = unique(NewStr);
+        for( var n = 0; n<New.length; n++){
+            if(n == New.length - 1){
+                var dd = New[n];
+            }else{
+                dd = New[n] + '\n';
+            }
+            Change += dd;
+        }
+        $('textarea').val(Change);
+    });
+</script>
+</body>
+</html>

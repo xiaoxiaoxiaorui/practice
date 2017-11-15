@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+</head>
+<body>
+<div id="wrap">
+    <input type="button" id="btn1" value="btn1">
+    <input type="button" id="btn2" value="btn2">
+    <a href="../cookie.html" id="Skip">跳转</a>
+</div>
+<script src="event.js"></script>
+<script>
+    var go = document.getElementById('Skip');
+    var box = document.getElementById('wrap');
+    function GOto(event) {
+        event.stopPropagation(event);
+        event.preventDefault(event);
+        alert('this is a a element');
+        event = eventHandle.getEvent(event);
+        alert(eventHandle.getType(event));
+        alert(eventHandle.getTarget(event));
+    }
+    function Box() {
+        alert('This is a parent box')
+    }
+    eventHandle.addEventHandle(go,'click',GOto);
+    eventHandle.addEventHandle(box,'click',Box);
+</script>
+</body>
+</html>

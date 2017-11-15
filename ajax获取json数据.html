@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax获取json数据</title>
+</head>
+<body>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    $.getJSON('js/test.json',function (data) {
+        var arr = [];
+        var Html = '';
+        $.each(data,function (index) {
+            var con = [];
+            Html = "name:" + data[index].name;
+            con.push(Html);
+            Html = "value:" + data[index].value;
+            con.push(Html);
+            arr.push(con);
+        });
+        console.log(arr);
+    });
+</script>
+</body>
+</html>

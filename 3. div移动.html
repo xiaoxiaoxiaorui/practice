@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 2017.11.02 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标拖拽div移动</title>
+    <style type="text/css">
+        *{ margin: 0; padding: 0; border: none; list-style: none;}
+        #wrap{ height: 100vh; background: #f9f2f4; position: relative;}
+        #drag{ width: 200px; height: 100px; background: #f7ecb5; position: absolute; top: 0; left: 0;}
+    </style>
+</head>
+<body data-page="cc">
+<div id="wrap" class="dd">
+    <div id="drag" onmousedown="MusDown(event)"></div>
+</div>
+<script>
+    var Box = document.getElementById('wrap');
+    var Drag = document.getElementById('drag');
+    /*window.onload = drag();
+    function drag() {
+        Drag.onmousedown = MusDown;
+    }*/
+    function MusDown(event) {
+//        按下鼠标时鼠标和被拖拽div之间的距离
+        var Left = event.clientX - Drag.offsetLeft,
+            Top = event.clientY - Drag.offsetTop;
+        //  鼠标移动
+        document.onmousemove = function (event) {
+            event = event || window.event;
+            MusMove(event,Left,Top);
+
+        };
+        //  释放鼠标
+        document.onmouseup = function () {
+            document.onmousemove = null;
+            document.onmouseup = null;
+        }
+    }
+    function MusMove(e,Left,Top) {
+        var L = e.clientX - Left,
+            T = e.clientY - Top,
+            WinW = document.documentElement.clientWidth || document.body.clientWidth,  //  两者都可以获取页面可见宽度，但有些情况前者会为0
+            WinH = document.documentElement.clientHeight || document.body.clientHeight,
+            maxL = WinW - Drag.offsetWidth,  //  对于已设置元素宽高可用element.style.width来获取，对于未设置的可以用element.offsetWidth来获取，且后者在已设置宽高的情况下同样可以获取到
+            maxT = WinH - Drag.offsetHeight;
+        if(L > maxL){
+            L = maxL;
+        }else if(L<0){
+            L = 0;
+        }
+        if(T > maxT){
+            T = maxT;
+        }else if(T<0){
+            T = 0;
+        }
+        Drag.style.left = L + 'px' ;
+        Drag.style.top = T + 'px' ;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- 2017.11.01 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>audio</title>
+</head>
+<body data-page="aa">
+<audio src="audio/薛之谦%20-%20别.mp3" id="media"></audio>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    /*$('.media').play();*/
+    var Media = document.getElementById('media');
+    Media.play();
+    Media.controls = true;
+    console.dir(Media)
+</script>
+</body>
+</html>
