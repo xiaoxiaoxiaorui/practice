@@ -1,78 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/5.js实现路由.html" line="22" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="cb771eae-60b5-463c-8739-39796066903f" name="Default" comment="新添加了一些新的功能效果页面">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1. audio.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2. 事件处理.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3. div移动.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/4. 键盘切换选项.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/5.js实现路由.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax获取json数据.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax调用json数据.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/薛之谦 - 别.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkbox颜色.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookie.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookie登录.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/event/event.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/event/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/focus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/line.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/power.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/reconnecting-websocket.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/store.legacy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/store.legacy.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/test.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json转化.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js举例.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/conventional-commit-types/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/conventional-commit-types/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/conventional-commit-types/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/conventional-commit-types/index.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/conventional-commit-types/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/cz-conventional-changelog/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/cz-conventional-changelog/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/cz-conventional-changelog/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/cz-conventional-changelog/engine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/cz-conventional-changelog/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/cz-conventional-changelog/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/lodash.map/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/lodash.map/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/lodash.map/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/lodash.map/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/longest/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/longest/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/longest/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/longest/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/right-pad/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/right-pad/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/right-pad/examples/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/right-pad/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/right-pad/rightpad.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/word-wrap/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/word-wrap/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/word-wrap/index.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/word-wrap/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/word-wrap/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/store.js本地存储.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/try.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/websocket-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/websocket.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/全屏登录注册页面.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/动态添加表单表格.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/悬浮图片.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/比较两句英文字母是否完全相等.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raiditem-Gold_files" afterPath="$PROJECT_DIR$/raiditem-Gold_files" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrapselect.html" afterPath="$PROJECT_DIR$/bootstrapselect.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loading动画.html" afterPath="$PROJECT_DIR$/loading动画.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/下拉框.html" afterPath="$PROJECT_DIR$/下拉框.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/try.html" afterPath="$PROJECT_DIR$/try.html" />
     </list>
+    <list id="4d4817fc-96ed-4864-8437-046ca20b28c6" name="Failed commit: Default" comment="test commit" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -132,24 +66,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="try.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="try.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/try.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="70" column="8" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+            <state relative-caret-position="428">
+              <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
               <folding>
-                <element signature="e#794#1617#0" expanded="false" />
+                <element signature="e#580#1403#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="5.js实现路由.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/5.js实现路由.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -205,8 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/idangerous.swiper.js" />
-        <option value="$PROJECT_DIR$/waitting.html" />
         <option value="$PROJECT_DIR$/waitting-eyes.html" />
         <option value="$PROJECT_DIR$/css3  2D转换.html" />
         <option value="$PROJECT_DIR$/幽灵按钮.html" />
@@ -250,12 +172,14 @@
         <option value="$PROJECT_DIR$/div移动.html" />
         <option value="$PROJECT_DIR$/audio.html" />
         <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/try.html" />
         <option value="$PROJECT_DIR$/1. audio.html" />
         <option value="$PROJECT_DIR$/4. 键盘切换选项.html" />
         <option value="$PROJECT_DIR$/3. div移动.html" />
         <option value="$PROJECT_DIR$/2. 事件处理.html" />
         <option value="$PROJECT_DIR$/5.js实现路由.html" />
+        <option value="D:/Users/Administrator/Desktop/top-tool.css" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/try.html" />
       </list>
     </option>
   </component>
@@ -289,7 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -305,11 +228,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/我的项目/MusicApp" />
+    <property name="last_opened_file_path" value="E:/项目最终版/raiditem-Gold_files" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.selected.package.jscs" value="" />
@@ -322,15 +246,15 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\practice\try" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\practice\try\Images" />
       <recent name="E:\practice\try" />
       <recent name="E:\practice\try\audio" />
       <recent name="E:\practice\try\js" />
-      <recent name="E:\practice\try\Images" />
       <recent name="E:\practice\try\css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\practice\try" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -408,6 +332,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -523,7 +450,9 @@
       <workItem from="1510623753512" duration="7955000" />
       <workItem from="1510657306843" duration="889000" />
       <workItem from="1510711896481" duration="3447000" />
-      <workItem from="1510716857181" duration="224000" />
+      <workItem from="1510716857181" duration="4187000" />
+      <workItem from="1510797090690" duration="9099000" />
+      <workItem from="1510883847109" duration="4746000" />
     </task>
     <task id="LOCAL-00001" summary="不知道上传到那个库了">
       <created>1498533597513</created>
@@ -553,11 +482,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504077407730</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test commit">
+      <created>1510829299058</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1510829299058</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="683360000" />
+    <option name="totallyTimeSpent" value="701168000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,24 +506,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19336143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="25" y="65" width="367" height="906" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19968387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="25" y="65" width="367" height="906" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.50421494" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.50632244" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.5126449" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32781458" sideWeight="0.5126449" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.49367756" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32781458" sideWeight="0.4873551" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +554,8 @@
     <MESSAGE value="不知道上传到那个库了" />
     <MESSAGE value="新添加了一些新的功能效果页面，关于aso100网站的一些效果" />
     <MESSAGE value="新添加了一些新的功能效果页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="新添加了一些新的功能效果页面" />
+    <MESSAGE value="test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -627,42 +564,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tsconfig.json" />
-    <entry file="file://$PROJECT_DIR$/focus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/迷你图.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="64" column="7" lean-forward="false" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/小图标轮播.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5676">
-          <caret line="258" column="31" lean-forward="false" selection-start-line="258" selection-start-column="31" selection-end-line="258" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/下拉框.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="117" column="9" lean-forward="false" selection-start-line="117" selection-start-column="9" selection-end-line="117" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/select2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -958,21 +859,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/try.html">
+    <entry file="file://D:/Users/Administrator/Desktop/Details.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="70" column="8" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
-          <folding>
-            <element signature="e#794#1617#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Users/Administrator/Desktop/top-tool.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-836">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/5.js实现路由.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/longest/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/des2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/try.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+          <folding>
+            <element signature="e#580#1403#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

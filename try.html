@@ -14,33 +14,6 @@
     </style>
 </head>
 <body>
-<div class="AppShow">
-    <div class="swiper-container">
-        <a class="swiper-button-next"><span class="swiper-next"> > </span></a>
-        <a class="swiper-button-prev"><span class="swiper-prev"> <  </span></a>
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des1.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des2.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des3.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des4.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des1.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des2.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des3.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des4.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des3.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des4.png"></div></div>
-            <!--<div class="swiper-slide"><div class="SldImg"><img src="Images/des5.jpg"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des9.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des5.jpg"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des6.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des7.png"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des8.jpg"></div></div>
-            <div class="swiper-slide"><div class="SldImg"><img src="Images/des9.png"></div></div>-->
-            <!--<div class="clear"></div>-->
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</div>
 
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/idangerous.swiper.js"></script>
@@ -81,27 +54,24 @@ $('.str').mouseenter(function () {
 
 </script>-->
 <script>
-    var swiper = new Swiper(".swiper-container",{
-        pagination: '.swiper-pagination',
-        loop:false,
-        grabCursor: true,
-        paginationClickable: true,
-        slidesPerGroup:1,
-        slidesPerView:'auto',
-        /*resistance:'100%',
-        momentumBounce:false,*/
-        autoplayDisableOnInteraction:true,
-        autoplay: false
-    });
-    $('.swiper-button-prev').on('click', function(e){
-        /*e.preventDefault();*/
-        swiper.swipePrev()
-    });
-    $('.swiper-button-next').on('click', function(e){
-        /*e.preventDefault();*/
-        swiper.swipeNext()
-    });
-
+    var num = '[{"price_id":"1",' +
+                '"price_num":"41",' +
+                '"price_1":"500|1000",' +
+                '"price_2":"1000|1000",' +
+                '"price_3":"2500|1000",' +
+                '"price_4":"5000|1000",' +
+                '"price_5":"5000|1000",' +
+                '"price_6":"5000|1000",' +
+                '"price_7":"5000|1000",' +
+                '"price_8":"5000|1000",' +
+                '"price_9":"5000|1000",' +
+                '"price_10":"5000|1000"}]';
+    var arr = JSON.parse(num);
+    console.log(arr);
+    console.log(arr instanceof  Array);  // arr是一个数组
+    console.log(arr[0]);
+    console.log(arr[0] instanceof  Array);  //  arr[0]是一个对象
+    console.log(typeof parseInt(arr[0].price_num))
 </script>
 </body>
 </html>
