@@ -3,35 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>try</title>
+    <link href="css/idangerous.swiper.css" rel="stylesheet">
     <style>
-        .str{ transform: rotate(0); transition: all 2s 2s; display: inline-block;}
+        .swiper-container{ height: 320px;}
+        .SldImg{ margin: 0 7px;}
+        .swiper-slide:nth-last-child(1) .SldImg{margin-right: 0;}
+        .AppShow{ border: 3px solid #c9302c;}
+        .swiper-container{ border: 2px solid #0bb995;}
+        .swiper-wrapper{ border: 1px solid #000;}
     </style>
 </head>
 <body>
-<div id="box">
-    <ul>
-        <li><a href="">dxfhn</a></li>
-        <li><a href="">xdfhgfh</a></li>
-        <li><a href="">dfhbfghnj</a></li>
-        <li><a href="">dfhggjhg</a></li>
-        <li><a href="">cgnvbnmhm</a></li>
-    </ul>
-    <div id="div1">aaa</div>
-    <div id="div2">bbb</div>
-    <div id="div3">ccc</div>
-    <div class="str">rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</div>
-    <input type="text">
+<div class="AppShow">
+    <div class="swiper-container">
+        <a class="swiper-button-next"><span class="swiper-next"> > </span></a>
+        <a class="swiper-button-prev"><span class="swiper-prev"> <  </span></a>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des1.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des2.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des3.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des4.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des1.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des2.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des3.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des4.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des3.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des4.png"></div></div>
+            <!--<div class="swiper-slide"><div class="SldImg"><img src="Images/des5.jpg"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des9.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des5.jpg"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des6.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des7.png"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des8.jpg"></div></div>
+            <div class="swiper-slide"><div class="SldImg"><img src="Images/des9.png"></div></div>-->
+            <!--<div class="clear"></div>-->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
 </div>
 
-
-
-
-<a href=" " >white</a>
-<a href="#/green" >green</a>
-<a href="#/blue" >blue</a>
-<a href="#/yellow" >yellow</a>
-
 <script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/idangerous.swiper.js"></script>
 <!--<script type="text/javascript">
 
     //  匿名函数的使用
@@ -69,42 +81,25 @@ $('.str').mouseenter(function () {
 
 </script>-->
 <script>
-
-    function Route(){
-    }
-    Route.prototype.open=function(route,callback){
-        var arr={};
-        arr[route]=callback;
-
-        window.addEventListener('hashchange',function(){
-            var temp=window.location.hash;
-            for(var i in arr){
-                if(i==temp.slice(1,temp.length)){
-                    arr[i]();
-                }
-            }
-        })
-    };
-    window.Route=new Route();
-
-
-    function change(color){
-        var body=document.getElementsByTagName('body')[0];
-        body.style.backgroundColor=color;
-        console.log(color);
-    }
-
-    Route.open('/',function(){
-        change('');
+    var swiper = new Swiper(".swiper-container",{
+        pagination: '.swiper-pagination',
+        loop:false,
+        grabCursor: true,
+        paginationClickable: true,
+        slidesPerGroup:1,
+        slidesPerView:'auto',
+        /*resistance:'100%',
+        momentumBounce:false,*/
+        autoplayDisableOnInteraction:true,
+        autoplay: false
     });
-    Route.open('/green',function(){
-        change('green');
+    $('.swiper-button-prev').on('click', function(e){
+        /*e.preventDefault();*/
+        swiper.swipePrev()
     });
-    Route.open('/blue',function(){
-        change('blue');
-    });
-    Route.open('/yellow',function(){
-        change('yellow');
+    $('.swiper-button-next').on('click', function(e){
+        /*e.preventDefault();*/
+        swiper.swipeNext()
     });
 
 </script>
