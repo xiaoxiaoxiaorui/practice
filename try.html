@@ -2,76 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>try</title>
     <link href="css/idangerous.swiper.css" rel="stylesheet">
     <style>
-        .swiper-container{ height: 320px;}
-        .SldImg{ margin: 0 7px;}
-        .swiper-slide:nth-last-child(1) .SldImg{margin-right: 0;}
-        .AppShow{ border: 3px solid #c9302c;}
-        .swiper-container{ border: 2px solid #0bb995;}
-        .swiper-wrapper{ border: 1px solid #000;}
+        html{ font-size: 100%;}
+        .FontRem{ font-size: 3rem;}
+        .FontPx{ font-size: 48px;}
     </style>
 </head>
 <body>
-
+<p class="FontRem">发你的了南方V领股以后把</p>
+<p class="FontPx"> VB你女孩帮你们还没回家模糊</p>
+<div class="boy"></div>
+<button class="btn"></button>
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/idangerous.swiper.js"></script>
-<!--<script type="text/javascript">
-
-    //  匿名函数的使用
-    /*for(var i = 1; i<4; i++){
-        !function (i) {
-            var Div = document.getElementById('div'+i);
-            Div.addEventListener('click',function () {
-                alert(i);
-            })
-        }(i);
-    }*/
-
-    for(var i = 1; i<4; i++){
-        (function (i) {
-            var Div = document.getElementById('div'+i);
-            Div.addEventListener('click',function () {
-                alert(i);
-            })
-        })(i);
-    }
-
-    var o = {x:1,y:2},
-        key;
-    var obj = Object.create(o);
-    obj.a = 3;
-    for(key in obj){
-        console.log(key);
-    }
-
-    var str = '5562 lkdfbvgn jdghjk';
-    console.log(str.replace(/ /g,'-'));
-$('.str').mouseenter(function () {
-    $(this).css('transform','rotate(90deg)')
-})
-
-</script>-->
 <script>
-    var num = '[{"price_id":"1",' +
-                '"price_num":"41",' +
-                '"price_1":"500|1000",' +
-                '"price_2":"1000|1000",' +
-                '"price_3":"2500|1000",' +
-                '"price_4":"5000|1000",' +
-                '"price_5":"5000|1000",' +
-                '"price_6":"5000|1000",' +
-                '"price_7":"5000|1000",' +
-                '"price_8":"5000|1000",' +
-                '"price_9":"5000|1000",' +
-                '"price_10":"5000|1000"}]';
-    var arr = JSON.parse(num);
-    console.log(arr);
-    console.log(arr instanceof  Array);  // arr是一个数组
-    console.log(arr[0]);
-    console.log(arr[0] instanceof  Array);  //  arr[0]是一个对象
-    console.log(typeof parseInt(arr[0].price_num))
+
+    var tem = new Date();
+    function f() {
+        console.log(tem);
+        if(true){
+            var tem = 'aa';
+        }
+    }
+    f();
 </script>
 </body>
 </html>
