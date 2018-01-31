@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉框</title>
+</head>
+<body>
+<div class="wrap">
+    <select class="select1" id="changeCurrency">
+        <option value="">szgdfdxg</option>
+        <option value="">vnbgfvnc</option>
+        <option value="" selected="selected">gjhjblkj,</option>
+        <option value="">dfcgsdfrh</option>
+        <option value="">cf,jhnm </option>
+        <option value="">dxfhgft</option>
+        <option value="">gvhkbm</option>
+        <option value="">c vmbn,</option>
+        <option value="">vmbn,n</option>
+        <option value="">vbmjhk</option>
+    </select>
+    <select class="select2" id="s_type" onchange="SelectChange()">
+        <option value="">szgdfdxg</option>
+        <option value="" selected="selected">vnbgfvnc</option>
+        <option value="">gjhjblkj,</option>
+        <option value="">dfcgsdfrh</option>
+        <option value="">cf,jhnm </option>
+        <option value="">dxfhgft</option>
+        <option value="">gvhkbm</option>
+        <option value="">c vmbn,</option>
+        <option value="">vmbn,n</option>
+        <option value="">vbmjhk</option>
+    </select>
+</div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    /*$('.select1').on('change',function () {
+        var Index = $(this).children('option:selected').index();
+        $($('.select2').children('option')[Index]).attr('selected','selected');
+    });*/
+    function SelectChange() {
+        var Index = $('#s_type').children('option:selected').index();
+        $($('#changeCurrency').children('option')[Index]).attr('selected','selected');
+    }
+</script>
+<script>
+    $("#se1,#se2,#se3").change(function(){
+        var se1 = $("#se1").val();
+        var se2 = $("#se2").val();
+        var se3 = $("#se3").val();
+        $.get('ajax_2290.php',{s1:se1,s2:se2,s3:se3},function(data){
+            var k = data.indexOf('|');
+            var price = data.substr(0, k);
+            var times = data.substr(k+1);
+            $("#times").html(times);
+            $("#totalPrice").html(price);
+        });
+    });
+
+    function totalPrice() {
+        var se1 = $("#se1").val();
+        var se2 = $("#se2").val();
+        var se3 = $("#se3").val();
+        $.get('ajax_2290.php',{s1:se1,s2:se2,s3:se3},function(data){
+            var k = data.indexOf('|');
+            var price = data.substr(0, k);
+            var times = data.substr(k+1);
+            $("#times").html(times);
+            $("#totalPrice").html(price);
+        });
+    }
+    totalPrice();
+</script>
+</body>
+</html>

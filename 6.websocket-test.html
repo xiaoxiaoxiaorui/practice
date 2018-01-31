@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket-test</title>
+</head>
+<body>
+<button onclick="connect()">连接</button>
+<input type="text" class="userName" placeholder="用户名" />
+<input type="text" class="honeId" placeholder="房间号" />
+<button onclick="creat()">创建房间</button>
+<button onclick="join()">加入房间</button>
+<input type="text" class="message" placeholder="聊天" />
+<button onclick="send()">发送</button>
+<h2 class="homeContent"></h2>
+<h2 class="userContent"></h2>
+<div class="msgContent">
+    <h2>聊天信息：</h2>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script>
+    var socket,homeID,i;
+    function connect(){
+        var host = 'ws://192.168.196.91:9502';
+        socket = new WebSocket(host);
+        socket.onopen = function(e){
+            alert('连接成功')
+        };
+        socket.onmessage = function (e) {
+            var data = JSON.parse(e.data);
+            console.log(data)
+            if(data.type == "create-home"){
+                if(data.result == "OK"){
+                    homeID = data.data.home_id;
+                    /*var users = data.data.user.name;*/
+                    $('.homeContent').text("房间号："+homeID);
+                }
+            }else if(data.type == "join-home"){
+                homeID = data.data.home_id;
+                $('.homeContent').text("房间号："+homeID);
+            }else if(data.type == "msg"){
+                var messageContent = data.data.msg;
+                $('.msgContent').append("<span>"+ messageContent +"</span><br />")
+            }else if(data.type == "new-user"){
+                console.log(data);
+                var newUser = data.data.user.name;
+                $('.msgContent').append("<span>欢迎 "+ newUser +" 进入房间！</span><br />")
+            }else if(data.type == "online"){
+                console.log(data);
+                $('.userContent').text('');
+                for(i in data.data.users){
+                    $('.userContent').append("<sapn>"+ data.data.users[i].name +"</sapn><br />");
+                }
+            }else if(data.type == "out"){
+                console.log(data);
+                var outUser = data.data.user.name;
+                $('.msgContent').append("<span>"+ outUser +" 离开房间！</span><br />")
+            }
+        }
+    }
+    function send() {
+        var msg = $('.message').val();
+        socket.send(JSON.stringify({
+            type: "msg",
+            msg: msg
+        }));
+    }
+    function creat() {
+        var username = $('.userName').val();
+        socket.send(JSON.stringify({
+            type: "create-home",
+            name: username
+        }));
+    }
+    function join() {
+        var username = $('.userName').val();
+        var homeid = $('.honeId').val();
+        if(username && homeid){
+            socket.send(JSON.stringify({
+                type: "join-home",
+                home_id: homeid,
+                name: username
+            }));
+        }else{
+            alert("请补全信息")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>redux</title>
+</head>
+<body>
+<div class="wrap">
+
+</div>
+<script src="//cdn.bootcss.com/redux/3.5.2/redux.min.js"></script>
+<script>
+    function inc() {
+        return { type: 'INCREMENT' };
+    }
+    function dec() {
+        return { type: 'DECREMENT' };
+    }
+
+    function reducer(state,action) {
+        state = state || { counter : 0};
+         switch( action.type ){
+             case 'INCREMENT':
+                 return { counter: state.counter + 1 };
+             case 'DECREMENT':
+                 return { counter: state.counter - 1 };
+             default:
+                 return state;
+         }
+    }
+
+    var store = Redux.createStore(reducer);
+
+    console.log( store.getState() ); // { counter: 0 }
+
+    store.dispatch(inc());
+    console.log( store.getState() ); // { counter: 1 }
+
+    store.dispatch(inc());
+    console.log( store.getState() ); // { counter: 2 }
+
+    store.dispatch(dec());
+    console.log( store.getState() ); // { counter: 1 }
+</script>
+</body>
+</html>

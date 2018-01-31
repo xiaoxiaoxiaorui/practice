@@ -5,6 +5,7 @@
     <title>nicescroll</title>
     <style type="text/css">
         .wrap{ width: 100px; height: 200px; overflow: hidden;}
+        .wrap ul{ height: 200px;}
     </style>
 </head>
 <body>
@@ -22,10 +23,16 @@
         <li>fcxjhkj</li>
     </ul>
 </div>
-<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 <script>
-    $(".wrap").niceScroll({});
+    $(".wrap ul").niceScroll({
+        cursorcolor:"aquamarine",
+        grabcursorenabled: true,
+        background:"rgba(20,20,20,0.3)",
+        /*touchbehavior:true,*/
+        cursordragontouch: true,
+    });
 </script>
 </body>
 </html>

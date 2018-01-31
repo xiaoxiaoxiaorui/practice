@@ -44,11 +44,12 @@
         var host = "ws://" + ID("serverIP").value + ":" + ID("serverPort").value + "/";
         socket = new WebSocket(host);
         try {
+            //  连接成功时执行
             socket.onopen = function (msg) {
                 ID("btnConnect").disabled = true;
                 alert("连接成功！");
             };
-
+            //  接收到消息
             socket.onmessage = function (msg) {
                 if (typeof msg.data == "string") {
                     displayContent(msg.data);
@@ -58,14 +59,14 @@
                 }
 
             };
-
+            //  连接关闭时执行
             socket.onclose = function (msg) { alert("socket closed!") };
         }
         catch (ex) {
             log(ex);
         }
     }
-
+//  给服务器发送消息
     function Send() {
         var msg = ID("sendText").value;
         /*socket.send(msg);*/

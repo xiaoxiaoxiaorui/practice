@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try</title>
+    <link href="css/idangerous.swiper.css" rel="stylesheet">
+    <style>
+        html{ font-size: 100%;}
+        .FontRem{ font-size: 3rem;}
+        .FontPx{ font-size: 48px;}
+
+        .box{ width: 200px; background: #0bb995; padding: 20px; box-sizing: border-box;}
+        .list{ min-height: 100%; width: 100%; background: #f9f2f4; list-style: none; padding: 0; margin: 0;}
+    </style>
+</head>
+<body>
+<p class="FontRem">发你的了南方V领股以后把</p>
+<p class="FontPx"> VB你女孩帮你们还没回家模糊</p>
+<div class="box">
+    <ul class="list">
+        <li>ffffff</li>
+        <li>vvvvvvvvvv</li>
+        <li>hhhhhhhhhhh</li>
+        <li>xdfgfh</li>
+        <li>vhk,jh,kj</li>
+        <li>xdfgftghygj</li>
+    </ul>
+</div>
+<div class="boy"></div>
+<button class="btn"></button>
+<input type="text" value="AA" class="test" />
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/idangerous.swiper.js"></script>
+<script>
+
+$(function () {
+
+    var dse = ' i am a girl ';
+    // ('i') 表示匹配的字符串中字母不区分大小写，
+    // ('g')是全局标志 表示该表达式将用来在输入字符串中查找尽可能多的匹配，
+    // ('m')表示在多行中查找，不然只会查找一行也就是查找到\n换行处
+    var tem = dse.replace(/^\s+|\s+$/igm,'');
+    var res = tem.replace(/ /g, '-').toUpperCase();
+    console.log(res)
+})
+
+</script>
+</body>
+</html>
