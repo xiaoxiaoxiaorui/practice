@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找data属性对应的元素</title>
+</head>
+<body>
+<div id="aa1" class="aa" data-name="aa">aa</div>
+<div id="aa2" class="bb">bb</div>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    var ele = $('div[data-name = "aa"]').attr('class');
+    console.log(ele)
+</script>
+</body>
+</html>

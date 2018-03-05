@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素垂直居中</title>
+    <style>
+        /*  高版本浏览器支持，但IE7及以下不兼容  */
+        .parent{ display: table; width: 200px; height: 200px; background: #ccc;}
+        .childer{ display: table-cell; vertical-align: middle;}
+        /*  带 * 的前缀在 IE7 及以下可识别，即此方法可兼容任何版本浏览器  */
+        .middle-box{display: table; height: 300px; border:1px solid #ff0000; width:400px; margin:0 auto; position:relative;}
+        .middle-inner{display: table-cell; vertical-align:middle; *position:absolute; *top:50%; *left:50%; width:100%; text-align:center;}
+        .middle-inner p{position:relative; *top:-50%; *left:-50%;}
+    </style>
+</head>
+<body>
+<span class="parent">
+    <span class="childer">子元素</span>
+</span>
+
+<div class="middle-box">
+    <div class="middle-inner">
+        <p>
+            <span class="suc-tip">前端开发博客，专注前端开发和web教程</span><br/>
+            <span class="suc-link">快捷入口：
+                <a href="http://caibaojian.com">http://caibaojian.com</a>
+            </span>
+        </p>
+    </div>
+</div>
+</body>
+</html>

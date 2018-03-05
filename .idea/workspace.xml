@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb771eae-60b5-463c-8739-39796066903f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/7.元素垂直居中.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8.查找data属性对应的元素.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raiditem-Gold_files" afterPath="$PROJECT_DIR$/raiditem-Gold_files" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/6.websocket-test.html" afterPath="$PROJECT_DIR$/6.websocket-test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkbox颜色.html" afterPath="$PROJECT_DIR$/checkbox颜色.html" />
     </list>
     <list id="4d4817fc-96ed-4864-8437-046ca20b28c6" name="Failed commit: Default" comment="test commit" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -50,11 +50,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="6.websocket-test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="6.websocket-test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/6.websocket-test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
               <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="7.元素垂直居中.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/7.元素垂直居中.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="8.查找data属性对应的元素.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/8.查找data属性对应的元素.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -121,8 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/line.txt" />
-        <option value="$PROJECT_DIR$/focus.html" />
         <option value="$PROJECT_DIR$/下拉框.html" />
         <option value="$PROJECT_DIR$/比较两句英文字母是否完全相等.html" />
         <option value="D:/Users/Administrator/Desktop/WOW Items, Buy WOW Items, WOW BOE Gears - Raiditem_files/common.css" />
@@ -172,6 +190,8 @@
         <option value="$PROJECT_DIR$/websocket-test.html" />
         <option value="$PROJECT_DIR$/6.websocket-test.html" />
         <option value="$PROJECT_DIR$/checkbox颜色.html" />
+        <option value="$PROJECT_DIR$/7.元素垂直居中.html" />
+        <option value="$PROJECT_DIR$/8.查找data属性对应的元素.html" />
       </list>
     </option>
   </component>
@@ -507,7 +527,7 @@
       <workItem from="1519782864914" duration="2033000" />
       <workItem from="1519868428421" duration="849000" />
       <workItem from="1519953742423" duration="663000" />
-      <workItem from="1520214393526" duration="48000" />
+      <workItem from="1520214393526" duration="3519000" />
     </task>
     <task id="LOCAL-00001" summary="不知道上传到那个库了">
       <created>1498533597513</created>
@@ -565,11 +585,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517363908308</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加 websocket-test 页面，是websocket与后台接口对接的练习，checkbox 页面修改，checkbox 样式可修改">
+      <created>1520214599059</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1520214599059</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="833500000" />
+    <option name="totallyTimeSpent" value="836971000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,18 +615,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.5126449" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.5126449" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.4873551" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +661,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="test close&#10;&#10;closes #1" />
     <MESSAGE value="websocket链接数据demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="websocket链接数据demo" />
+    <MESSAGE value="添加 websocket-test 页面，是websocket与后台接口对接的练习，checkbox 页面修改，checkbox 样式可修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加 websocket-test 页面，是websocket与后台接口对接的练习，checkbox 页面修改，checkbox 样式可修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -643,20 +671,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/store.legacy.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="1473" lean-forward="false" selection-start-line="1" selection-start-column="1470" selection-end-line="1" selection-end-column="1473" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selected.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/audio/薛之谦 - 别.mp3">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -921,6 +935,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7.元素垂直居中.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.查找data属性对应的元素.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
