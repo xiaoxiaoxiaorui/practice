@@ -23,7 +23,7 @@
     function connect(){
         var host = 'ws://192.168.196.91:9502';
         socket = new WebSocket(host);
-        socket.onopen = function(e){
+        socket.onopen = function(){
             alert('连接成功')
         };
         socket.onmessage = function (e) {

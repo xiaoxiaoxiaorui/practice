@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb771eae-60b5-463c-8739-39796066903f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/5. 两个下拉同时改变.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/6.websocket-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/redux.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/字符串查找代表意义.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raiditem-Gold_files" afterPath="$PROJECT_DIR$/raiditem-Gold_files" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicescroll.html" afterPath="$PROJECT_DIR$/nicescroll.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrollbar.html" afterPath="$PROJECT_DIR$/scrollbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/store.js本地存储.html" afterPath="$PROJECT_DIR$/store.js本地存储.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/try.html" afterPath="$PROJECT_DIR$/try.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/websocket-test.html" afterPath="$PROJECT_DIR$/websocket-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/6.websocket-test.html" afterPath="$PROJECT_DIR$/6.websocket-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkbox颜色.html" afterPath="$PROJECT_DIR$/checkbox颜色.html" />
     </list>
     <list id="4d4817fc-96ed-4864-8437-046ca20b28c6" name="Failed commit: Default" comment="test commit" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="websocket-test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="websocket-test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websocket-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
+            <state relative-caret-position="1760">
               <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
               <folding />
             </state>
@@ -57,11 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="6.websocket-test.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="6.websocket-test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/6.websocket-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+            <state relative-caret-position="660">
+              <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkbox颜色.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkbox颜色.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -123,7 +126,6 @@
         <option value="$PROJECT_DIR$/下拉框.html" />
         <option value="$PROJECT_DIR$/比较两句英文字母是否完全相等.html" />
         <option value="D:/Users/Administrator/Desktop/WOW Items, Buy WOW Items, WOW BOE Gears - Raiditem_files/common.css" />
-        <option value="$PROJECT_DIR$/checkbox颜色.html" />
         <option value="$PROJECT_DIR$/动态添加表单表格.html" />
         <option value="$PROJECT_DIR$/js/power.js" />
         <option value="D:/phpStudy/PHPTutorial/WWW/try/全屏登录注册页面.html" />
@@ -169,6 +171,7 @@
         <option value="$PROJECT_DIR$/try.html" />
         <option value="$PROJECT_DIR$/websocket-test.html" />
         <option value="$PROJECT_DIR$/6.websocket-test.html" />
+        <option value="$PROJECT_DIR$/checkbox颜色.html" />
       </list>
     </option>
   </component>
@@ -202,7 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -218,11 +220,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/FinalProject/Raiditem-Membership-Systm" />
+    <property name="last_opened_file_path" value="E:/FinalProject/www.raiditem.com-mobile-html" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.selected.package.jscs" value="" />
@@ -497,7 +500,14 @@
       <workItem from="1517191192879" duration="2802000" />
       <workItem from="1517205798242" duration="1362000" />
       <workItem from="1517277319292" duration="719000" />
-      <workItem from="1517363719182" duration="42000" />
+      <workItem from="1517363719182" duration="836000" />
+      <workItem from="1517450082204" duration="2271000" />
+      <workItem from="1517795876617" duration="2761000" />
+      <workItem from="1519725241213" duration="1020000" />
+      <workItem from="1519782864914" duration="2033000" />
+      <workItem from="1519868428421" duration="849000" />
+      <workItem from="1519953742423" duration="663000" />
+      <workItem from="1520214393526" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="不知道上传到那个库了">
       <created>1498533597513</created>
@@ -548,11 +558,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511419490099</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="websocket链接数据demo">
+      <created>1517363908308</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1517363908308</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="823061000" />
+    <option name="totallyTimeSpent" value="833500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,7 +584,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19968387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="25" y="65" width="367" height="906" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14278187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="25" y="65" width="367" height="906" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.5126449" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.5126449" order="7" side_tool="true" content_ui="tabs" />
@@ -616,7 +633,8 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="test" />
     <MESSAGE value="test close&#10;&#10;closes #1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test close&#10;&#10;closes #1" />
+    <MESSAGE value="websocket链接数据demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="websocket链接数据demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -757,20 +775,7 @@
     <entry file="file://$PROJECT_DIR$/Aautoconplete.html" />
     <entry file="file://$PROJECT_DIR$/js/Ajquery.js" />
     <entry file="file://$PROJECT_DIR$/js/Aautocomplete.js" />
-    <entry file="file://$PROJECT_DIR$/checkbox颜色.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Users/Administrator/Desktop/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="740" column="81" lean-forward="true" selection-start-line="740" selection-start-column="81" selection-end-line="740" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Users/Administrator/Desktop/test.html" />
     <entry file="file://$PROJECT_DIR$/redux.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -884,21 +889,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Users/Administrator/Desktop/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1254">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6.websocket-test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Users/Administrator/Desktop/index.html" />
     <entry file="file://$PROJECT_DIR$/websocket.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -912,8 +903,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/websocket-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="1760">
           <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkbox颜色.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6.websocket-test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
           <folding />
         </state>
       </provider>

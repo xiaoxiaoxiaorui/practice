@@ -6,7 +6,21 @@
     <style>
         .pColor{ width: 100px; height: 30px; background: #333;}
         .pColor p{ line-height: 30px; color: #fff; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
-        .Check{ background: url("Images/s_03.gif") no-repeat;}
+        .Check{ /*background: url("Images/s_03.gif") no-repeat;*/ background: red; color: red;}
+        input[type="checkbox"] {
+            -webkit-appearance: none;  /*清除复选框默认样式*/
+            -moz-appearance: none;
+            appearance: none;
+            -ms-appearance: none;
+            background: #fff;   /*复选框的背景图，就是上图*/
+            border: 0.01rem solid #333;
+            height: 22px;   /*高度*/
+            vertical-align: middle;
+            width: 22px;
+        }
+        input[type="checkbox"]:checked{
+            background: red;
+        }
         /* 复选框的样式无法改变 */
     </style>
 </head>
