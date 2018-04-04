@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度地图</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=A1LU7iHS0avqQwPLAxbhKn0UYSQCuRVH"></script>
+    <script src="js/jquery.baiduMap.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; }
+        a { text-decoration: none; }
+        ul { list-style: none; }
+        body,  html { height: 100%; font-family: "微软雅黑"; }
+        .box { width: 400px; height: 200px; margin: 40px 0; }
+        #container1,  #container2 { width: 100%; height: 100%; }
+        #container3 { width: 80%; height: 100%; }
+        .list { width: 20%; height: 100%; background: #eee; }
+        .list li { height: 34px; line-height: 34px; padding-left: 20px; }
+        .list li.active a { color: red; }
+        .title { font-size: 14px; font-weight: bold; color: #cc5522; }
+        .content { font-size: 13px; color: #333; margin-top: 6px; }
+        .fl { float: left; }
+        .anchorBL{display:none;}
+        .BMap_stdMpPan{ display: none;}
+        .BMap_stdMpZoom{ display: none;}
+        .BMap_ieundefined{ display: none;}
+    </style>
+</head>
+<body>
+<div class="box">
+    <div id="container3" class="container fl"></div>
+</div>
+<div class="box">
+    <div id="container1"></div>
+</div>
+<div class="box">
+    <div id="container2"></div>
+</div>
+<script type="text/javascript">
+    var points = [{
+        id: 0,
+        lng: 108.894887,
+        lat: 34.202131,
+        title: "都市之门C座",
+        content: ["地址：陕西省西安市雁塔区锦业路1号绿地都市之门C座", "电话：010-64040610"]
+    }];
+    var map = new BaiduMap({
+        id: "container3",
+        level: 16, //  选填--地图级别--(默认15)
+        zoom: true, // 选填--是否启用鼠标滚轮缩放功能--(默认false)
+        /*type: ["地图", "卫星", "三维"], // 选填--显示地图类型--(默认不显示)*/
+        width: 120, // 选填--信息窗口width--(默认自动调整)
+        height: 50, // 选填--信息窗口height--(默认自动调整)
+        /*titleClass: "title",*/
+        /*contentClass: "content",*/
+        /*showPanorama: true, // 是否显示全景控件(默认false)
+         showMarkPanorama: true, // 是否显示标注点全景图(默认false)*/
+        showLabel: false, // 是否显示文本标注(默认false)
+        mapStyle: "normal", // 默认normal,可选dark,light
+        icon: { // 选填--自定义icon图标
+            url: "Images/marker2.png",
+            width: 34,
+            height: 94
+        },
+        centerPoint: { // 中心点经纬度
+            lng: 108.894887,
+            lat: 34.202131
+        },
+        index: 0, // 开启对应的信息窗口，默认-1不开启
+        animate: true, // 是否开启坠落动画，默认false
+        points: points, // 标注点--id(唯一标识)
+        callback: function(id) {
+            $(".list").find("li").eq(id - 1).addClass("active").siblings().removeClass("active");
+        }
+    });
+</script>
+</body>
+</html>

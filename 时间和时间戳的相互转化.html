@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>time</title>
+</head>
+<body>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    var date = new Date(); //时间对象
+    var str = date.getTime(); //转换成时间戳
+    console.log(date);
+    console.log(str);
+    /*
+    //  自带的时间转化函数
+    function getDate(tm){
+        var tt=new Date(tm).toLocaleString();
+        return tt;
+    }
+    */
+
+    //  自定义的转化后的时间转化函数
+    function add0(m){return m<10?'0'+m:m };
+    function getDate(shijianchuo) {
+        //shijianchuo是整数，否则要parseInt转换
+        var time = new Date(shijianchuo);
+        var y = time.getFullYear();
+        var m = time.getMonth()+1;
+        var d = time.getDate();
+        var h = time.getHours();
+        var mm = time.getMinutes();
+        var s = time.getSeconds();
+        return y+'-'+add0(m)+'-'+add0(d)+' '+add0(h)+':'+add0(mm)+':'+add0(s);
+    };
+
+    console.log(getDate(str));
+</script>
+</body>
+</html>

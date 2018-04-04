@@ -5,81 +5,35 @@
     <title>MonyTrans</title>
 </head>
 <body>
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<form action="6.websocket-test.html">
+    <input type="text" value="aa" onchange="Name()" data-flag="true" />
+    <textarea onchange="TextContent()" data-flag="true">
+        adfvk,g
+    </textarea>
+    <button type="submit" disabled = 'disabled'> Submit </button>
+</form>
 <script>
-    var choiceFoodsData = {
-                    id1:1,
-                    img1:'//p0.meituan.net/200.0/deal/056f287ea5707f347c62a4e1c6a1877729748.jpg',
-                    title1:'拉菲达牛排自助',
-                    text1:'[小寨]周内雪花肉眼牛排/周末雪花肉眼牛排2选1',
-                    discount1:'61',
-                    price1:'69',
-                    sales1:'116042',
-                    id2:2,
-                    img2:'//p0.meituan.net/200.0/deal/67254d325a89b195de0e39f56e9f3af744095.jpg@267h_267w_2e_90Q',
-                    title2:'M12铁板餐厅',
-                    text2:'[小寨]套餐3选1，提供免费WiFi',
-                    discount2:'9.9',
-                    price2:'60',
-                    sales2:'4410',
-                    id12:3,
-                    img12:'//p1.meituan.net/200.0/deal/f5706e190d42d330f42b448bb3fc3f3b2124831.jpg@920_0_4009_4009a%7C267h_267w_2e_90Q',
-                    title12:'千家粗粮王',
-                    text12:'[4店通用]周内晚餐/周末节假日午晚餐2选1',
-                    discount12:'67.1',
-                    price12:'69',
-                    sales12:'214578',
-                    id3:4,
-                    img3:'//p0.meituan.net/200.0/deal/400387bf85164ac9d1bb097bce2e633f51770.jpg@120_0_400_400a%7C267h_267w_2e_100Q',
-                    title3:'享遇自助餐厅',
-                    text3:'[小寨]午晚通用自助',
-                    discount3:'58',
-                    price3:'新客立减8元',
-                    sales3:'40001',
-                    id4:5,
-                    img4:'//p0.meituan.net/200.0/deal/c9a9a24813cfdb540dfda736fb8f3ad172722.jpg@102_0_595_595a%7C267h_267w_2e_90Q',
-                    title4:'鱼厂',
-                    text4:'[小寨]100元代金券1张，可叠加',
-                    discount4:'82.6',
-                    price4:'100',
-                    sales4:'104866',
-                    id5:6,
-                    img5:'//p1.meituan.net/200.0/deal/__48668483__7689310.jpg',
-                    title5:'Rikuro瑞可爷爷の店',
-                    text5:'[西安等]起司蛋糕1个，约7英寸，圆形',
-                    discount5:'29.9',
-                    price5:'39',
-                    sales5:'256692',
-                    id6:7,
-                    img6:'//p0.meituan.net/200.0/deal/8d7637b427c7a68317b45bbf175e400119012.jpg@267h_267w_2e_90Q',
-                    title6:'花田煮·臻牛',
-                    text6:'[3店通用]100元代金券1张',
-                    discount6:'49.9',
-                    price6:'100',
-                    sales6:'41896',
-                    id7:8,
-                    img7:'//p1.meituan.net/200.0/deal/9ff09a93daae4a2a7c60f294107afaf3130924.jpg',
-                    title7:'玩味音乐海鲜自助火锅',
-                    text7:'[小寨]海鲜自助晚市1人',
-                    discount7:'68',
-                    price7:'69',
-                    sales7:'171878',
-                    id8:9,
-                    img8:'//p0.meituan.net/200.0/deal/2792606b96dd70464f65b3c9bbcf680722627.jpg@80_0_480_480a%7C267h_267w_2e_100Q',
-                    title8:'和谐号海鲜烤肉火锅自助',
-                    text8:'[小寨]单人自助餐',
-                    discount8:'63.9',
-                    price8:'新客立减7元',
-                    sales8:'36853',
-                    id9:10,
-                    img9:'//p0.meituan.net/200.0/dpdeal/711b1d52655f17ee47232387549978f9527906.jpg',
-                    title9:'致青春摄影',
-                    text9:'[3店通用]致青春证件照综合套餐',
-                    discount9:'1',
-                    price9:'99',
-                    sales9:'11191'
-    };
-    console.log(choiceFoodsData)
+    function Name() {
+        document.getElementsByTagName('input')[0].setAttribute('data-flag','false');
+    }
+    function TextContent() {
+        document.getElementsByTagName('textarea')[0].setAttribute('data-flag','false');
+    }
+    document.getElementsByTagName('button')[0].onclick = function () {
+        var flag = true;
+        var NameEle = document.getElementsByTagName('input')[0];
+        var TextContentEle = document.getElementsByTagName('textarea')[0];
+        var Name = NameEle.getAttribute('data-flag');
+        var TextContent = TextContentEle.getAttribute('data-flag');
+        if(Name == 'true' && TextContent == 'true'){
+            NameEle.setAttribute('data-flag','false');
+            TextContentEle.setAttribute('data-flag','false');
+            flag = true;
+        }else{
+            flag = false;
+        }
+        return flag
+    }
 </script>
 </body>
 </html>
