@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>翻转图片的正反面</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        .center-content{ width: 388px; height: 196px;}
+        .col-md-4{ transition: all 0.5s; -webkit-transform-style: preserve-3d; position: relative; width: 403px; height: 196px;}
+        .col-transfrom{ transform: rotateY(180deg); transition: all 0.5s;}
+        /*.center-content:hover .col-md-4{ transform: rotateY(180deg); transition: all 0.5s;}*/
+        .top{ position: absolute; top: 0; left: 0; z-index: 2;}
+        .down{ position: absolute; top: 0; left: 0; transform: rotateY(180deg);}
+    </style>
+</head>
+<body>
+<div class="content row">
+    <div class="center-content">
+        <div class="col-md-4" onclick="this.classList.toggle('col-transfrom')">
+            <span class="top"><img src="Images/front.png" alt=""></span>
+            <span class="down"><img src="Images/back.png" alt=""></span>
+        </div>
+    </div>
+    <div class="center-content">
+        <div class="col-md-4" onclick="this.classList.toggle('col-transfrom')">
+            <span class="top"><img src="Images/front.png" alt=""></span>
+            <span class="down"><img src="Images/back.png" alt=""></span>
+        </div>
+    </div>
+    <div class="center-content">
+        <div class="col-md-4" onclick="this.classList.toggle('col-transfrom')">
+            <span class="top"><img src="Images/front.png" alt=""></span>
+            <span class="down"><img src="Images/back.png" alt=""></span>
+        </div>
+    </div>
+    <div class="center-content">
+        <div class="col-md-4" onclick="this.classList.toggle('col-transfrom')">
+            <span class="top"><img src="Images/front.png" alt=""></span>
+            <span class="down"><img src="Images/back.png" alt=""></span>
+        </div>
+    </div>
+    <div class="center-content">
+        <div class="col-md-4" onclick="this.classList.toggle('col-transfrom')">
+            <span class="top"><img src="Images/front.png" alt=""></span>
+            <span class="down"><img src="Images/back.png" alt=""></span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script>
+    /*$('.center-content').on('click',function () {
+        $(this).children('.col-md-4').toggleClass('col-transfrom');
+    })*/
+</script>
+</body>
+</html>

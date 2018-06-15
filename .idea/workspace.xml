@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb771eae-60b5-463c-8739-39796066903f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2048GameDemo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-七巧板.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-五角星.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-小球运动.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-弯月.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-线性渐变.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css3-动画翻页.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/googleSign.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Images/back.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Images/front.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/9. 翻转图片的正反面.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raiditem-Gold_files" afterPath="$PROJECT_DIR$/raiditem-Gold_files" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
     </list>
     <list id="4d4817fc-96ed-4864-8437-046ca20b28c6" name="Failed commit: Default" comment="test commit" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -38,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2048GameDemo.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2048GameDemo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2048GameDemo.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3036">
@@ -67,6 +60,16 @@
                 <element signature="e#19097#19242#0" expanded="false" />
                 <element signature="e#19283#19465#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="9. 翻转图片的正反面.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/9. 翻转图片的正反面.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1012">
+              <caret line="46" column="10" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/selected.html" />
         <option value="$PROJECT_DIR$/js/line.json" />
         <option value="$PROJECT_DIR$/cookie登录.html" />
         <option value="D:/Users/Administrator/Desktop/WOW Items, Buy WOW Items, WOW BOE Gears - Raiditem.html" />
@@ -173,6 +175,7 @@
         <option value="$PROJECT_DIR$/css3-动画翻页.html" />
         <option value="$PROJECT_DIR$/2048demo.html" />
         <option value="$PROJECT_DIR$/2048GameDemo.html" />
+        <option value="$PROJECT_DIR$/9. 翻转图片的正反面.html" />
       </list>
     </option>
   </component>
@@ -239,15 +242,15 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\practice\try" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\practice\try\Images" />
       <recent name="E:\practice\try\js" />
       <recent name="E:\practice\try" />
       <recent name="E:\practice\try\audio" />
       <recent name="E:\practice\try\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\practice\try" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -562,7 +565,7 @@
       <workItem from="1527126519666" duration="15559000" />
       <workItem from="1527212832791" duration="10848000" />
       <workItem from="1527472155559" duration="9209000" />
-      <workItem from="1529029717333" duration="46000" />
+      <workItem from="1529029717333" duration="4103000" />
     </task>
     <task id="LOCAL-00001" summary="不知道上传到那个库了">
       <created>1498533597513</created>
@@ -648,11 +651,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522836559058</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="增加 canvas 的demo">
+      <created>1529029833748</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1529029833748</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1036501000" />
+    <option name="totallyTimeSpent" value="1040558000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -671,18 +681,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.5126449" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.5126449" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.4873551" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,7 +731,8 @@
     <MESSAGE value="1. 添加  元素垂直居中的  demo&#10;2. 添加  查找 data 属性对应元素的 demo（jquery）" />
     <MESSAGE value="1. 添加内容上下左右居中的问题&#10;2. 添加会员系统消息页面在后台的展示" />
     <MESSAGE value="1. 添加 js 中时间和时间戳的相互转化&#10;2. 添加百度地图是实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 添加 js 中时间和时间戳的相互转化&#10;2. 添加百度地图是实现" />
+    <MESSAGE value="增加 canvas 的demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加 canvas 的demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -730,23 +741,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/Ajquery.js" />
-    <entry file="file://$PROJECT_DIR$/js/Aautocomplete.js" />
-    <entry file="file://D:/Users/Administrator/Desktop/test.html" />
-    <entry file="file://$PROJECT_DIR$/redux.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scroll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Images/des1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -869,11 +863,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Images/201704200424161.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/201704200406531.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -1054,6 +1043,39 @@
             <element signature="e#19097#19242#0" expanded="false" />
             <element signature="e#19283#19465#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/201704200406301.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/201704200408081.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/201704200407541.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/201704200407341.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/201704200406531.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/9. 翻转图片的正反面.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="46" column="10" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
