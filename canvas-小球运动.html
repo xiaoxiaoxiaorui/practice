@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas-小球运动</title>
+    <style>
+        #canvas{ border: 1px solid #aaa; margin: 50px auto; display: block;}
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    var canvas = document.getElementById('canvas');
+    canvas.width = 1366;
+    canvas.height = 768;
+    var context = canvas.getContext('2d');
+    /* 小球下落 */
+    var ball = { x:500, y:100, r:20, g:2, vx:-4, vy:-10, color:"#005588"};
+    setInterval(function () {
+        context.clearRect(0,0,context.canvas.width,context.canvas.height);
+        context.beginPath();
+        context.arc(ball.x, ball.y , ball.r , 0 ,2*Math.PI);
+        context.closePath();
+        context.fillStyle = "#005588";
+        context.fill();
+        update();
+    },50);
+    function update() {
+        ball.x += ball.vx;
+        ball.y += ball.vy;
+        ball.vy += ball.g;
+        if(ball.y >= 768-ball.r){
+            ball.y = 768-ball.r;
+            ball.vy = - ball.vy*0.5;
+        }
+    }
+</script>
+</body>
+</html>

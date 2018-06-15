@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas-demo</title>
+    <style>
+        #canvas{ border: 1px solid #aaa; margin: 50px auto; display: block;}
+    </style>
+</head>
+<body><!--width="1366" height="768"-->
+<canvas id="canvas" ></canvas>
+<script>
+    var canvas = document.getElementById('canvas');
+    canvas.width = 1366;
+    canvas.height = 768;
+    var context = canvas.getContext('2d');
+    /* 判断浏览器是否支持canvas */
+    /*if(canvas.getContext('2d')){
+        var context = canvas.getContext('2d');
+    }else{
+        alert('当前浏览器不支持canvas，请更换浏览器再试');
+    }*/
+    /* 练习做线段和图形 */
+    context.beginPath();
+    context.moveTo(20,20);
+    context.lineTo(100,100);
+    context.lineTo(500,100);
+    context.lineTo(20,20);
+    context.closePath();
+    context.lineWidth = 5;
+    context.strokeStyle = "red";
+    context.fillStyle = "#005588";
+    context.stroke();  //  绘制边线
+    context.fill();  //  填充内容
+
+    context.beginPath();
+    context.moveTo(100,120);
+    context.lineTo(700,120);
+    context.closePath();
+    context.strokeStyle = "#333";
+    context.stroke();
+
+    /* 圆弧练习 */
+    context.lineWidth = 3;
+    context.strokeStyle = "#999";
+    for( var i = 0; i<10; i++){
+        context.beginPath();
+        context.arc(50 + i*100, 200 , 40 , 0 , 2*Math.PI*(i+1)/10);
+        context.stroke();
+    }
+    for( var j = 0; j<10; j++){
+        context.beginPath();
+        context.arc(50 + j*100, 300 , 40 , 0 , 2*Math.PI*(j+1)/10,true);
+        context.stroke();
+        context.closePath();
+    }
+    for( var j = 0; j<10; j++){
+        context.beginPath();
+        context.arc(50 + j*100, 400 , 40 , 0 , 2*Math.PI*(j+1)/10);
+        context.fill();
+        context.closePath();
+    }
+
+    /* transform 矩形变换 */
+    context.transform(1,0,0,1,100,50);  //  位移
+    context.transform(1.5,0,0,1.5,0,0);  //  缩放
+    context.transform(1,0.2,0,1,0,0);  //  倾斜
+    //  transform 效果会进行叠加，setTransform 效果会忽略之前的变化，效果不会叠加
+    //  context.setTransform(1,0,0,1,0,0);
+    context.fillRect( 0 , 200 , 200 , 200);
+    context.strokeRect( 0 , 200 , 200 , 200);
+
+</script>
+</body>
+</html>

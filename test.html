@@ -4,71 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    select{ line-height: 30px; background: #999;}
+</style>
 <body>
-<div id="paypal-button"></div>
-
-<script>
-    var CREATE_PAYMENT_URL  = '/api/paypal-payment-create';
-    var EXECUTE_PAYMENT_URL = '/api/paypal-payment-execute';
-    if("{{ env('APP_ENV') }}"=='local'){
-        var env = 'sandbox';
-    }else{
-        var env = 'production';
-    }
-
-    paypal.Button.render({
-        env: env,
-        commit: true, // Show a 'Pay Now' button
-        style: {
-            label: 'paypal',
-            size:  'small',    // small | medium | large | responsive
-            shape: 'rect',     // pill | rect
-            color: 'gold',     // gold | blue | silver | black
-            tagline: false
-        },
-        payment: function() {
-            return paypal.request.post(CREATE_PAYMENT_URL,{ orderNum: "{{$orderNum}}" } ).then(function(data) {
-//                console.log('1111111111111');
-
-                return data.id
-
-                    ;
-            });
-        },
-        onAuthorize: function(data) {
-            return paypal.request.post(EXECUTE_PAYMENT_URL, {
-                paymentID: data.paymentID,
-                payerID:   data.payerID
-            }).then(function(data) {
-//                window.location.replace('http://192.168.196.81/api/paypal-payment-success
-
-                ');
-            });
-        },
-        onCancel: function(data) {
-//            console.log('33333333333333');
-//            console.log(data);
-//            window.location.replace("http://www.jb51.net
-
-            ");
-        },
-        onError: function(err) {
-//            console.log('4444444444444444444');
-//            console.log(err);
-//            window.location.replace('http://192.168.196.81/api/paypal-payment-success
-
-            ');
-        }
-    }, '#paypal-button');
-
-    //
-    $(function(){
-//        $(".paypal-button").trigger('click');
-        $(".paypal-button").on('click',function(){
-            alert()
-        })
-    });
-</script>
+<select>
+    <option value="">zsgf</option>
+    <option value="">srg</option>
+    <option value="">dxf</option>
+    <option value="">xdfg</option>
+    <option value="">xdfhgh</option>
+</select>
 </body>
 
 </html>

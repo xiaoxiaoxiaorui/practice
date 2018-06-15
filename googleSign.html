@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="google-google-signin-client_id" content ="1039624646470-or2koaf98nje48lcl2r4e2k5kij28jk2.apps.googleusercontent.com">
+    <title>google-快速登录接口</title>
+    <!-- google自带需要的js -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- 自定义需要的js -->
+    <script src="https://apis.google.com/js/api:client.js"></script>
+</head>
+<body>
+<!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
+<!--自定义登录按钮-->
+<button id="customBtn" type="button">Google登录</button>
+<div id="name"></div>
+<button type="button" onclick="signOut()">Sign out</button>
+<button type="button" onclick="msg()">show message</button>
+<script>
+    var googleUser = {};
+    var startApp = function() {
+        gapi.load('auth2', function(){
+            // Retrieve the singleton for the GoogleAuth library and set up the client.
+            auth2 = gapi.auth2.init({
+                client_id: '1039624646470-or2koaf98nje48lcl2r4e2k5kij28jk2.apps.googleusercontent.com', //客户端ID
+                cookiepolicy: 'single_host_origin',
+                scope: 'profile' //可以请求除了默认的'profile' and 'email'之外的数据
+            });
+            attachSignin(document.getElementById('customBtn'));
+            //onSignIn();
+        });
+    };
+    /*function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log('Id Token: ' + id_token);
+    }*/
+    //  自定义登录方法
+    function attachSignin(element) {
+        auth2.attachClickHandler(element, {},
+            function(googleUser) {
+                document.getElementById('name').innerText = "Signed in: " + googleUser.getBasicProfile().getName();
+                var profile = auth2.currentUser.get().getBasicProfile();
+                console.log('ID: ' + profile.getId());
+                console.log('Full Name: ' + profile.getName());
+                console.log('Given Name: ' + profile.getGivenName());
+                console.log('Family Name: ' + profile.getFamilyName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail());
+            }, function(error) {
+                console.log(JSON.stringify(error, undefined, 2));
+            });
+    }
+    startApp();
+    function msg(){
+        var profile = auth2.currentUser.get().getBasicProfile();
+        console.log('Full Name: ' + profile.getName());
+    }
+    //注销（在自定义登录方法和谷歌自带方法中通用）
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            alert('用户注销成功');
+            document.getElementById('name').innerText = "Signed out success!";
+        });
+    }
+</script>
+</body>
+</html>

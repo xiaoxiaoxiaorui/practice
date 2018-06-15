@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/2048GameDemo.html" line="122" mnemonic="9" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cb771eae-60b5-463c-8739-39796066903f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Images/marker2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.baiduMap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/时间和时间戳的相互转化.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/百度地图.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2048GameDemo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-七巧板.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-五角星.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-小球运动.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-弯月.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas-线性渐变.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css3-动画翻页.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/googleSign.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raiditem-Gold_files" afterPath="$PROJECT_DIR$/raiditem-Gold_files" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/try.html" afterPath="$PROJECT_DIR$/try.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
     </list>
     <list id="4d4817fc-96ed-4864-8437-046ca20b28c6" name="Failed commit: Default" comment="test commit" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,52 +38,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="websocket-test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/websocket-test.html">
+      <file leaf-file-name="2048GameDemo.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2048GameDemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1760">
-              <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="6.websocket-test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/6.websocket-test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="try.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/try.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="70" lean-forward="false" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="时间和时间戳的相互转化.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/时间和时间戳的相互转化.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="百度地图.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/百度地图.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-              <folding />
+            <state relative-caret-position="3036">
+              <caret line="187" column="27" lean-forward="false" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
+              <folding>
+                <element signature="e#2492#3141#0" expanded="false" />
+                <element signature="e#3165#3276#0" expanded="false" />
+                <element signature="e#4057#5414#0" expanded="false" />
+                <element signature="e#5458#5498#0" expanded="false" />
+                <element signature="e#8553#9870#0" expanded="false" />
+                <element signature="e#9910#9996#0" expanded="false" />
+                <element signature="e#10021#10056#0" expanded="false" />
+                <element signature="e#11440#12807#0" expanded="false" />
+                <element signature="e#12846#14228#0" expanded="false" />
+                <element signature="e#14266#15636#0" expanded="false" />
+                <element signature="e#15882#15942#0" expanded="false" />
+                <element signature="e#15972#16032#0" expanded="false" />
+                <element signature="e#16096#16852#0" expanded="false" />
+                <element signature="e#16905#16990#0" expanded="false" />
+                <element signature="e#17260#17476#0" expanded="false" />
+                <element signature="e#17533#17803#0" expanded="false" />
+                <element signature="e#17857#18145#0" expanded="false" />
+                <element signature="e#18201#18491#0" expanded="false" />
+                <element signature="e#18546#18820#0" expanded="false" />
+                <element signature="e#18897#19027#0" expanded="false" />
+                <element signature="e#19097#19242#0" expanded="false" />
+                <element signature="e#19283#19465#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,11 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Pa</find>
-      <find>tooltip</find>
-      <find>dataCenterCustomRankChart</find>
-      <find>cancelMyEmailSubscribe</find>
-      <find>showOpenVipSwal</find>
       <find>wechatSharePop</find>
       <find>serialize</find>
       <find>body-left</find>
@@ -123,6 +109,11 @@
       <find>colspan</find>
       <find>form</find>
       <find>panelWidth</find>
+      <find>noSpace</find>
+      <find>console</find>
+      <find>getNumberBackground</find>
+      <find>generateOneNumber</find>
+      <find>updateNumberView</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,17 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bootstrapselect.html" />
-        <option value="$PROJECT_DIR$/js/tsconfig.json" />
-        <option value="$PROJECT_DIR$/js/test.json" />
-        <option value="D:/phpStudy/PHPTutorial/WWW/try/websocket-test.html" />
-        <option value="$PROJECT_DIR$/websocket.html" />
-        <option value="$PROJECT_DIR$/json转化.html" />
-        <option value="$PROJECT_DIR$/ajax调用json数据.html" />
-        <option value="$PROJECT_DIR$/ajax获取json数据.html" />
-        <option value="$PROJECT_DIR$/悬浮图片.html" />
-        <option value="$PROJECT_DIR$/loading动画.html" />
-        <option value="$PROJECT_DIR$/cookie.html" />
         <option value="$PROJECT_DIR$/selected.html" />
         <option value="$PROJECT_DIR$/js/line.json" />
         <option value="$PROJECT_DIR$/cookie登录.html" />
@@ -172,7 +152,6 @@
         <option value="$PROJECT_DIR$/6.websocket-test.html" />
         <option value="$PROJECT_DIR$/checkbox颜色.html" />
         <option value="$PROJECT_DIR$/7.元素垂直居中.html" />
-        <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/8.查找data属性对应的元素.html" />
         <option value="$PROJECT_DIR$/不定宽子元素在父元素中上下左右居中.html" />
         <option value="$PROJECT_DIR$/多行文字垂直居中.html" />
@@ -182,6 +161,18 @@
         <option value="$PROJECT_DIR$/try.html" />
         <option value="$PROJECT_DIR$/时间和时间戳的相互转化.html" />
         <option value="$PROJECT_DIR$/百度地图.html" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/9. google-快速登录接口.html" />
+        <option value="$PROJECT_DIR$/googleSign.html" />
+        <option value="$PROJECT_DIR$/canvas-七巧板.html" />
+        <option value="$PROJECT_DIR$/canvas-小球运动.html" />
+        <option value="$PROJECT_DIR$/canvas-demo.html" />
+        <option value="$PROJECT_DIR$/canvas-线性渐变.html" />
+        <option value="$PROJECT_DIR$/canvas-弯月.html" />
+        <option value="$PROJECT_DIR$/canvas-五角星.html" />
+        <option value="$PROJECT_DIR$/css3-动画翻页.html" />
+        <option value="$PROJECT_DIR$/2048demo.html" />
+        <option value="$PROJECT_DIR$/2048GameDemo.html" />
       </list>
     </option>
   </component>
@@ -215,7 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,12 +221,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/我的项目/MeiTuanApp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.selected.package.jscs" value="" />
@@ -544,7 +535,34 @@
       <workItem from="1522633527619" duration="614000" />
       <workItem from="1522651371057" duration="3399000" />
       <workItem from="1522721021389" duration="2780000" />
-      <workItem from="1522807240378" duration="1810000" />
+      <workItem from="1522807240378" duration="2540000" />
+      <workItem from="1523152809794" duration="1282000" />
+      <workItem from="1523238614133" duration="607000" />
+      <workItem from="1523324716835" duration="1206000" />
+      <workItem from="1523411397149" duration="1259000" />
+      <workItem from="1523498320895" duration="8374000" />
+      <workItem from="1523585025109" duration="5846000" />
+      <workItem from="1523931374702" duration="824000" />
+      <workItem from="1524017061975" duration="618000" />
+      <workItem from="1524102280068" duration="620000" />
+      <workItem from="1524188750153" duration="590000" />
+      <workItem from="1525657871865" duration="617000" />
+      <workItem from="1525744424004" duration="622000" />
+      <workItem from="1525830018206" duration="1402000" />
+      <workItem from="1525916352247" duration="1254000" />
+      <workItem from="1526003037333" duration="1414000" />
+      <workItem from="1526262648792" duration="635000" />
+      <workItem from="1526349084661" duration="13212000" />
+      <workItem from="1526434648770" duration="8130000" />
+      <workItem from="1526521903074" duration="9203000" />
+      <workItem from="1526610162536" duration="15183000" />
+      <workItem from="1526867783456" duration="18062000" />
+      <workItem from="1526953966309" duration="7304000" />
+      <workItem from="1527040294213" duration="25255000" />
+      <workItem from="1527126519666" duration="15559000" />
+      <workItem from="1527212832791" duration="10848000" />
+      <workItem from="1527472155559" duration="9209000" />
+      <workItem from="1529029717333" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="不知道上传到那个库了">
       <created>1498533597513</created>
@@ -623,11 +641,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522382922791</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1. 添加 js 中时间和时间戳的相互转化&#10;2. 添加百度地图是实现">
+      <created>1522836559058</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1522836559058</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="876590000" />
+    <option name="totallyTimeSpent" value="1036501000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -695,85 +720,16 @@
     <MESSAGE value="添加 websocket-test 页面，是websocket与后台接口对接的练习，checkbox 页面修改，checkbox 样式可修改" />
     <MESSAGE value="1. 添加  元素垂直居中的  demo&#10;2. 添加  查找 data 属性对应元素的 demo（jquery）" />
     <MESSAGE value="1. 添加内容上下左右居中的问题&#10;2. 添加会员系统消息页面在后台的展示" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 添加内容上下左右居中的问题&#10;2. 添加会员系统消息页面在后台的展示" />
+    <MESSAGE value="1. 添加 js 中时间和时间戳的相互转化&#10;2. 添加百度地图是实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 添加 js 中时间和时间戳的相互转化&#10;2. 添加百度地图是实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Images/des2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Users/Administrator/Desktop/1.html" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/悬浮图片.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4. 键盘切换选项.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3. div移动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1. audio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5. 两个下拉同时改变.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="61" column="34" lean-forward="false" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/字符串查找代表意义.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery-1.4.2.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Aautoconplete.html" />
     <entry file="file://$PROJECT_DIR$/js/Ajquery.js" />
     <entry file="file://$PROJECT_DIR$/js/Aautocomplete.js" />
     <entry file="file://D:/Users/Administrator/Desktop/test.html" />
@@ -891,22 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websocket-test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6.websocket-test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/7.元素垂直居中.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -960,10 +900,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.baiduMap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="154">
+          <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleSign.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="66" lean-forward="false" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas-七巧板.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/百度地图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/时间和时间戳的相互转化.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -971,31 +946,114 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="21" column="70" lean-forward="false" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/时间和时间戳的相互转化.html">
+    <entry file="file://$PROJECT_DIR$/6.websocket-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="660">
+          <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.baiduMap.min.js">
+    <entry file="file://$PROJECT_DIR$/websocket-test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas-小球运动.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas-demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas-弯月.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas-线性渐变.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas-五角星.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css3-动画翻页.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/下拉框.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1782">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selected.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/百度地图.html">
+    <entry file="file://$PROJECT_DIR$/select-try.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-          <folding />
+        <state relative-caret-position="-528">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048GameDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3036">
+          <caret line="187" column="27" lean-forward="false" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
+          <folding>
+            <element signature="e#2492#3141#0" expanded="false" />
+            <element signature="e#3165#3276#0" expanded="false" />
+            <element signature="e#4057#5414#0" expanded="false" />
+            <element signature="e#5458#5498#0" expanded="false" />
+            <element signature="e#8553#9870#0" expanded="false" />
+            <element signature="e#9910#9996#0" expanded="false" />
+            <element signature="e#10021#10056#0" expanded="false" />
+            <element signature="e#11440#12807#0" expanded="false" />
+            <element signature="e#12846#14228#0" expanded="false" />
+            <element signature="e#14266#15636#0" expanded="false" />
+            <element signature="e#15882#15942#0" expanded="false" />
+            <element signature="e#15972#16032#0" expanded="false" />
+            <element signature="e#16096#16852#0" expanded="false" />
+            <element signature="e#16905#16990#0" expanded="false" />
+            <element signature="e#17260#17476#0" expanded="false" />
+            <element signature="e#17533#17803#0" expanded="false" />
+            <element signature="e#17857#18145#0" expanded="false" />
+            <element signature="e#18201#18491#0" expanded="false" />
+            <element signature="e#18546#18820#0" expanded="false" />
+            <element signature="e#18897#19027#0" expanded="false" />
+            <element signature="e#19097#19242#0" expanded="false" />
+            <element signature="e#19283#19465#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

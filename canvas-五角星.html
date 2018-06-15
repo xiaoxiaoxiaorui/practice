@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas-五角星</title>
+    <style type="text/css">
+        #canvas{ display: block; margin: 0 auto; border: 1px solid #aaa;}
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript">
+    var canvas = document.getElementById('canvas');
+    canvas.width = 1200;
+    canvas.height = 800;
+    var context = canvas.getContext('2d');
+    /* 设置背景渐变 */
+    var skyStyle = context.createLinearGradient(0,0,0,800);
+    skyStyle.addColorStop(0.0,'#000');
+    skyStyle.addColorStop(1.0,'#035');
+    context.fillStyle = skyStyle;
+    context.fillRect(0,0,canvas.width, canvas.height);
+
+    context.fill();
+    context.lineJoin = 'miter'; //( 默认是 miter -- 指代尖角 ) bevel -- 指代斜接  round -- 指代圆角
+    for( var j = 0; j<200 ; j++){
+        var R = Math.random() * 10;
+        var x = Math.random() * canvas.width;
+        var y = Math.random() * canvas.height * 0.65;
+        var rot = Math.random() * 360;
+        drawStar(context , R/2 , R , x , y , rot);
+        drawLand(context);
+    }
+    function drawLand( ctext ) {
+        ctext.save();
+        ctext.beginPath();
+        ctext.moveTo(0,600);
+        ctext.bezierCurveTo(540, 400, 660, 800, 1200, 600);
+        ctext.lineTo(1200,800);
+        ctext.lineTo(0,800);
+        ctext.closePath();
+
+        var landStyle = ctext.createLinearGradient(0,800,0,0);
+        landStyle.addColorStop(0.0,'#030');
+        landStyle.addColorStop(1.0,'#580');
+        ctext.fillStyle = landStyle;
+        ctext.fill();
+
+        ctext.restore();
+    }
+    function drawStar( ctxt , r , R , x , y , rot ) {
+        ctxt.beginPath();
+        for( var i = 0; i<5; i++){
+            ctxt.lineTo(Math.cos((18 + i*72 -rot)/180 * Math.PI)*R + x , -Math.sin((18 + i*72 -rot)/180 * Math.PI)*R + y);
+            ctxt.lineTo(Math.cos((54 + i*72 -rot)/180 * Math.PI)*r + x , -Math.sin((54 + i*72 -rot)/180 * Math.PI)*r + y)
+        }
+        ctxt.closePath();
+        ctxt.fillStyle = '#fb3';
+        ctxt.strokeStyle = '#fd5';
+        ctxt.lineWidth = 3;
+        ctxt.lineJoin = 'round';
+        ctxt.fill();
+        ctxt.stroke();
+    }
+</script>
+</body>
+</html>

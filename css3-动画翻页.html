@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3-动画翻页</title>
+    <style>
+        ._3dSpace{ -webkit-perspective: 800px; -webkit-perspective-origin: 50% 50%; overflow: hidden;}
+        .pageGroup{ width: 400px; height: 400px; margin: 0 auto; -webkit-transform-style: preserve-3d;}
+        .page{ width: 360px; height: 360px; padding: 20px; background: #000; color: #fff; font-size: 360px; line-height: 360px; text-align: center; position: absolute;}
+        .page1{ -webkit-transform-origin: bottom; -webkit-transition: -webkit-transform 1s linear;}
+        .page2,.page3,.page4,.page5,.page6{ -webkit-transform-origin: bottom; -webkit-transition: -webkit-transform 1s linear; -webkit-transform: rotateX(90deg);}
+    </style>
+</head>
+<body>
+<div class="_3dSpace">
+    <div class="pageGroup">
+        <div class="page page1">1</div>
+        <div class="page page2">2</div>
+        <div class="page page3">3</div>
+        <div class="page page4">4</div>
+        <div class="page page5">5</div>
+        <div class="page page6">6</div>
+    </div>
+</div>
+<div class="">
+    <a href="javascript:next()">next</a>
+    <a href="javascript:prev()">prev</a>
+</div>
+<script>
+    var curtPageCount = 1;
+    function next() {
+        if(curtPageCount<6){
+            var curtPage = document.getElementsByClassName('page'+curtPageCount)[0];
+            curtPage.style.webkitTransform = "rotateX(-90deg)";
+            curtPageCount++;
+        }
+        var nextPage = document.getElementsByClassName('page'+curtPageCount)[0];
+        nextPage.style.webkitTransform = "rotateX(0deg)";
+    }
+    function prev() {
+        if(curtPageCount>1){
+            var curtPage = document.getElementsByClassName('page'+curtPageCount)[0];
+            curtPage.style.webkitTransform = "rotateX(90deg)";
+            curtPageCount--;
+        }
+        var nextPage = document.getElementsByClassName('page'+curtPageCount)[0];
+        nextPage.style.webkitTransform = "rotateX(0deg)";
+    }
+</script>
+</body>
+</html>
