@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星级评论</title>
+</head>
+<body>
+<div class="content">
+    <div id="star"></div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.raty.min.js"></script>
+<script type="text/javascript">
+    $('#star').raty({
+        space: false,   //  设置星星之间的空格为0
+        width: 200,   //  设置包含星星div的宽度
+        half: true,   // 有一半星星的展示
+        path: 'Images',   //  匹配图片路径
+        starOff: 'star-off.png',  //  自定义设置图片（匹配图片路径后可省略原路径中的"Images/"）
+        starOn: 'star-on.png',
+        starHalf: 'star-half.png',
+        round: { down: .0, full: .5, up: .6 },   //  控制上一个下一个和半个星星的小数部分
+        score: 3.1,   //  当前评分
+        readOnly: true,   //  只读时不显示鼠标停留时的信息
+        hints: ['a', '2', '', '/', '*_*']   //  改变默认的鼠标停留显示标签
+    });
+</script>
+</body>
+</html>
