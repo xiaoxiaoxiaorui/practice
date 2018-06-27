@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3线性渐变</title>
+    <style>
+        .gradient{ width: 400px; height: 200px; background-image: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);}
+        .text{
+            font-size: 40px;
+            font-weight: 700;
+            background-image: linear-gradient(to bottom,indigo,violet);
+            -webkit-background-clip: text; /* 规定背景的绘制区域，background-clip，属性一般为border-box（边框区），padding-box（内边距区），content-box（内容区），text属性仅支持谷歌浏览器 */
+            color: transparent;
+        }
+        /*  background-origin, 设置元素背景图片的起始位置，属性可以为： border-box, padding-box, content-box  */
+    </style>
+</head>
+<body>
+<div class="gradient"></div>
+<div class="text">to be or not to be</div>
+</body>
+</html>

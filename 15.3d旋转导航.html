@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d旋转导航</title>
+    <style>
+        .nav{ list-style: none;}
+        .nav:after{ content: ''; display: block; clear: both;}
+        .nav li{ float: left; color: #fff; position: relative; width: 67px; height: 33px; transition: all 0.8s; transform: translatez(-16px);transform-style: preserve-3d;} /*  应具有投死效果，需要给父元素添加 perestive 属性，值为像素  */
+        .nav li span{ padding: 6px 15px;}
+        .front{ background: #0bb995; position: absolute; top: 0; left: 0; transform: rotateX(0deg) translatez(16px);}
+        .back{ background: #00C1B3; position: absolute; top: 0; left: 0; transform: rotateX(-90deg) translatez(16px);}
+        .nav li:hover{ transform: rotateX(90deg); transition: all 0.8s; transform-style: preserve-3d;}
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <li>
+        <span class="front">nav1</span>
+        <span class="back">nav1</span>
+    </li>
+    <li>
+        <span class="front">nav2</span>
+        <span class="back">nav2</span>
+    </li>
+    <li>
+        <span class="front">nav3</span>
+        <span class="back">nav3</span>
+    </li>
+    <li>
+        <span class="front">nav4</span>
+        <span class="back">nav4</span>
+    </li>
+    <li>
+        <span class="front">nav5</span>
+        <span class="back">nav5</span>
+    </li>
+</ul>
+</body>
+</html>
