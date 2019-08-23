@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <style>
+        table{
+            width: 100%;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th><input type="checkbox" placeholder="" />操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>是否可</td>
+        <td>22</td>
+        <td><input type="checkbox" placeholder="">选择</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>时到今日，好</td>
+        <td>22</td>
+        <td><input type="checkbox" placeholder="">选择</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>大声，发几个</td>
+        <td>34</td>
+        <td><input type="checkbox" placeholder="">选择</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>电饭锅看吧</td>
+        <td>78</td>
+        <td><input type="checkbox" placeholder="">选择</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>大进口国</td>
+        <td>45</td>
+        <td><input type="checkbox" placeholder="">选择</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <select>
+            <option>aaa</option>
+            <option>bbb</option>
+            <option>ccc</option>
+        </select>
+        </td>
+        
+    </tr>
+    </tbody>
+</table>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script>
+    $('thead tr th input[type="checkbox"]').on('click',function () {
+        if($(this).prop('checked')){
+            $('tbody tr input[type="checkbox"]').prop('checked',true)
+        }else{
+            $('tbody tr input[type="checkbox"]').prop('checked',false)
+        }
+    });
+    $('select').on('change',function () {
+        val = $(this).val();
+        var checkLen = $('tbody tr input[type="checkbox"]').length;
+        var chankedId = [];
+        for(var i = 0; i<checkLen; i++){
+            if($($('tbody tr input[type="checkbox"]')[i]).prop('checked')){
+                chankedId.push($($('tbody tr')[i]).children('td').eq(0).html())
+            }
+        }
+        console.log(chankedId)
+    })
+</script>
+</body>
+</html>

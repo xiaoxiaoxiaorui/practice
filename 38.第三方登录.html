@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="225063681571-4r17b35lkrg69ne98dq830vk7nurqhhn.apps.googleusercontent.com">
+    <title>test</title>
+    <script src="http://adodson.com/hello.js/dist/hello.all.js"></script>
+</head>
+<body>
+<button class="twBtn" onclick = "login_twitter('twitter')" >twitter登录</button>
+<script>
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<script>
+    var log = console.log;
+    hello.init({
+            'twitter' : 'f1rWwAuC5MrC0NoNz1vE1baN0'
+        },
+        {
+//                      redirect_uri:'/', //代理后的重定向路径，可不填
+            oauth_proxy: 'https://auth-server.herokuapp.com/proxy' //这里使用默认的代理
+        });
+    function login_twitter(network){  //登录方法，并将twitter 作为参数传入
+        // Twitter instance
+        var twitter = hello(network);
+        // Login
+        twitter.login().then( function(auth){
+            console.log(auth.authResponse);
+            // Get Profile
+            return twitter.api('/me');
+        }, log ) .then( function(p){
+            console.log("Connected to "+ network+" as " + p.name);
+            var res = JSON.stringify(p);//因为得不到token，但是这步已经得到用户所有信息，所以将用户信息转成JSON字符串给后台
+            console.log(p)
+            //self.location= '/home/login.twLogin.do?result='+res;
+        }, log );
+    }
+</script>
+</body>
+</html>

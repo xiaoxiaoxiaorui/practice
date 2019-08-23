@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test3</title>
+</head>
+<body>
+<script type="text/javascript"></script>
+<script>
+
+    //clear（）：删除所有值。
+    //getItem（name）：根据指定的名字name获取对应的值
+    //key(index)：在指定的数字位置获取该位置的名字。
+    //removeItem（name）：删除由name指定的名值对
+    //setItem(name,value)：为指定名字设置一个对应的值
+
+    var aa = {'a': 1,'b': 2};
+    var storage = window.localStorage;
+    storage.setItem("user",JSON.stringify(aa));
+    storage.setItem("qq",123456);
+    console.log(storage.getItem("user"));
+    console.log(storage.key(0));
+</script>
+</body>
+</html>

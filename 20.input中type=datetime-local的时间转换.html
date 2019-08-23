@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+</head>
+<body>
+<div class="fcup">
+    <input type="datetime-local" name="stop_date" value="2018-03-09T12:04:34"/> 下个赛季结束时间<br>
+    <input id="start" type="datetime-local" name="start_date"/> 下个赛季开始时间<br>
+    <br>
+    <input id="stop" type="datetime-local" name="stop_date" value="2018-03-09 12:04:34"/> 下个赛季结束时间<br>
+    <br>
+    <button id="submit" class="btn btn-primary" type="submit">更改</button>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.fcup.min.js"></script>
+<script type="text/javascript">
+    var now = new Date();
+    now.setHours(now.getHours() + 1);
+    var str = now.getFullYear() + "-" + fix((now.getMonth() + 1), 2) + "-" + fix(now.getDate(), 2) + "T" + fix(now.getHours(), 2) + ":" + fix(now.getMinutes(), 2) + ":" +fix(now.getSeconds(),2) ;
+    document.getElementById("start").value = str;
+    document.getElementById("stop").value = str;
+    function dateChange(x) {
+        now.setFullYear(parseInt(x.substring(0, 4)));
+        now.setMonth(parseInt(x.substring(5, 7)) - 1);
+        now.setDate(parseInt(x.substring(8, 10)));
+        now.setHours(parseInt(x.substring(11, 13)));
+        now.setMinutes(parseInt(x.substring(14, 16)));
+        return x.replace('T'," ")
+    }
+    function fix(num, length) {
+        return ('' + num).length < length ? ((new Array(length + 1)).join('0') + num).slice(-length) : '' + num;
+    }
+document.getElementById('submit').onclick=function () {
+    //val = $('#time').val()
+    var start = dateChange($("#start").val());
+    var stop = dateChange($("#stop").val());
+    console.log(start);
+    console.log(stop)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<div id="animation"></div>
+<script type="text/javascript" src="js/lottie.js"></script>
+<script>
+    lottie.loadAnimation({
+        container: document.getElementById('animation'), // the dom element that will contain the animation
+        renderer: 'svg', //渲染出来的是什么格式
+        loop: true,  //循环播放
+        autoplay: true, //自动播放
+        path: './json/Banner.json' // the path to the animation json
+    });
+</script>
+</body>
+</html>

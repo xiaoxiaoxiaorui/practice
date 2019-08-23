@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <title>test</title>
+</head>
+<body>
+<div class="indicatorContainer1"></div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/radialIndicator.min.js"></script>
+<script>
+    /*$('#indicatorContainer').radialIndicator({
+        radius: 10,
+        barWidth: 25,
+        showPercentage : false, // option
+        barBgColor: '#ccc',
+        fontColor: '#666',
+        fontSize: '14px',
+        percentage: true
+    });*/
+    var radialObj = radialIndicator('.indicatorContainer'+1,{
+        radius: 10,
+        barWidth: 25,
+        showPercentage : false, // option
+        barBgColor: '#ccc',
+        fontColor: '#666',
+        fontSize: '14px',
+        percentage: true
+    });
+    var val = 0;
+    setInterval(function () {
+        radialObj.value(val);
+        val++;
+    },1000)
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            background: pink;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <p>是否VB和，十多个别是大法官吧</p>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script>
+    $.ajax({
+        url: 'http://catchu-dev-local.aktgo.com/api/invite/info?api_token=YaBSaeg4ZZ16DCnCDyS3PdAKkkcCM8O0PL8Ks3ek3KU2AjPofkWg90gAi6aT',
+        type: 'get',
+        dataType:'json',
+        /*body: {
+            "api_token": 'YaBSaeg4ZZ16DCnCDyS3PdAKkkcCM8O0PL8Ks3ek3KU2AjPofkWg90gAi6aT'
+        },*/
+        success: function (data) {
+            console.log(data)
+        },
+        error: function (err) {
+            console.log(err)
+        }
+    })
+</script>
+
+</body>
+</html>

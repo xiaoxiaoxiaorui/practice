@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: monMedium;
+            src: url('./fonts/Montserrat-Medium.ttf') format('truetype');
+            font-style: normal;
+        }
+        @font-face {
+            font-family: monBold;
+            src: url('./fonts/Montserrat-Bold.ttf') format('truetype');
+            font-style: normal;
+        }
+        @font-face {
+            font-family: monSemiBold;
+            src: url('./fonts/Montserrat-SemiBold.ttf') format('truetype');
+            font-style: normal;
+        }
+        body{
+            /*background: #1c1c1c;*/
+        }
+        .medium1{
+            font-family: monMedium;
+        }
+        .medium2{
+            font-family: 'Montserrat';
+            font-weight: 500;
+        }
+        .bold1{
+            font-family: monBold;
+        }
+        .bold2{
+            font-family: 'Montserrat';
+            font-weight: 700;
+        }
+        .semibold1{
+            font-family: monSemiBold;
+        }
+        .semibold2{
+            font-family: 'Montserrat';
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+<div id="root">
+    <p class="medium1">medium</p><br/>
+    <p class="medium2">medium</p><br/>
+    <p class="bold1">bold</p><br/>
+    <p class="bold2">bold</p><br/>
+    <p class="semibold1">semibold</p><br/>
+    <p class="semibold2">semibold</p><br/>
+    <textarea class="text">[{"aa":"22"},{"bb":"33"}]</textarea>
+</div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    var aa = '[{"aa":"22"},{"bb":"33"}]';
+    var bb = JSON.parse(aa);
+    console.log(bb[1].bb);
+    var str = $('#root');
+    console.log(str.find('.text').val());
+</script>
+</body>
+</html>

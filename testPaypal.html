@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @if($request['lang'] == 'zh')<title>付费</title>@else <title>Payment</title>@endif
+
+    <script src="{{ asset('style/index/js/checkout.js') }}"></script>
+    <script src="{{ asset('style/plugins/jquery/jquery.min.js') }}"></script>
+    <link href="{{ asset('style/index/css/reset-paypal.css') }}" rel="stylesheet">
+    <link href="{{ asset('style/index/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('style/index/css/index-paypal.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<div class="list-content">
+    <div class="container">
+        <div class="payment-area">
+            <div class="pay-money">
+                <div class="title">
+                    @if($request['lang'] == 'zh')付款金额 @else Payment Amount @endif
+                </div>
+                <div class="price">{{$request['currency'].'  '.$request['payMoney']}}</div>
+            </div>
+            <div class="pay-detail">
+                <ul>
+                    <li class="clearfix">
+                        <span class="title">@if($request['lang'] == 'zh')用户ID @else User ID @endif</span>
+                        <span class="titInfo">{{$request['memberId']}}</span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="title">@if($request['lang'] == 'zh')订单时间 @else Order time @endif</span>
+                        <span class="titInfo">{{ date("Y-m-d H:i:s",time()) }}</span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="title">@if($request['lang'] == 'zh')订单ID @else Order ID @endif</span>
+                        <span class="titInfo">{{$orderNum}}</span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="title">@if($request['lang'] == 'zh')收款方 @else Payment Reciever @endif</span>
+                        <span class="titInfo">Wonderful Island Team</span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="title">@if($request['lang'] == 'zh')购买商品 @else Product @endif</span>
+                        <span class="titInfo">{{ $request['productInfo'] }}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="payPal-button">
+                <div id="paypal-button"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var parseParam=function(param, key){
+        var paramStr="";
+        if(param instanceof String||param instanceof Number||param instanceof Boolean){
+            paramStr+="&"+key+"="+encodeURIComponent(param);
+        }else{
+            $.each(param,function(i){
+                var k=key==null?i:key+(param instanceof Array?"["+i+"]":"."+i);
+                paramStr+='&'+parseParam(this, k);
+            });
+        }
+        return paramStr.substr(1);
+    };
+    var CREATE_PAYMENT_URL  = '/api/paypal-payment-create';
+    var EXECUTE_PAYMENT_URL = '/api/paypal-payment-execute';
+    if("{{ env('APP_ENV') }}"=='local'){
+        var env = 'sandbox';
+    }else{
+        var env = 'production';
+    }
+
+    var pay = paypal.Button.render({
+        env: env,
+        commit: true, // Show a 'Pay Now' button
+        style: {
+            label: 'paypal',
+            size:  'small',    // small | medium | large | responsive
+            shape: 'rect',     // pill | rect
+            color: 'gold',     // gold | blue | silver | black
+            tagline: false
+        },
+        payment: function() {
+            return paypal.request.post(CREATE_PAYMENT_URL,{ orderNum: "{{$orderNum}}" } ).then(function(data) {
+                return data.id;
+            });
+        },
+        onAuthorize: function(data) {
+            return paypal.request.post(EXECUTE_PAYMENT_URL, {
+                paymentID: data.paymentID,
+                payerID:   data.payerID
+            }).then(function(data) {
+                window.location.replace('/api/paypal-payment-success?lang={{$request['lang']}}&'+parseParam(data));
+            });
+        },
+        onCancel: function(data) {
+            window.location.replace('/api/paypal-payment-cancel?lang={{$request['lang']}}&'+parseParam(data));
+        },
+        onError: function(err) {
+            window.location.replace('/api/paypal-payment-error?lang={{$request['lang']}}&'+parseParam(data));
+        }
+    }, '#paypal-button');
+</script>
+</body>

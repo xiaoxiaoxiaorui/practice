@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js动态插入视频</title>
+    <link href="http://sdk-release.qnsdk.com/qiniuplayer-0.3.9.min.css" rel="stylesheet">
+    <script src="http://sdk-release.qnsdk.com/qiniuplayer-0.3.9.min.js"></script>
+</head>
+<body>
+<div>
+    <video id="video" autoplay muted loop>
+        <source src="./video/time.mp4" type="video/mp4" />
+    </video>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script>
+    /*$('video').append('<source src="./video/time.mp4" type="video/mp4" />');
+    $('div').show();
+    $('div video')[0].play;*/
+//    $('div').html('<video autoplay><source src="./video/time.mp4" type="video/mp4" /></video>')
+    /*document.getElementById("video").src='./video/time.mp4' ;
+    document.getElementById("video").play();*/
+    /*var options = {
+        controls: false,
+        url: 'http://og9dz2jqu.cvoda.com/Zmlyc3R2b2RiOm9jZWFucy0xLm1wNA==_q00000001.m3u8',
+        type: 'hls',
+        preload: true,
+        autoplay: true, // 如为 true，则视频将会自动播放
+        width: 200,
+        height: 200
+    };
+    var player = new QiniuPlayer('video', options);*/
+    console.log($('#video'));
+    $('body').click(function () {
+        if($('#video').prop('muted')){
+            $('#video').prop('muted',false);
+        }else{
+            $('#video').prop('muted',true);
+        }
+    })
+</script>
+</body>
+</html>
