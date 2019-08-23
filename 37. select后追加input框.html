@@ -2,9 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>test</title>
+    <style>
+        select {
+            margin-right: 20px;
+            vertical-align: top;
+            height: 30px;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        input{
+            vertical-align: top;
+            width: 100px;
+            height: 28px;
+            border: 1px solid #666;
+            padding: 0;
+            margin: 0;
+            padding-left: 5px;
+        }
+        .col-lg-2{
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div>
+    <div class="col-lg-2">
+        <select name="" id="aa">
+            <option value="">1111</option>
+            <option value="">2222</option>
+            <option value="">3333</option>
+            <option value="">其他</option>
+        </select>
+    </div>
+</div>
+<div>
+    <div class="col-lg-2">
+        <select name="" id="bb">
+            <option value="">aaa</option>
+            <option value="">bbb</option>
+            <option value="">ccc</option>
+            <option value="">其他</option>
+        </select>
+    </div>
+</div>
+<script>
+    // 元素后添加元素
+    function insertAfter(newElement,targetElement){
+        var parent = targetElement.parentNode;
+        if(parent.lastChild == targetElement){
+            parent.appendChild(newElement);
+        }else{
+            parent.insertBefore(newElement,targetElement.nextSibling);
+        }
+    }
+    var length = document.getElementsByTagName('select').length;
+    for(var i = 0; i<length; i++){
+        document.getElementsByTagName('select')[i].onchange = function () {
+            var seleIndex = this.selectedIndex;
+            var seleContent = this.options[seleIndex].text;
+            var newDiv = document.createElement("div");
+            newDiv.setAttribute("class","col-lg-2");
+            var input = document.createElement("input");
+            var cls = this.getAttribute("id");
+            input.setAttribute("id",cls+'_1');
+            input.setAttribute("class","form-control");
+            input.type="text";
+            input.name="";
+            newDiv.append(input);
+            if(seleContent == '其他'){
+                insertAfter(newDiv,this.parentNode);
+                this.parentNode.nextSibling.children[0].focus()
+            }else{
+                this.parentNode.nextSibling.remove();
+            }
+        }
+    }
+</script>
 </body>
 </html>

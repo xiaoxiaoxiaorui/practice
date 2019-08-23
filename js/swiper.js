@@ -157,7 +157,7 @@
             lazyLoadingInPrevNext: false,
             lazyLoadingInPrevNextAmount: 1,
             lazyLoadingOnTransitionStart: false,
-            // Images
+            // images
             preloadImages: true,
             updateOnImagesReady: true,
             // loop
@@ -557,7 +557,7 @@
             s.setGrabCursor();
         }
         /*=========================
-          Update on Images Ready
+          Update on images Ready
           ===========================*/
         s.imagesToLoad = [];
         s.imagesLoaded = 0;
@@ -2784,7 +2784,7 @@
         
 
         /*=========================
-          Images Lazy Loading
+          images Lazy Loading
           ===========================*/
         s.lazy = {
             initialImageLoaded: false,

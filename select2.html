@@ -92,9 +92,9 @@
 
         function formatState (state) {
             if (!state.id) { return state.text; }
-            /*var scr = "Images/" + state.element.value + ".png";*/
+            /*var scr = "images/" + state.element.value + ".png";*/
             var $state = $(
-                '<span><img src="Images/' + state.element.value + '.png" class="img-flag" /> ' + '</span><span>' + state.text + '</span>'
+                '<span><img src=' + state.element.value + '"images/.png" class="img-flag" /> ' + '</span><span>' + state.text + '</span>'
             /*'<span style="background:url(' + scr + ');background-size:100%;float:left;margin:5px 10px 0 0;">' + '<div class="img-flag"></div></span><span>' + state.text + '</span>'*/
             );
             return $state;

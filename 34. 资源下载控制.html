@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        p{
+            font-size: 20px;
+            text-align: center;
+        }
+        .loading{
+            display: block;
+        }
+        .loaded{
+            display: none;
+        }
+        .imgGroup{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="imgGroup">
+    <img src="images/201704200406301.jpg" alt="image">
+    <img src="images/201704200406531.jpg" alt="image">
+    <img src="images/201704200407341.jpg" alt="images">
+    <img src="images/201704200407541.jpg" alt="images">
+    <img src="images/201704200408081.jpg" alt="images">
+    <img src="images/201704200408171.jpg" alt="images">
+    <img src="images/201704200408191.jpg" alt="images">
+    <img src="images/201704200408221.jpg" alt="images">
+    <img src="images/banner0.png" alt="image">
+</div>
+<p class="loading">loading……</p>
+<p class="loaded">图片全部下载完成</p>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/PxLoader.js"></script>
+<script type="text/javascript" src="js/PxLoaderImage.js"></script>
+<script>
+    var loader = new PxLoader();
+    var imgArr = $('img');
+    for(var i=0; i<imgArr.length; i++){
+        var pxImage = new PxLoaderImage($(imgArr[i]).attr('src'));
+        loader.add(pxImage)
+    }
+    loader.addProgressListener(function (e) {
+        $('.loading').hide();
+        $('.loaded').show();
+        $('.imgGroup').show();
+    });
+    loader.start();
+</script>
 </body>
 </html>

@@ -4,13 +4,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @if($request['lang'] == 'zh')<title>付费</title>@else <title>Payment</title>@endif
+    <title>付费</title>
 
-    <script src="{{ asset('style/index/js/checkout.js') }}"></script>
-    <script src="{{ asset('style/plugins/jquery/jquery.min.js') }}"></script>
-    <link href="{{ asset('style/index/css/reset-paypal.css') }}" rel="stylesheet">
-    <link href="{{ asset('style/index/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('style/index/css/index-paypal.css') }}" rel="stylesheet">
+    <script src="js/checkout.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
 </head>
 <body>
 
@@ -19,31 +16,31 @@
         <div class="payment-area">
             <div class="pay-money">
                 <div class="title">
-                    @if($request['lang'] == 'zh')付款金额 @else Payment Amount @endif
+                    付款金额
                 </div>
-                <div class="price">{{$request['currency'].'  '.$request['payMoney']}}</div>
+                <div class="price">$12.36</div>
             </div>
             <div class="pay-detail">
                 <ul>
                     <li class="clearfix">
-                        <span class="title">@if($request['lang'] == 'zh')用户ID @else User ID @endif</span>
-                        <span class="titInfo">{{$request['memberId']}}</span>
+                        <span class="title">用户ID</span>
+                        <span class="titInfo">666666666</span>
                     </li>
                     <li class="clearfix">
-                        <span class="title">@if($request['lang'] == 'zh')订单时间 @else Order time @endif</span>
-                        <span class="titInfo">{{ date("Y-m-d H:i:s",time()) }}</span>
+                        <span class="title">订单时间</span>
+                        <span class="titInfo">12:30</span>
                     </li>
                     <li class="clearfix">
-                        <span class="title">@if($request['lang'] == 'zh')订单ID @else Order ID @endif</span>
-                        <span class="titInfo">{{$orderNum}}</span>
+                        <span class="title">订单ID</span>
+                        <span class="titInfo">123456789</span>
                     </li>
                     <li class="clearfix">
-                        <span class="title">@if($request['lang'] == 'zh')收款方 @else Payment Reciever @endif</span>
+                        <span class="title">收款方</span>
                         <span class="titInfo">Wonderful Island Team</span>
                     </li>
                     <li class="clearfix">
-                        <span class="title">@if($request['lang'] == 'zh')购买商品 @else Product @endif</span>
-                        <span class="titInfo">{{ $request['productInfo'] }}</span>
+                        <span class="title">购买商品</span>
+                        <span class="titInfo">土地</span>
                     </li>
                 </ul>
             </div>
@@ -67,13 +64,9 @@
         }
         return paramStr.substr(1);
     };
-    var CREATE_PAYMENT_URL  = '/api/paypal-payment-create';
-    var EXECUTE_PAYMENT_URL = '/api/paypal-payment-execute';
-    if("{{ env('APP_ENV') }}"=='local'){
-        var env = 'sandbox';
-    }else{
-        var env = 'production';
-    }
+    var CREATE_PAYMENT_URL  = 'http://192.168.196.13:8080/api/v1/member/buyer/paypal-create';
+    var EXECUTE_PAYMENT_URL = 'http://192.168.196.13:8080/api/v1/member/buyer/paypal-execute';
+    var env = 'sandbox';
 
     var pay = paypal.Button.render({
         env: env,
@@ -86,23 +79,37 @@
             tagline: false
         },
         payment: function() {
-            return paypal.request.post(CREATE_PAYMENT_URL,{ orderNum: "{{$orderNum}}" } ).then(function(data) {
+            return paypal.request.post(
+                CREATE_PAYMENT_URL,
+                { orderId: "1",memberId:1 },
+                {
+                    headers: {
+                        'Authorization': 'Bearer c05a247c4ce96abe29075357cfe05a0ahhwhVukPaW9rn0sGgNXHZgSCBHzl'
+                    }
+                }
+            ).then(function(data) {
                 return data.id;
             });
         },
         onAuthorize: function(data) {
             return paypal.request.post(EXECUTE_PAYMENT_URL, {
-                paymentID: data.paymentID,
-                payerID:   data.payerID
+                paymentToken: data.paymentToken,
+                orderID: data.orderID,
+                payerID:   data.payerID,
+                intent:   data.intent,
+            },{
+                headers: {
+                    'Authorization': 'Bearer c05a247c4ce96abe29075357cfe05a0ahhwhVukPaW9rn0sGgNXHZgSCBHzl'
+                }
             }).then(function(data) {
-                window.location.replace('/api/paypal-payment-success?lang={{$request['lang']}}&'+parseParam(data));
+                alert('隔壁小王吧 , 你真棒')
             });
         },
         onCancel: function(data) {
-            window.location.replace('/api/paypal-payment-cancel?lang={{$request['lang']}}&'+parseParam(data));
+            window.location.replace('http://www.baidu.com');
         },
         onError: function(err) {
-            window.location.replace('/api/paypal-payment-error?lang={{$request['lang']}}&'+parseParam(data));
+            alert('隔壁小王吧 , 你错了')
         }
     }, '#paypal-button');
 </script>

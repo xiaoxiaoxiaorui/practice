@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0",
     "detaillog": "git log --pretty=oneline",
-    "modules":"commitizen init cz-conventional-changelog --save --save-exact"
+    "modules": "commitizen init cz-conventional-changelog --save --save-exact"
   },
   "author": "wr",
   "license": "ISC",
@@ -18,5 +18,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "lottie-web": "^5.2.1"
   }
 }

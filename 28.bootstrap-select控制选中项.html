@@ -2,9 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bootstrap-select</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-$END$
+<select class="select">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+<script>
+    var arr = ['aa','bb','cc','dd','ee','ff','gg','hh','ii','jj',
+        'aa1','bb1','cc1','dd1','ee1','ff1','gg1','hh1','ii1','jj1',
+        'aa2','bb2','cc2','dd2','ee2','ff2','gg2','hh2','ii2','jj2',
+        'aa3','bb3','cc3','dd3','ee3','ff3','gg3','hh3','ii3','jj3',
+        'aa4','bb4','cc4','dd4','ee4','ff4','gg4','hh4','ii4','jj4',
+        'aa5','bb5','cc5','dd5','ee5','ff5','gg5','hh5','ii5','jj5',
+        'aa6','bb6','cc6','dd6','ee6','ff6','gg6','hh6','ii6','jj6',
+        'aa7','bb7','cc7','dd7','ee7','ff7','gg7','hh7','ii7','jj7',
+        'aa8','bb8','cc8','dd8','ee8','ff8','gg8','hh8','ii8','jj8',
+        'aa9','bb9','cc9','dd9','ee9','ff9','gg9','hh9','ii9','jj9',
+        'aa0','bb0','cc0','dd0','ee0','ff0','gg0','hh0','ii0','jj0',
+        'aa11','bb11','cc11','dd11','ee11','ff11','gg11','hh11','ii11','jj11',
+        'aa12','bb12','cc12','dd12','ee12','ff12','gg12','hh12','ii12','jj12',
+        'aa13','bb13','cc13','dd13','ee13','ff13','gg13','hh13','ii13','jj13',
+        'aa14','bb14','cc14','dd14','ee14','ff14','gg14','hh14','ii14','jj14',
+        'aa15','bb15','cc15','dd15','ee15','ff15','gg15','hh15','ii15','jj15',
+        'aa16','bb16','cc16','dd16','ee16','ff16','gg16','hh16','ii16','jj16'];
+    var str = '';
+    var num = 2;
+    for(var i=0;i<arr.length;i++){
+        str += '<option data-id="'+ i +'">'+ arr[i] +'</option>'
+    }
+    setTimeout(function () {
+        for(var j = 0; j<arr.length; j++){
+            if($($('.select option')[j]).attr('data-id')==num){
+                $($('.select')[j]).attr('selected','selected');
+                $('.select').selectpicker('val',$($('.select option')[j]).html());
+                //$('.select').selectpicker('refresh');
+            }
+        }
+    },300);
+    $('.select').html(str).selectpicker();
+</script>
 </body>
 </html>

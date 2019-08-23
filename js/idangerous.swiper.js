@@ -171,7 +171,7 @@ var Swiper = function (selector, params) {
         calculateHeight: false,
         //Apply CSS for width and/or height
         cssWidthAndHeight: false, // or true or 'width' or 'height'
-        //Images Preloader
+        //images Preloader
         updateOnImagesReady : true,
         //Form elements
         releaseFormElements : true,

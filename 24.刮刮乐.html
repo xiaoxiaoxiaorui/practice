@@ -2,9 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>刮刮乐</title>
+    <style type="text/css">
+        @keyframes dsp {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .canvas {
+            animation: dsp 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .canCenter {
+            position: relative;
+            user-select: none;
+            display: inline-block;
+            /*width: 325px;
+            height: 165px;*/
+        }
+
+        .afterImage {
+            width: 320px;
+            height: 160px;
+        }
+
+        canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 3;
+        }
+    </style>
 </head>
 <body>
-$END$
+<img id="beforeImage" src="images/img2.jpg"/>
+<div class="canCenter">
+    <img class="afterImage" src="images/ima1.png"/>
+    <canvas id="myCanvas" style="border: 1px solid #000000;" width="320" height="160"></canvas>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    var Stroke;
+    var c = document.getElementById("myCanvas");
+    var context = c.getContext("2d");
+
+    var img = new Image();
+    //img.src = "images/img0.jpg";
+
+
+    var str = "Images/img";  //图片地址前缀
+    var nums = "0000000000112233445566778";  //控制图片出现的概率，此处 图片0出现的概率为2/5，图片1出现的概率为1/25，以此类推，可根据自己的需求修改出现概率及图片
+    var num = nums.charAt(parseInt(Math.random() * 3) + 1); //随机数生成出现的图片数字
+    var jpg = ".jpg"; //图片地址的后缀
+    //c.style.backgroundImage = 'url("'+str+num+jpg+'")'; //设置画布背景为随机生成的图片地址
+    c.style.backgroundImage = 'url("Images/img1.jpg")';
+
+    var Image = document.getElementById('beforeImage');
+    context.fillStyle = "#ccc";
+    context.lineJoin = "round";
+    context.lineWidth = 20;
+    window.onload = function () {
+        context.drawImage(Image, 0, 0);
+    };
+    context.globalCompositeOperation = "destination-over"; //与destination-out实现擦除效果
+    // 使用图片做被擦除层是要注释
+    context.beginPath();
+    context.fillRect(0, 0, 320, 160);
+    context.closePath();
+
+    function down(e) {
+        e.preventDefault();
+        context.beginPath();
+        var x = e.pageX - c.offsetLeft;
+        var y = e.pageY - c.offsetTop;
+        context.moveTo(x, y);
+        Stroke = true;
+    }
+
+    function move(e) {
+        e.preventDefault();
+        if (!Stroke) {
+            return;
+        }
+        //获取鼠标位置
+        var x = (e.pageX == undefined?(e.touches[0].pageX + document.body.scrollLeft): e.pageX) - c.offsetLeft;
+        var y = (e.pageY == undefined?(e.touches[0].pageY + document.body.scrollTop): e.pageY) - c.offsetTop;
+        context.globalCompositeOperation = "destination-out";
+        context.lineTo(x, y);
+        context.stroke();
+    }
+
+    function up(e) {
+        e.preventDefault();
+        Stroke = false;
+        var imgData = context.getImageData(0, 0, c.width, c.height);
+        var allPX = imgData.width * imgData.height;
+        var Num = 0;
+        for (var i = 0; i < allPX; i++) {
+            if (imgData.data[i * 4 + 3] == 0) {
+                Num++;
+            }
+        }
+        if (Num >= allPX / 3) {
+            context.beginPath();
+            context.fillStyle = 'rgba(0, 0, 0, 1)';
+            context.fillRect(0,0,320,160);
+        }
+    }
+    c.onmousedown = function (e) {
+        down(e);
+    };
+    c.onmousemove = function (e) {
+        move(e);
+    };
+    c.onmouseup = function (e) {
+        up(e);
+    };
+    c.ontouchstart=function (e) {
+        console.log(e)
+        down(e);
+    };
+    c.ontouchmove=function (e) {
+        move(e);
+    };
+    c.ontouchend=function (e) {
+        up(e);
+    };
+</script>
 </body>
 </html>

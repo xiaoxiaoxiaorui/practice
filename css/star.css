@@ -87,15 +87,15 @@ body {
   height: 10px;
   -webkit-animation-name: move-frames-1;
           animation-name: move-frames-1;
-  -webkit-animation-duration: 8441ms;
-          animation-duration: 8441ms;
+  -webkit-animation-duration: 24000ms;
+          animation-duration: 24000ms;
   -webkit-animation-delay: 4544ms;
           animation-delay: 4544ms;
 }
 @-webkit-keyframes move-frames-1 {
   from {
-    -webkit-transform: translate3d(50vw, 102vh, 0);
-            transform: translate3d(50vw, 102vh, 0);
+    -webkit-transform: translate3d(50vw, 350vh, 0);
+            transform: translate3d(50vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(2vw, -117vh, 0);
@@ -104,8 +104,8 @@ body {
 }
 @keyframes move-frames-1 {
   from {
-    -webkit-transform: translate3d(50vw, 102vh, 0);
-            transform: translate3d(50vw, 102vh, 0);
+    -webkit-transform: translate3d(50vw, 350vh, 0);
+            transform: translate3d(50vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(2vw, -117vh, 0);
@@ -121,15 +121,15 @@ body {
   height: 10px;
   -webkit-animation-name: move-frames-2;
           animation-name: move-frames-2;
-  -webkit-animation-duration: 9921ms;
-          animation-duration: 9921ms;
+  -webkit-animation-duration: 30000ms;
+          animation-duration: 30000ms;
   -webkit-animation-delay: 5982ms;
           animation-delay: 5982ms;
 }
 @-webkit-keyframes move-frames-2 {
   from {
-    -webkit-transform: translate3d(89vw, 108vh, 0);
-            transform: translate3d(89vw, 108vh, 0);
+    -webkit-transform: translate3d(89vw, 350vh, 0);
+            transform: translate3d(89vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(72vw, -123vh, 0);
@@ -138,8 +138,8 @@ body {
 }
 @keyframes move-frames-2 {
   from {
-    -webkit-transform: translate3d(89vw, 108vh, 0);
-            transform: translate3d(89vw, 108vh, 0);
+    -webkit-transform: translate3d(89vw, 350vh, 0);
+            transform: translate3d(89vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(72vw, -123vh, 0);
@@ -155,15 +155,15 @@ body {
   height: 3px;
   -webkit-animation-name: move-frames-3;
           animation-name: move-frames-3;
-  -webkit-animation-duration: 10427ms;
-          animation-duration: 10427ms;
+  -webkit-animation-duration: 30000ms;
+          animation-duration: 30000ms;
   -webkit-animation-delay: 3649ms;
           animation-delay: 3649ms;
 }
 @-webkit-keyframes move-frames-3 {
   from {
-    -webkit-transform: translate3d(85vw, 107vh, 0);
-            transform: translate3d(85vw, 107vh, 0);
+    -webkit-transform: translate3d(85vw, 350vh, 0);
+            transform: translate3d(85vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(30vw, -133vh, 0);
@@ -172,8 +172,8 @@ body {
 }
 @keyframes move-frames-3 {
   from {
-    -webkit-transform: translate3d(85vw, 107vh, 0);
-            transform: translate3d(85vw, 107vh, 0);
+    -webkit-transform: translate3d(85vw, 350vh, 0);
+            transform: translate3d(85vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(30vw, -133vh, 0);
@@ -189,15 +189,15 @@ body {
   height: 6px;
   -webkit-animation-name: move-frames-4;
           animation-name: move-frames-4;
-  -webkit-animation-duration: 10951ms;
-          animation-duration: 10951ms;
+  -webkit-animation-duration: 33000ms;
+          animation-duration: 33000ms;
   -webkit-animation-delay: 8909ms;
           animation-delay: 8909ms;
 }
 @-webkit-keyframes move-frames-4 {
   from {
-    -webkit-transform: translate3d(50vw, 104vh, 0);
-            transform: translate3d(50vw, 104vh, 0);
+    -webkit-transform: translate3d(50vw, 350vh, 0);
+            transform: translate3d(50vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(74vw, -122vh, 0);
@@ -206,8 +206,8 @@ body {
 }
 @keyframes move-frames-4 {
   from {
-    -webkit-transform: translate3d(50vw, 104vh, 0);
-            transform: translate3d(50vw, 104vh, 0);
+    -webkit-transform: translate3d(50vw, 350vh, 0);
+            transform: translate3d(50vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(74vw, -122vh, 0);
@@ -223,15 +223,15 @@ body {
   height: 5px;
   -webkit-animation-name: move-frames-5;
           animation-name: move-frames-5;
-  -webkit-animation-duration: 7642ms;
-          animation-duration: 7642ms;
+  -webkit-animation-duration: 25000ms;
+          animation-duration: 25000ms;
   -webkit-animation-delay: 2502ms;
           animation-delay: 2502ms;
 }
 @-webkit-keyframes move-frames-5 {
   from {
-    -webkit-transform: translate3d(9vw, 108vh, 0);
-            transform: translate3d(9vw, 108vh, 0);
+    -webkit-transform: translate3d(9vw, 350vh, 0);
+            transform: translate3d(9vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(39vw, -126vh, 0);
@@ -240,8 +240,8 @@ body {
 }
 @keyframes move-frames-5 {
   from {
-    -webkit-transform: translate3d(9vw, 108vh, 0);
-            transform: translate3d(9vw, 108vh, 0);
+    -webkit-transform: translate3d(9vw, 350vh, 0);
+            transform: translate3d(9vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(39vw, -126vh, 0);
@@ -257,15 +257,15 @@ body {
   height: 6px;
   -webkit-animation-name: move-frames-6;
           animation-name: move-frames-6;
-  -webkit-animation-duration: 8439ms;
-          animation-duration: 8439ms;
+  -webkit-animation-duration: 25000ms;
+          animation-duration: 25000ms;
   -webkit-animation-delay: 455ms;
           animation-delay: 455ms;
 }
 @-webkit-keyframes move-frames-6 {
   from {
-    -webkit-transform: translate3d(29vw, 101vh, 0);
-            transform: translate3d(29vw, 101vh, 0);
+    -webkit-transform: translate3d(29vw, 350vh, 0);
+            transform: translate3d(29vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(21vw, -109vh, 0);
@@ -274,8 +274,8 @@ body {
 }
 @keyframes move-frames-6 {
   from {
-    -webkit-transform: translate3d(29vw, 101vh, 0);
-            transform: translate3d(29vw, 101vh, 0);
+    -webkit-transform: translate3d(29vw, 350vh, 0);
+            transform: translate3d(29vw, 350vh, 0);
   }
   to {
     -webkit-transform: translate3d(21vw, -109vh, 0);
@@ -291,8 +291,8 @@ body {
   height: 8px;
   -webkit-animation-name: move-frames-7;
           animation-name: move-frames-7;
-  -webkit-animation-duration: 7539ms;
-          animation-duration: 7539ms;
+  -webkit-animation-duration: 23000ms;
+          animation-duration: 23000ms;
   -webkit-animation-delay: 3595ms;
           animation-delay: 3595ms;
 }
@@ -6870,7 +6870,7 @@ body {
 }
 @keyframes move-frames-200 {
   from {
-    -webkit-transform: translate3d(53vw, 109vh, 0);
+    -webkit-transform: translate3d(53vw, 200vh, 0);
             transform: translate3d(53vw, 109vh, 0);
   }
   to {
